@@ -1,0 +1,18 @@
+cff-version: 1.2.0
+title: "RePressDB JSS Revision Artifact"
+message: "If you use this artifact, please cite the associated RePressDB article and this software release."
+type: software
+version: 1.0.0
+date-released: 2026-07-30
+license: MIT
+authors:
+  - given-names: Zhichao
+    family-names: Zhang
+    affiliation: Minzu University of China
+abstract: "Code, frozen results, manifests, and generation scripts for the Journal of Systems and Software major revision of RePressDB."
+keywords:
+  - self-adaptive storage
+  - time-series systems
+  - runtime reconfiguration
+  - crash recovery
+repository-code: "https://github.com/REPLACE-WITH-ACCOUNT/RePressDB-JSS-Artifact"

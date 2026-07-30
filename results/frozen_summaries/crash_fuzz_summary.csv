@@ -1,0 +1,5 @@
+trial_type,trials,passed,integrity_passed,full_array_passed,median_query_ok,pass_rate
+metadata_corruption_after_commit,50,50,50,50,20.0,1.0
+orphan_file_recovery,75,75,75,75,20.0,1.0
+payload_truncation_after_commit,75,75,75,75,20.0,1.0
+random_process_termination,300,300,300,300,20.0,1.0

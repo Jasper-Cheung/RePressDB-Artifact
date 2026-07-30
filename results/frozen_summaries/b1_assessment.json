@@ -1,0 +1,93 @@
+{
+  "version": "0.9.0",
+  "target_journal": "Journal of Big Data",
+  "status": "B1 complete",
+  "b1_protocol_sha256": "02f399c347f444426aeb6413119b75049d3562579d24a5c105588e05dfc6e6e5",
+  "b1_experiment_freeze_sha256": "89b5586712ab73ad9fdfb7ec018da5c2ad884276778682c65794e7f3f0f8d3ac",
+  "source_metadata": {
+    "data_file": "E:\\IPM\\大学\\科研\\鲁棒性预测\\data\\Traffic-main\\PEMS04\\PEMS04.npz",
+    "data_file_sha256": "95a3c9b720fffdb85f0330d09bfab41b0b3cad0ca86c0d7d5f3accacb4ac999a",
+    "a0_protocol_sha256": "196ac4312695a0b5255129ee1587e9d7112c3bf9f795ebe6763434334fad97e8",
+    "manifest_sha256": "c4a613c7c2b368ea5c9168b40b91c5e937353d867d1e268c29b1989131fb6986",
+    "chunk_count": 32,
+    "chunk_size": 16384,
+    "series_indices": [
+      0,
+      10,
+      27,
+      28,
+      35,
+      39,
+      46,
+      56,
+      71,
+      78,
+      89,
+      103,
+      108,
+      127,
+      131,
+      133,
+      139,
+      143,
+      146,
+      148,
+      174,
+      193,
+      195,
+      207,
+      225,
+      230,
+      233,
+      240,
+      246,
+      254,
+      258,
+      277
+    ]
+  },
+  "acceptance_checks": {
+    "B1_1_exactly_32_frozen_chunks": true,
+    "B1_2_exactly_one_active_payload_per_chunk": true,
+    "B1_3_no_invalid_active_chunks": true,
+    "B1_4_catalog_all_idle": true,
+    "B1_5_no_staging_files": true,
+    "B1_6_all_100000_queries_correct": true,
+    "B1_7_all_1000_migrations_checksum_correct": true,
+    "B1_8_all_1000_migration_query_spotchecks_correct": true,
+    "B1_9_all_600_fault_recoveries_correct": true,
+    "all_nine": true
+  },
+  "result_summary": {
+    "integrity": {
+      "chunk_count": 32,
+      "invalid_chunks": [],
+      "non_idle_chunks": [],
+      "chunks_without_exactly_one_payload": [],
+      "temporary_file_count": 0,
+      "active_stored_bytes": 1277250,
+      "pass": true
+    },
+    "counts": {
+      "query_records": 100000,
+      "query_correct": 100000,
+      "migration_records": 1000,
+      "migration_checksum_successes": 1000,
+      "migration_query_successes": 1000,
+      "fault_records": 600,
+      "fault_all_columns_success": 600
+    },
+    "query_summary_rows": 7,
+    "migration_summary_rows": 20,
+    "fault_summary_rows": 6,
+    "final_recovery_actions": {
+      "completed_cleanup": 0,
+      "rolled_back": 0,
+      "aborted_uncommitted": 0,
+      "orphan_files_removed": 0
+    }
+  },
+  "elapsed_seconds_this_invocation": 223.4020157,
+  "interpretation": "A passing B1 establishes a standalone file-backed single-active-representation prototype with transactional catalog switching and tested crash recovery. It does not yet establish GB-scale throughput or concurrent-query performance; those belong to B2/B3.",
+  "next_gate": "Proceed to B2 full-BDG2 and GB-scale experiments."
+}

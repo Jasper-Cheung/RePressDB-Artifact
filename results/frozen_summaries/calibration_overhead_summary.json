@@ -1,0 +1,31 @@
+{
+  "stage": "fresh_full_calibration",
+  "n_buildings": 32,
+  "n_chunks": 64,
+  "chunk_sizes": [
+    8192,
+    16384
+  ],
+  "candidate_codec_count": 5,
+  "query_class_count": 8,
+  "directed_migration_pairs": 25,
+  "wall_elapsed_ns": 26099039600,
+  "wall_elapsed_minutes": 0.4349839933333333,
+  "cpu_user_seconds": 8.3125,
+  "cpu_system_seconds": 5.390625,
+  "process_read_bytes": 923226727,
+  "process_write_bytes": 113150795,
+  "process_read_count": 81962,
+  "process_write_count": 14191,
+  "output_directory_bytes": 13968613,
+  "candidate_storage_bytes": 12396379,
+  "raw_chunk_bytes": 3145728,
+  "all_candidate_representation_bytes": 12396379,
+  "candidate_storage_over_raw_ratio": 3.940702756245931,
+  "calibration_record_count": 2560,
+  "codec_record_count": 320,
+  "migration_record_count": 1600,
+  "calibration_records_sha256": "65e3dab3380bee47f77e2ab96a529c959af882d059a3cd873c9662eb095f39c8",
+  "codec_records_sha256": "e9376db2c38d6b9510cc5145c6f713337ffbf83b22c8ab01145690766cc84aca",
+  "migration_records_sha256": "00a400a5e695f2650112951701eef8810ad556a265ccfca06688e59c73e74d3d"
+}

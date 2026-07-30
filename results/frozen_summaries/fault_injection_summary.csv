@@ -1,0 +1,7 @@
+stage,n_trials,injected_faults,checksum_successes,query_successes,idle_successes,one_payload_successes,no_temp_successes,median_recovery_trial_ns
+after_catalog_commit_corrupt_active,100,100,100,100,100,100,100,175774650.0
+after_encode,100,100,100,100,100,100,100,129792750.0
+after_full_publish_before_catalog_commit,100,100,100,100,100,100,100,164588750.0
+after_intent,100,100,100,100,100,100,100,129878450.0
+after_payload_publish_before_metadata,100,100,100,100,100,100,100,142777650.0
+after_validate,100,100,100,100,100,100,100,134582700.0

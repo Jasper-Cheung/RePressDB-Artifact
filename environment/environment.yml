@@ -1,0 +1,13 @@
+name: repressdb-jss
+channels:
+  - conda-forge
+dependencies:
+  - python=3.10.20
+  - numpy=2.2.6
+  - pandas=2.3.3
+  - matplotlib>=3.8
+  - pip
+  - pip:
+      - lz4==4.4.5
+      - zstandard==0.25.0
+      - psutil>=5.9

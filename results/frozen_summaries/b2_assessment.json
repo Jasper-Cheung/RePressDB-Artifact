@@ -1,0 +1,320 @@
+{
+  "version": "1.0.0",
+  "target_journal": "Journal of Big Data",
+  "status": "B2 complete",
+  "parent_b1_experiment_freeze_sha256": "89b5586712ab73ad9fdfb7ec018da5c2ad884276778682c65794e7f3f0f8d3ac",
+  "b2_protocol_sha256": "726a83e0f9b7917a096a6fc59120315fdfef9047065d27e2a55a135d6d2eaab2",
+  "b2_experiment_freeze_sha256": "1e7708807b1f44b3b3608a3dd2d0e590d3d74e78ac53dcb7652586ed6248f733",
+  "dataset_summary": {
+    "candidate_meter_series": 3053,
+    "eligible_meter_series": 564,
+    "eligible_unique_buildings": 468,
+    "eligible_meter_types": {
+      "chilledwater": 138,
+      "electricity": 302,
+      "gas": 26,
+      "hotwater": 30,
+      "irrigation": 1,
+      "steam": 64,
+      "water": 3
+    },
+    "eligible_sites": 13,
+    "views": {
+      "data_scale_8192": {
+        "chunk_size": 8192,
+        "chunk_count": 720,
+        "raw_bytes": 23592960,
+        "unique_series": 564,
+        "unique_buildings": 468
+      },
+      "catalog_scale_2048": {
+        "chunk_size": 2048,
+        "chunk_count": 3283,
+        "raw_bytes": 26894336,
+        "unique_series": 564,
+        "unique_buildings": 468
+      }
+    }
+  },
+  "view_results": {
+    "data_scale_8192": {
+      "manifest": {
+        "chunk_size": 8192,
+        "chunk_count": 720,
+        "raw_bytes": 23592960,
+        "unique_series": 564,
+        "unique_buildings": 468
+      },
+      "ingestion": {
+        "wall_elapsed_ns_this_invocation": 36222043700,
+        "chunk_count": 720,
+        "completed_ingest_records": 720,
+        "measured_encode_store_ns": 12939926000,
+        "measured_ingest_throughput_mib_per_s": 1.1827142214491573,
+        "active_stored_bytes": 16047653
+      },
+      "initial_storage": {
+        "chunk_count": 720,
+        "raw_bytes": 23592960,
+        "payload_bytes": 16047653,
+        "metadata_bytes": 0,
+        "active_stored_bytes": 16047653,
+        "stored_over_raw": 0.6801882002088758,
+        "compression_factor_raw_over_stored": 1.4701813405362143,
+        "codec_distribution": [
+          {
+            "active_codec": "whole_lz4",
+            "chunk_count": 720,
+            "stored_bytes": 16047653
+          }
+        ]
+      },
+      "initial_catalog": {
+        "database_bytes": 528384,
+        "wal_bytes": 0,
+        "shm_bytes": 32768,
+        "total_catalog_files_bytes": 561152,
+        "page_size": 4096,
+        "page_count": 129,
+        "allocated_database_bytes": 528384,
+        "bytes_per_chunk_allocated": 733.8666666666667,
+        "files_bytes_per_chunk": 779.3777777777777
+      },
+      "migrations": {
+        "elapsed_ns": 41793813300,
+        "migration_count": 500,
+        "rewrite_bytes": 12042890,
+        "logical_raw_migrated_bytes": 16384000,
+        "write_amplification": 0.7350396728515625,
+        "measured_migration_ns": 37150975900,
+        "migration_throughput_mib_per_s": 0.3091438275866574,
+        "recovered_completions": 0
+      },
+      "queries": {
+        "wall_elapsed_ns_this_invocation": 713097190700,
+        "query_count": 500000,
+        "measured_query_execution_ns": 150563484500,
+        "storage_throughput_queries_per_second": 3320.8583187379677,
+        "wall_throughput_this_invocation_if_fresh": 701.1666944153619,
+        "median_latency_ns": 260000.0,
+        "p95_latency_ns": 487800.0,
+        "p99_latency_ns": 1334000.0,
+        "maximum_latency_ns": 237197200.0,
+        "all_correct": true
+      },
+      "final_integrity": {
+        "chunk_count": 720,
+        "invalid_chunks": [],
+        "non_idle_chunks": [],
+        "chunks_without_exactly_one_payload": [],
+        "temporary_file_count": 0,
+        "active_stored_bytes": 16960565,
+        "pass": true
+      },
+      "final_storage": {
+        "chunk_count": 720,
+        "raw_bytes": 23592960,
+        "payload_bytes": 16497917,
+        "metadata_bytes": 462648,
+        "active_stored_bytes": 16960565,
+        "stored_over_raw": 0.7188824547661675,
+        "compression_factor_raw_over_stored": 1.3910479986957982,
+        "codec_distribution": [
+          {
+            "active_codec": "block_lz4_1024",
+            "chunk_count": 87,
+            "stored_bytes": 2000686
+          },
+          {
+            "active_codec": "block_lz4_256",
+            "chunk_count": 92,
+            "stored_bytes": 2357262
+          },
+          {
+            "active_codec": "block_lz4_64",
+            "chunk_count": 84,
+            "stored_bytes": 2719247
+          },
+          {
+            "active_codec": "whole_lz4",
+            "chunk_count": 370,
+            "stored_bytes": 8434566
+          },
+          {
+            "active_codec": "whole_zstd",
+            "chunk_count": 87,
+            "stored_bytes": 1448804
+          }
+        ]
+      },
+      "final_catalog": {
+        "database_bytes": 933888,
+        "wal_bytes": 0,
+        "shm_bytes": 32768,
+        "total_catalog_files_bytes": 966656,
+        "page_size": 4096,
+        "page_count": 228,
+        "allocated_database_bytes": 933888,
+        "bytes_per_chunk_allocated": 1297.0666666666666,
+        "files_bytes_per_chunk": 1342.5777777777778
+      },
+      "startup": {
+        "repeats": 5,
+        "median_startup_ns": 4737097400.0,
+        "p95_startup_ns": 4821367960.0,
+        "minimum_startup_ns": 4676286100.0,
+        "maximum_startup_ns": 4840916900.0
+      }
+    },
+    "catalog_scale_2048": {
+      "manifest": {
+        "chunk_size": 2048,
+        "chunk_count": 3283,
+        "raw_bytes": 26894336,
+        "unique_series": 564,
+        "unique_buildings": 468
+      },
+      "ingestion": {
+        "wall_elapsed_ns_this_invocation": 82577198700,
+        "chunk_count": 3283,
+        "completed_ingest_records": 3283,
+        "measured_encode_store_ns": 58740956900,
+        "measured_ingest_throughput_mib_per_s": 0.3105323724173726,
+        "active_stored_bytes": 19127042
+      },
+      "initial_storage": {
+        "chunk_count": 3283,
+        "raw_bytes": 26894336,
+        "payload_bytes": 19127042,
+        "metadata_bytes": 0,
+        "active_stored_bytes": 19127042,
+        "stored_over_raw": 0.7111922004692736,
+        "compression_factor_raw_over_stored": 1.4060896609104534,
+        "codec_distribution": [
+          {
+            "active_codec": "whole_lz4",
+            "chunk_count": 3283,
+            "stored_bytes": 19127042
+          }
+        ]
+      },
+      "initial_catalog": {
+        "database_bytes": 2252800,
+        "wal_bytes": 0,
+        "shm_bytes": 32768,
+        "total_catalog_files_bytes": 2285568,
+        "page_size": 4096,
+        "page_count": 550,
+        "allocated_database_bytes": 2252800,
+        "bytes_per_chunk_allocated": 686.2016448370393,
+        "files_bytes_per_chunk": 696.1827596710326
+      },
+      "migrations": {
+        "elapsed_ns": 38459354700,
+        "migration_count": 500,
+        "rewrite_bytes": 3271880,
+        "logical_raw_migrated_bytes": 4096000,
+        "write_amplification": 0.798798828125,
+        "measured_migration_ns": 34394579100,
+        "migration_throughput_mib_per_s": 0.09072092184327038,
+        "recovered_completions": 0
+      },
+      "queries": {
+        "wall_elapsed_ns_this_invocation": 591033187100,
+        "query_count": 500000,
+        "measured_query_execution_ns": 127008672400,
+        "storage_throughput_queries_per_second": 3936.739047435315,
+        "wall_throughput_this_invocation_if_fresh": 845.976183593566,
+        "median_latency_ns": 236200.0,
+        "p95_latency_ns": 434500.0,
+        "p99_latency_ns": 699200.0,
+        "maximum_latency_ns": 227760300.0,
+        "all_correct": true
+      },
+      "final_integrity": {
+        "chunk_count": 3283,
+        "invalid_chunks": [],
+        "non_idle_chunks": [],
+        "chunks_without_exactly_one_payload": [],
+        "temporary_file_count": 0,
+        "active_stored_bytes": 19380375,
+        "pass": true
+      },
+      "final_storage": {
+        "chunk_count": 3283,
+        "raw_bytes": 26894336,
+        "payload_bytes": 19206087,
+        "metadata_bytes": 174288,
+        "active_stored_bytes": 19380375,
+        "stored_over_raw": 0.7206117674740139,
+        "compression_factor_raw_over_stored": 1.3877097837374148,
+        "codec_distribution": [
+          {
+            "active_codec": "block_lz4_1024",
+            "chunk_count": 93,
+            "stored_bytes": 576657
+          },
+          {
+            "active_codec": "block_lz4_256",
+            "chunk_count": 111,
+            "stored_bytes": 743098
+          },
+          {
+            "active_codec": "block_lz4_64",
+            "chunk_count": 134,
+            "stored_bytes": 1098121
+          },
+          {
+            "active_codec": "whole_lz4",
+            "chunk_count": 2832,
+            "stored_bytes": 16402196
+          },
+          {
+            "active_codec": "whole_zstd",
+            "chunk_count": 113,
+            "stored_bytes": 560303
+          }
+        ]
+      },
+      "final_catalog": {
+        "database_bytes": 2908160,
+        "wal_bytes": 0,
+        "shm_bytes": 32768,
+        "total_catalog_files_bytes": 2940928,
+        "page_size": 4096,
+        "page_count": 710,
+        "allocated_database_bytes": 2908160,
+        "bytes_per_chunk_allocated": 885.8239415169053,
+        "files_bytes_per_chunk": 895.8050563508986
+      },
+      "startup": {
+        "repeats": 5,
+        "median_startup_ns": 16796082500.0,
+        "p95_startup_ns": 17124557240.0,
+        "minimum_startup_ns": 16647009500.0,
+        "maximum_startup_ns": 17165647700.0
+      }
+    }
+  },
+  "memory": {
+    "method": "psutil_rss",
+    "peak_rss_bytes": 130285568,
+    "final_sample_rss_bytes": 102248448
+  },
+  "total_elapsed_ns_this_invocation": 1839479070900,
+  "acceptance_checks": {
+    "B2_1_all_candidate_meter_series_qualified": true,
+    "B2_2_at_least_one_eligible_meter": true,
+    "B2_3_both_full_manifests_nonempty": true,
+    "B2_4_production_catalog_and_telemetry_separated": true,
+    "B2_5_all_1000000_queries_correct": true,
+    "B2_6_all_1000_migrations_checksum_correct": true,
+    "B2_7_both_stores_have_one_active_payload_per_chunk": true,
+    "B2_8_no_staging_files": true,
+    "B2_9_catalog_bytes_per_chunk_reported": true,
+    "B2_10_startup_measured_five_times_per_view": true,
+    "all_ten": true
+  },
+  "interpretation": "A passing B2 establishes full cleaned-BDG2 storage-scale characterization with production catalog and telemetry separation. It reports real-data storage, catalog, startup, query, migration, write-amplification, and memory measurements. Synthetic replicated-tenant 1/5/10-GB scale-out and concurrent foreground/background interference remain B3.",
+  "next_gate": "Proceed to B3 replicated-tenant 1/5/10-GB scale-out and concurrent-query experiments."
+}

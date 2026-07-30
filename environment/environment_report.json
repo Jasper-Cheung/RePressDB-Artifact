@@ -1,0 +1,107 @@
+{
+  "captured_at_ns": 1784364635396022800,
+  "python": "3.10.20 | packaged by conda-forge | (main, Mar  5 2026, 16:36:49) [MSC v.1944 64 bit (AMD64)]",
+  "python_executable": "D:\\anaconda\\envs\\imu_wfst\\python.exe",
+  "platform": "Windows-10-10.0.26200-SP0",
+  "system": "Windows",
+  "release": "10",
+  "version": "10.0.26200",
+  "machine": "AMD64",
+  "processor": "Intel64 Family 6 Model 183 Stepping 1, GenuineIntel",
+  "cpu": {
+    "logical_cpu_count": 28,
+    "physical_cpu_count": 20,
+    "frequency_mhz": 2100.0
+  },
+  "memory": {
+    "total_bytes": 16873545728,
+    "available_bytes_at_start": 431767552
+  },
+  "disks": [
+    {
+      "device": "C:\\",
+      "mountpoint": "C:\\",
+      "filesystem": "NTFS",
+      "options": "rw,fixed"
+    },
+    {
+      "device": "D:\\",
+      "mountpoint": "D:\\",
+      "filesystem": "NTFS",
+      "options": "rw,fixed"
+    },
+    {
+      "device": "E:\\",
+      "mountpoint": "E:\\",
+      "filesystem": "NTFS",
+      "options": "rw,fixed"
+    }
+  ],
+  "package_versions": {
+    "numpy": "2.2.6",
+    "pandas": "2.3.3",
+    "sqlite": "3.53.1",
+    "psutil": "7.2.2",
+    "lz4": "4.4.5",
+    "zstandard": "0.25.0"
+  },
+  "current_working_directory": "D:\\python_projects\\python_project IPM\\RePressDB_E0_v0_1",
+  "project_directory": "D:\\python_projects\\python_project IPM\\RePressDB_E0_v0_1",
+  "output_directory": "D:\\python_projects\\python_project IPM\\RePressDB_E0_v0_1\\results_jss_major_revision_v151",
+  "sqlite_pragmas_used": {
+    "journal_mode": "WAL",
+    "synchronous": "FULL"
+  },
+  "timer": "time.perf_counter_ns",
+  "data_type": "little-endian float32 through numpy float32",
+  "scripts": [
+    {
+      "name": "s1",
+      "path": "D:\\python_projects\\python_project IPM\\RePressDB_E0_v0_1\\RUN_THIS_ONLY_REPRESSDB_S1_SHAPE_EWMA_BE_V1_3_1.py",
+      "sha256": "366f21b1d71a2d05866a04e5f9153fe3835193808d14a3b2c3e6e82122d36bab",
+      "line_count": 3415
+    },
+    {
+      "name": "r1",
+      "path": "D:\\python_projects\\python_project IPM\\RePressDB_E0_v0_1\\RUN_THIS_ONLY_REPRESSDB_R1_CONTINUOUS_NONSTATIONARY_V1_4_1.py",
+      "sha256": "3be9b87059a81aa4ccc36a6e5ef72927bec9462ea8d7131be9cc803577ee1582",
+      "line_count": 2984
+    },
+    {
+      "name": "v070",
+      "path": "D:\\python_projects\\python_project IPM\\RePressDB_E0_v0_1\\RUN_THIS_ONLY_REPRESSDB_A0_A1_HOTCOLD_DEV_PEMS04_V0_7_0.py",
+      "sha256": "deb56eae96343ebd9d667ba267e5eff58de521fe5152581d6de85c930607ece4",
+      "line_count": 2919
+    },
+    {
+      "name": "v073",
+      "path": "D:\\python_projects\\python_project IPM\\RePressDB_E0_v0_1\\RUN_THIS_ONLY_REPRESSDB_A0_A1_HOTCOLD_DEADBAND_RECOVER_V0_7_3.py",
+      "sha256": "a48a0f9f0b39aeb18181138876b44edcf453f989ff435b931cfacc2bb487650d",
+      "line_count": 1472
+    },
+    {
+      "name": "v074",
+      "path": "D:\\python_projects\\python_project IPM\\RePressDB_E0_v0_1\\RUN_THIS_ONLY_REPRESSDB_A0_A1_HOTCOLD_V0_7_4.py",
+      "sha256": "3f67cc33682489b322f5d1200bd232f753266917bd0cebf907dc4f9a620a50c5",
+      "line_count": 2308
+    },
+    {
+      "name": "a2",
+      "path": "D:\\python_projects\\python_project IPM\\RePressDB_E0_v0_1\\RUN_THIS_ONLY_REPRESSDB_A2_PEMS08_BDG2_HOLDOUT_V0_8_0.py",
+      "sha256": "84d7bf67a1e04b579b3662d479f5f641646695adfd511f65060b3582bd9cc004",
+      "line_count": 2116
+    },
+    {
+      "name": "e5",
+      "path": "D:\\python_projects\\python_project IPM\\RePressDB_E0_v0_1\\RUN_THIS_ONLY_REPRESSDB_E5_BDG2_FROZEN_DIRECT_V0_6_0.py",
+      "sha256": "5334c34b4c6cbf7e2fdedd30090ff1eb40dd2c7429b3203fabb2befbb045f910",
+      "line_count": 2503
+    },
+    {
+      "name": "b1",
+      "path": "D:\\python_projects\\python_project IPM\\RePressDB_E0_v0_1\\RUN_THIS_ONLY_REPRESSDB_B1_SINGLE_ACTIVE_STORE_V0_9_0.py",
+      "sha256": "d92af7df6fb15363631d38bebf7dcef05d37f2d9138c318886a0fcbc8c9e1777",
+      "line_count": 2372
+    }
+  ]
+}

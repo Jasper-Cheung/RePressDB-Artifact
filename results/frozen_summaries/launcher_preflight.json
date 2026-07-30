@@ -1,0 +1,20 @@
+{
+  "version": "1.7.0",
+  "python_executable": "D:\\anaconda\\envs\\imu_wfst\\python.exe",
+  "python_version": "3.10.20 | packaged by conda-forge | (main, Mar  5 2026, 16:36:49) [MSC v.1944 64 bit (AMD64)]",
+  "project": "D:\\python_projects\\python_project IPM\\RePressDB_E0_v0_1",
+  "output": "D:\\python_projects\\python_project IPM\\RePressDB_E0_v0_1\\results_jss_j1r_low_memory_paired_v170",
+  "system_drive": "C:\\",
+  "system_drive_free_bytes": 101809577984,
+  "memory": {
+    "memory_load_percent": 89,
+    "total_physical_bytes": 16873545728,
+    "available_physical_bytes": 1709101056,
+    "total_pagefile_bytes": 53380767744,
+    "available_pagefile_bytes": 29077995520,
+    "total_virtual_bytes": 140737488224256,
+    "available_virtual_bytes": 140732818681856
+  },
+  "launcher_sha256": "7a77c98b87a19d848e02aaeebb5ceef3614c2686a97120afc8b5a296fd102b94",
+  "heavy_worker_sha256": "553eeeceddf653558a008ae501a39906c67fe638ac1228e5165af5fb42523830"
+}
