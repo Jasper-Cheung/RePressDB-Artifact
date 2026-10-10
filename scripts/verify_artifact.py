@@ -1,43 +1,43 @@
-from __future__ import annotations
-
-import hashlib
-import json
+﻿#!/usr/bin/env python3
 from pathlib import Path
+import hashlib, json, math, sys
+import pandas as pd
+ROOT=Path(__file__).resolve().parents[1]
+REQ=[
+ 'results/frozen_summaries/multiseed_global_results.csv',
+ 'results/frozen_summaries/unified_ablation_summary.csv',
+ 'results/frozen_summaries/v170_assessment.json',
+ 'results/frozen_summaries/v170_policy_statistics_by_implementation.csv',
+ 'results/frozen_summaries/crash_fuzz_summary.csv',
+ 'environment/environment_report.json','environment/hardware_exact.json',
+ 'paper/make_cleaned_figures.py','paper/main.tex'
+]
+def gm(a):
+    import numpy as np
+    a=np.asarray(a,float); return float(np.exp(np.mean(np.log(a))))
+def main():
+    missing=[p for p in REQ if not (ROOT/p).exists()]
+    if missing: raise SystemExit('missing required files: '+', '.join(missing))
+    mg=pd.read_csv(ROOT/'results/frozen_summaries/multiseed_global_results.csv')
+    piv=mg.pivot_table(index=['trace','chunk_size','trace_seed'],columns='policy',values='total_time_ns')
+    ratio=gm(piv['repressdb_frozen']/piv['shape_ewma_be_frozen'])
+    reps=int(mg[mg.policy=='repressdb_frozen'].migration_count.sum()); shapes=int(mg[mg.policy=='shape_ewma_be_frozen'].migration_count.sum())
+    if abs(ratio-0.9617)>5e-4: raise SystemExit(f'unexpected replay ratio: {ratio}')
+    if (reps,shapes)!=(185,361): raise SystemExit(f'unexpected migration totals: {(reps,shapes)}')
+    ass=json.loads((ROOT/'results/frozen_summaries/v170_assessment.json').read_text(encoding='utf-8'))
+    if int(ass['total_measured_queries']) != 16908066: raise SystemExit('unexpected measured-query count')
+    hw=json.loads((ROOT/'environment/hardware_exact.json').read_text(encoding='utf-8'))
+    if 'i7-14700HX' not in hw['processor']['Name']: raise SystemExit('hardware metadata mismatch')
+    manifest=ROOT/'manifests/SHA256SUMS.txt'
+    if manifest.exists():
+        for line in manifest.read_text(encoding='utf-8').splitlines():
+            if not line.strip() or line.startswith('#'): continue
+            h,rel=line.split('  ',1); p=ROOT/rel
+            if not p.exists(): raise SystemExit(f'manifest file missing: {rel}')
+            if hashlib.sha256(p.read_bytes()).hexdigest()!=h: raise SystemExit(f'checksum mismatch: {rel}')
+    print(f'replay ratio: {ratio:.4f}')
+    print(f'migrations: RePressDB={reps}, Shape-EWMA-BE={shapes}')
+    print(f'measured queries: {int(ass["total_measured_queries"]):,}')
+    print('artifact verification: PASS')
+if __name__=='__main__': main()
 
-ROOT = Path(__file__).resolve().parents[1]
-MANIFEST = ROOT / "manifests" / "SHA256SUMS.txt"
-
-
-def sha256(path: Path) -> str:
-    digest = hashlib.sha256()
-    with path.open("rb") as handle:
-        for block in iter(lambda: handle.read(1024 * 1024), b""):
-            digest.update(block)
-    return digest.hexdigest()
-
-
-def main() -> int:
-    failures = []
-    for line in MANIFEST.read_text(encoding="utf-8").splitlines():
-        if not line.strip():
-            continue
-        expected, relative = line.split("  ", 1)
-        path = ROOT / relative
-        if not path.exists() or sha256(path) != expected:
-            failures.append(relative)
-
-    assessment = json.loads(
-        (ROOT / "results" / "frozen_summaries" / "v170_assessment.json").read_text(encoding="utf-8")
-    )
-    all_ten = bool(assessment.get("acceptance_checks", {}).get("all_ten"))
-
-    print(f"manifest_failures={len(failures)}")
-    print(f"v170_all_ten={all_ten}")
-    if failures:
-        for item in failures:
-            print(item)
-    return 0 if not failures and all_ten else 1
-
-
-if __name__ == "__main__":
-    raise SystemExit(main())

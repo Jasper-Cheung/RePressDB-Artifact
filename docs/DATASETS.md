@@ -1,12 +1,15 @@
-# Dataset access
+# Dataset provenance
 
-The artifact does not include raw PEMS04, PEMS08, or Building Data Genome Project 2 data.
+The artifact does not redistribute third-party datasets.
 
-To reproduce the experiments:
+## PEMS04 and PEMS08
 
-1. Obtain each dataset from the source cited in the manuscript.
-2. Keep the original files unchanged.
-3. Use the frozen selection and trace manifests included with the result package.
-4. Record local paths in a private run configuration. Do not commit local absolute paths or raw datasets.
+Traffic measurements are used for representation calibration, development-only policy configuration, and held-out evaluation. Use the versions cited in the manuscript. Preserve the original sensor/time/channel ordering before applying the frozen selection procedure described in the supplementary material.
 
-PEMS04 is the development domain. PEMS08 and the BDG2 holdouts must not be used for parameter retuning.
+## Building Data Genome Project 2
+
+Building-meter series are used for cross-domain holdout, continuous replay, the physical corpus, and logical-scale experiments. Use the public Building Data Genome Project 2 release cited in the manuscript.
+
+## Integrity practice
+
+Keep downloaded datasets outside the Git repository. Record the local source path and source checksum before generating derived chunks. The published artifact should contain only derived manifests, frozen summaries, and scripts, not the original third-party data.

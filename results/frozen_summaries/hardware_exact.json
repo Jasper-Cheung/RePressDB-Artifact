@@ -1,0 +1,29 @@
+{
+  "captured_at": "2026-07-30T21:22:07.1196529+08:00",
+  "working_directory": "E:\\IPM\\大学\\科研\\JSS",
+  "processor": {
+    "Name": "Intel(R) Core(TM) i7-14700HX",
+    "Manufacturer": "GenuineIntel",
+    "NumberOfCores": 20,
+    "NumberOfLogicalProcessors": 28,
+    "MaxClockSpeed": 2100
+  },
+  "project_drive": "E",
+  "project_disk": {
+    "Number": 0,
+    "FriendlyName": "YMTC YMSS2ED08D25MC",
+    "Manufacturer": null,
+    "Model": "YMTC YMSS2ED08D25MC",
+    "BusType": "NVMe",
+    "PartitionStyle": "GPT",
+    "Size": 1024209543168,
+    "FirmwareVersion": "LN3603D1"
+  },
+  "operating_system": {
+    "Caption": "Microsoft Windows 11 Home Chinese Edition",
+    "Version": "10.0.26200",
+    "BuildNumber": "26200",
+    "OSArchitecture": "64-bit",
+    "TotalVisibleMemorySize": 16478072
+  }
+}

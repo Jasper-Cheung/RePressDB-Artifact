@@ -181,7 +181,7 @@
     "memory_pressure": "no additional competing-memory allocation in v1.7.0",
     "performance": "legacy and cached implementations are rerun on the same machine and in paired temporal proximity"
   },
-  "next_gate": "Upload the core ZIP and assessment for manuscript revision.",
+  "next_gate": "Upload the core ZIP and assessment for manuscript submission.",
   "result_archives": {
     "core_zip": "D:\\python_projects\\python_project IPM\\RePressDB_E0_v0_1\\results_jss_j1r_low_memory_paired_v170\\RePressDB_J1R_LOW_MEMORY_PAIRED_CORE_V170.zip",
     "core_zip_sha256": "fbf1fd7ff86bd8f5a15451ed240d5b874eb4d427f152db9294daddb693fbf4fa",

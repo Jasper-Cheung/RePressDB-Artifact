@@ -1,32 +1,64 @@
-# RePressDB JSS Revision Artifact
+# RePressDB Artifact
 
-This repository supports the major revision of **RePressDB: A Dependable Self-Adaptive Storage Architecture for Nonstationary Time-Series Workloads**.
+This repository accompanies the manuscript:
 
-It contains the experiment code, frozen summary results, environment records, trace and selection manifests, and the scripts used to generate the revised tables and numerical TeX macros. Raw public datasets are not redistributed.
+**RePressDB: A Dependable Self-Adaptive Storage Architecture for Nonstationary Time-Series Workloads**
 
-## Artifact levels
+Authors: Zhichao Zhang, Xiaolu Peng, and Daoqi Sun.
 
-**Audit the paper numbers.** The files under `results/frozen_summaries/` and `paper_assets/` are sufficient to regenerate the main revision tables and check the reported ratios.
+## Contents
 
-**Inspect paired end-to-end evidence.** `results/paired_e2e_core/` contains all worker summaries and the result manifest. Raw latency arrays are distributed in the versioned release asset because they exceed the normal Git repository file limit.
+- `src/repressdb/`: reference implementation of the storage architecture described in the paper.
+- `results/frozen_summaries/`: frozen CSV/JSON evidence used to reconstruct the reported paper-level statistics.
+- `paper/`: manuscript source, supplementary material, final figures, and figure/table generation scripts.
+- `environment/`: software and hardware metadata for the measured campaigns.
+- `scripts/`: verification, hardware capture, and smoke-test utilities.
+- `docs/`: reproduction notes, dataset provenance, artifact map, and release instructions.
+- `manifests/`: checksums and source-script provenance.
 
-**Rerun experiments.** Obtain PEMS04, PEMS08, and BDG2 from their cited public sources, preserve the frozen data-selection manifests, install the pinned environment, and run the one-entry scripts in `src/`.
+The public datasets used by the study are not redistributed here. Dataset acquisition and placement are described in `docs/DATASETS.md`.
 
-## Main entry points
+## Quick verification
 
-- `src/RUN_THIS_ONLY_REPRESSDB_JSS_MAJOR_REVISION_EXPERIMENTS_V1_5_1.py`
-- `src/RUN_THIS_ONLY_REPRESSDB_J1R_LOW_MEMORY_PAIRED_V1_7_0.py`
-- `paper_assets/make_revision_assets.py`
-- `scripts/verify_artifact.py`
+Create an environment and install the pinned dependencies:
 
-## Environment
+```bash
+python -m venv .venv
+# Windows
+.venv\Scripts\activate
+# Linux/macOS
+# source .venv/bin/activate
+pip install -r environment/requirements.txt
+```
 
-The formal runs used Python 3.10.20, NumPy 2.2.6, pandas 2.3.3, LZ4 4.4.5, and zstandard 0.25.0. The captured operating-system and package reports are included. Run `environment/capture_hardware.bat` on the original experiment host to record the exact CPU marketing name and the project-drive model before final submission.
+Verify the repository and frozen evidence:
 
-## Large files
+```bash
+python scripts/verify_artifact.py
+```
 
-Do not commit the full raw-result ZIP to the Git history. Attach `RePressDB_JSS_Artifact_Full_Release_V1.0.0.zip` to a GitHub Release and archive the same file in Zenodo. Checksums are listed in `release_assets/RELEASE_ASSET_SHA256.txt`.
+Run the architecture smoke test:
 
-## Licenses
+```bash
+python scripts/smoke_test.py
+```
 
-Code is released under the MIT License. RePressDB-generated summaries, manifests, and result records are released under CC BY 4.0. Source datasets retain their original terms.
+Regenerate paper-level numerical macros and figures from the frozen summaries:
+
+```bash
+python scripts/regenerate_paper_assets.py
+```
+
+Detailed instructions are in `docs/REPRODUCTION.md`.
+
+## Experimental environment
+
+The paired file-backed campaign was run on Windows 11 using an Intel Core i7-14700HX (20 physical cores, 28 logical processors), 16 GB RAM, and a YMTC YMSS2ED08D25MC NVMe SSD. SQLite used WAL mode with `synchronous=FULL`. Exact metadata is preserved in `environment/hardware_exact.json` and `environment/environment_report.json`.
+
+## Releases
+
+Large raw result archives should be attached to the GitHub `v1.0.0` release rather than committed to the Git history. `release_assets/README.md` gives the naming and checksum procedure.
+
+## License
+
+Source code is released under the MIT License. Frozen result tables and documentation are released under CC BY 4.0; see `LICENSE_RESULTS`.

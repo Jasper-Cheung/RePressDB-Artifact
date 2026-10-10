@@ -1,0 +1,50 @@
+[
+  {
+    "name": "s1",
+    "path": "D:\\python_projects\\python_project IPM\\RePressDB_E0_v0_1\\RUN_THIS_ONLY_REPRESSDB_S1_SHAPE_EWMA_BE_V1_3_1.py",
+    "sha256": "366f21b1d71a2d05866a04e5f9153fe3835193808d14a3b2c3e6e82122d36bab",
+    "line_count": 3415
+  },
+  {
+    "name": "r1",
+    "path": "D:\\python_projects\\python_project IPM\\RePressDB_E0_v0_1\\RUN_THIS_ONLY_REPRESSDB_R1_CONTINUOUS_NONSTATIONARY_V1_4_1.py",
+    "sha256": "3be9b87059a81aa4ccc36a6e5ef72927bec9462ea8d7131be9cc803577ee1582",
+    "line_count": 2984
+  },
+  {
+    "name": "v070",
+    "path": "D:\\python_projects\\python_project IPM\\RePressDB_E0_v0_1\\RUN_THIS_ONLY_REPRESSDB_A0_A1_HOTCOLD_DEV_PEMS04_V0_7_0.py",
+    "sha256": "deb56eae96343ebd9d667ba267e5eff58de521fe5152581d6de85c930607ece4",
+    "line_count": 2919
+  },
+  {
+    "name": "v073",
+    "path": "D:\\python_projects\\python_project IPM\\RePressDB_E0_v0_1\\RUN_THIS_ONLY_REPRESSDB_A0_A1_HOTCOLD_DEADBAND_RECOVER_V0_7_3.py",
+    "sha256": "a48a0f9f0b39aeb18181138876b44edcf453f989ff435b931cfacc2bb487650d",
+    "line_count": 1472
+  },
+  {
+    "name": "v074",
+    "path": "D:\\python_projects\\python_project IPM\\RePressDB_E0_v0_1\\RUN_THIS_ONLY_REPRESSDB_A0_A1_HOTCOLD_V0_7_4.py",
+    "sha256": "3f67cc33682489b322f5d1200bd232f753266917bd0cebf907dc4f9a620a50c5",
+    "line_count": 2308
+  },
+  {
+    "name": "a2",
+    "path": "D:\\python_projects\\python_project IPM\\RePressDB_E0_v0_1\\RUN_THIS_ONLY_REPRESSDB_A2_PEMS08_BDG2_HOLDOUT_V0_8_0.py",
+    "sha256": "84d7bf67a1e04b579b3662d479f5f641646695adfd511f65060b3582bd9cc004",
+    "line_count": 2116
+  },
+  {
+    "name": "e5",
+    "path": "D:\\python_projects\\python_project IPM\\RePressDB_E0_v0_1\\RUN_THIS_ONLY_REPRESSDB_E5_BDG2_FROZEN_DIRECT_V0_6_0.py",
+    "sha256": "5334c34b4c6cbf7e2fdedd30090ff1eb40dd2c7429b3203fabb2befbb045f910",
+    "line_count": 2503
+  },
+  {
+    "name": "b1",
+    "path": "D:\\python_projects\\python_project IPM\\RePressDB_E0_v0_1\\RUN_THIS_ONLY_REPRESSDB_B1_SINGLE_ACTIVE_STORE_V0_9_0.py",
+    "sha256": "d92af7df6fb15363631d38bebf7dcef05d37f2d9138c318886a0fcbc8c9e1777",
+    "line_count": 2372
+  }
+]

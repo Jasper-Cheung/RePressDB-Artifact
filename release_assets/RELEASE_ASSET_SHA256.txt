@@ -1,1 +1,1 @@
-fea4ae9eb14ccd2e0ec832a6f16354f7dacad0b03b26befab03806da7598d960  RePressDB_JSS_Artifact_Raw_Results_V1.0.0.zip  306285794 bytes
+# Add the SHA-256 value after creating the v1.0.0 raw-result release asset.
