@@ -2,6 +2,9 @@
 
 | Paper evidence | Repository location |
 |---|---|
+| Organized reference implementation | `src/repressdb/` |
+| Original experiment entry-script snapshots | `experiments/original/`; hashes in `manifests/original_experiment_scripts.json` |
+| Frozen paper summaries | `results/frozen_summaries/` |
 | Multi-seed measured-cost replay | `results/frozen_summaries/multiseed_global_results.csv` |
 | Multi-seed paired statistics | `results/frozen_summaries/multiseed_paired_statistics.csv` |
 | Ablation results | `results/frozen_summaries/unified_ablation_summary.csv` |
@@ -16,3 +19,5 @@
 | Final figure generator | `paper/make_cleaned_figures.py` |
 | Hardware metadata | `environment/hardware_exact.json`, `environment/environment_report.json` |
 | Original experiment script hashes | `manifests/original_experiment_scripts.json` |
+| Complete v1.5.1 and v1.7.0 raw result archives | GitHub Release asset; see `release_assets/README.md` |
+| Public source datasets | Acquired from the cited sources; not redistributed |

@@ -3,6 +3,8 @@ from pathlib import Path
 import hashlib, json, math, sys
 import pandas as pd
 ROOT=Path(__file__).resolve().parents[1]
+TEXT_SUFFIXES={'.md','.txt','.json','.csv','.py','.tex','.bib','.cff','.toml','.ps1','.bat','.cls','.bst'}
+TEXT_NAMES={'.gitignore','LICENSE','LICENSE_RESULTS'}
 REQ=[
  'results/frozen_summaries/multiseed_global_results.csv',
  'results/frozen_summaries/unified_ablation_summary.csv',
@@ -15,6 +17,11 @@ REQ=[
 def gm(a):
     import numpy as np
     a=np.asarray(a,float); return float(np.exp(np.mean(np.log(a))))
+def manifest_digest(path):
+    data=path.read_bytes()
+    if path.suffix.lower() in TEXT_SUFFIXES or path.name in TEXT_NAMES:
+        data=data.replace(b'\r\n',b'\n')
+    return hashlib.sha256(data).hexdigest()
 def main():
     missing=[p for p in REQ if not (ROOT/p).exists()]
     if missing: raise SystemExit('missing required files: '+', '.join(missing))
@@ -34,7 +41,7 @@ def main():
             if not line.strip() or line.startswith('#'): continue
             h,rel=line.split('  ',1); p=ROOT/rel
             if not p.exists(): raise SystemExit(f'manifest file missing: {rel}')
-            if hashlib.sha256(p.read_bytes()).hexdigest()!=h: raise SystemExit(f'checksum mismatch: {rel}')
+            if manifest_digest(p)!=h: raise SystemExit(f'checksum mismatch: {rel}')
     print(f'replay ratio: {ratio:.4f}')
     print(f'migrations: RePressDB={reps}, Shape-EWMA-BE={shapes}')
     print(f'measured queries: {int(ass["total_measured_queries"]):,}')

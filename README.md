@@ -8,8 +8,9 @@ Authors: Zhichao Zhang, Xiaolu Peng, and Daoqi Sun.
 
 ## Contents
 
-- `src/repressdb/`: reference implementation of the storage architecture described in the paper.
-- `results/frozen_summaries/`: frozen CSV/JSON evidence used to reconstruct the reported paper-level statistics.
+- `src/repressdb/`: organized reference implementation of the storage architecture described in the paper.
+- `experiments/original/`: byte-for-byte snapshots of the eight original experiment entry scripts recorded in `manifests/original_experiment_scripts.json`.
+- `results/frozen_summaries/`: frozen CSV/JSON summaries used for the paper.
 - `paper/`: manuscript source, supplementary material, final figures, and figure/table generation scripts.
 - `environment/`: software and hardware metadata for the measured campaigns.
 - `scripts/`: verification, hardware capture, and smoke-test utilities.
@@ -57,7 +58,7 @@ The paired file-backed campaign was run on Windows 11 using an Intel Core i7-147
 
 ## Releases
 
-Large raw result archives should be attached to the GitHub `v1.0.0` release rather than committed to the Git history. `release_assets/README.md` gives the naming and checksum procedure.
+The complete raw result archives are packaged for distribution as a GitHub Release asset rather than committed to Git history. The release asset contains the v1.5.1 and v1.7.0 core and raw-latency archives; GitHub provides source archives for the release tag separately. `release_assets/README.md` gives the contents and checksum procedure.
 
 ## License
 

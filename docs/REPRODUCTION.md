@@ -20,6 +20,12 @@ python scripts/verify_artifact.py
 
 The command checks the repository manifest, required frozen summaries, paper-level headline values, and hardware metadata.
 
+`src/repressdb/` is the organized reference implementation. The eight
+entry scripts used in the original experiments are preserved byte for byte
+in `experiments/original/`; their recorded SHA-256 values are in
+`manifests/original_experiment_scripts.json`. The paper's frozen summaries
+are in `results/frozen_summaries/`.
+
 ## 3. Reference implementation smoke test
 
 ```bash
@@ -42,8 +48,11 @@ The study uses PEMS04, PEMS08, and Building Data Genome Project 2. They are not 
 
 ## 6. Raw result release
 
-Large raw latency arrays and complete execution outputs should be distributed as the `v1.0.0` GitHub release asset. See `release_assets/README.md`.
+The complete raw result archives, including raw latency arrays, are packaged
+for distribution as the `v1.0.0` GitHub Release asset. GitHub provides the source
+archive for the tag separately. Public source datasets are not redistributed.
+See `release_assets/README.md` for the four result archives and checksums.
 
 ## 7. Original experiment provenance
 
-The exact script names, line counts, and SHA-256 hashes recorded by the measured environment are stored in `manifests/original_experiment_scripts.json`. The compact repository keeps the frozen evidence and reference architecture implementation under version control; large execution outputs belong in the versioned release asset.
+The exact script names, line counts, and SHA-256 hashes recorded by the measured environment are stored in `manifests/original_experiment_scripts.json`. The corresponding entry-script snapshots are in `experiments/original/`. Large execution outputs belong in the versioned release asset.

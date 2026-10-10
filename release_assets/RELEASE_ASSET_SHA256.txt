@@ -1,1 +1,1 @@
-# Add the SHA-256 value after creating the v1.0.0 raw-result release asset.
+e7e070927c5e81ada50f42488be34791870c977b7b6d80aa219f71e1007147a5  RePressDB_JSS_Artifact_Full_Release_V1.0.0.zip
