@@ -1,0 +1,6 @@
+dataset,chunk_id,series_index,chunk_start,chunk_size,unit_type,unit_id,building_id,codec,raw_size_bytes,payload_size_bytes,metadata_size_bytes,stored_size_bytes,compression_ratio,encode_ns,full_decode_ns
+BDG2_R1,bdg2_r1_cs8192_ef878d3c7db0bbae,31,0,8192,building,Eagle_public_Preston,Eagle_public_Preston,whole_lz4,32768,28108,0,28108,0.8577880859375,2758400,17800
+BDG2_R1,bdg2_r1_cs8192_ef878d3c7db0bbae,31,0,8192,building,Eagle_public_Preston,Eagle_public_Preston,whole_zstd,32768,24939,0,24939,0.761077880859375,3477400,37900
+BDG2_R1,bdg2_r1_cs8192_ef878d3c7db0bbae,31,0,8192,building,Eagle_public_Preston,Eagle_public_Preston,block_lz4_64,32768,31429,4104,35533,1.084381103515625,7325400,322600
+BDG2_R1,bdg2_r1_cs8192_ef878d3c7db0bbae,31,0,8192,building,Eagle_public_Preston,Eagle_public_Preston,block_lz4_256,32768,29023,1032,30055,0.917205810546875,5767500,93900
+BDG2_R1,bdg2_r1_cs8192_ef878d3c7db0bbae,31,0,8192,building,Eagle_public_Preston,Eagle_public_Preston,block_lz4_1024,32768,28386,264,28650,0.87432861328125,7969000,36200

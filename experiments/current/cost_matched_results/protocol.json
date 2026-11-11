@@ -1,0 +1,91 @@
+{
+  "version": "FGCS-1.2",
+  "created_utc": "2026-10-31T15:13:02Z",
+  "policies": [
+    "static",
+    "shape",
+    "work_function",
+    "legacy_repress",
+    "repressdb"
+  ],
+  "groups": [
+    [
+      "Eagle_health_Jodi",
+      "Hog_other_Noma",
+      "Eagle_public_Henry",
+      "Hog_public_Brad",
+      "Eagle_office_Mandi",
+      "Lamb_health_Ken",
+      "Lamb_office_Callie",
+      "Eagle_health_Gregoria"
+    ],
+    [
+      "Shrew_office_Doris",
+      "Lamb_education_Camille",
+      "Shrew_office_Sherill",
+      "Eagle_assembly_Lacy",
+      "Eagle_office_Mable",
+      "Eagle_education_Shante",
+      "Lamb_industrial_Venessa",
+      "Eagle_office_Chantelle"
+    ],
+    [
+      "Hog_office_Corey",
+      "Eagle_lodging_Casey",
+      "Hog_services_Danny",
+      "Eagle_education_Alberto",
+      "Eagle_office_Phyllis",
+      "Hog_lodging_Ora",
+      "Hog_office_Marlena",
+      "Eagle_public_Preston"
+    ]
+  ],
+  "prior_diagnostic_buildings": [
+    "Eagle_education_Shana",
+    "Eagle_lodging_Edgardo",
+    "Eagle_lodging_Stephanie",
+    "Hog_office_Alisha",
+    "Hog_public_Octavia",
+    "Lamb_assembly_Elinor",
+    "Lamb_assembly_Theresa",
+    "Shrew_office_Doug"
+  ],
+  "query_families": [
+    "R1_A_gradual_periodic",
+    "R1_B_mean_reverting",
+    "R1_C_noisy_bursts"
+  ],
+  "sizes": [
+    8192,
+    16384
+  ],
+  "events_per_cell": 160000,
+  "calibration_query_samples": 32,
+  "calibration_migration_repeats": 3,
+  "seeds": [
+    2026103101,
+    2026103102,
+    2026103103
+  ],
+  "processor_affinity": [
+    0
+  ],
+  "pilot_note": "One unpinned static timing pilot and the first calibration are preserved separately in results_diagnostic_unpinned. Before comparative execution, all final calibration and worker processes are pinned to logical processor 0 to reduce scheduling variation. No policy parameter was selected using that pilot.",
+  "implementation_note": "The first pinned development comparison used a NumPy allocation for every credit update. Version 1.2 removes that allocation with scalar updates in the same floating-point operation order. Event-by-event decision equivalence is checked before the final full campaign. Policy parameters, query seeds and calibration tables are unchanged. All development cells remain in development_numpy_credit/.",
+  "control_settings": {
+    "windows": [
+      300,
+      100
+    ],
+    "decision_interval": 100,
+    "confirmations": 3,
+    "minimum_gain": 0.08,
+    "cooldown": 300,
+    "credit_factor": 1.25
+  },
+  "costs": "fresh query path including metadata dispatch; full durable migration transaction",
+  "baseline_inputs": "Shape and work-function receive the same fresh query and full-transaction cost tables; legacy receives fresh query and codec-only migration costs.",
+  "statistical_unit": "building-group / query-family / chunk-size; 18 independent query realizations",
+  "prior_data_note": "These buildings occurred in earlier replay; they were absent from the old eight-building end-to-end campaign. This is a new seeded confirmation campaign, not an untouched corpus.",
+  "code_sha256": "dd1e00b992b990073ebdb8becdedb2ebd82fbc9f51baa0e042b768059cb96763"
+}

@@ -1,0 +1,6 @@
+dataset,chunk_id,series_index,chunk_start,chunk_size,unit_type,unit_id,building_id,codec,raw_size_bytes,payload_size_bytes,metadata_size_bytes,stored_size_bytes,compression_ratio,encode_ns,full_decode_ns
+BDG2_JSS_FRESH_CALIBRATION,bdg2_r1_cs16384_12c06c957d291792,11,0,16384,building,Eagle_health_Gregoria,Eagle_health_Gregoria,whole_lz4,65536,62455,0,62455,0.9529876708984375,2995700,19300
+BDG2_JSS_FRESH_CALIBRATION,bdg2_r1_cs16384_12c06c957d291792,11,0,16384,building,Eagle_health_Gregoria,Eagle_health_Gregoria,whole_zstd,65536,53945,0,53945,0.8231353759765625,3393000,62800
+BDG2_JSS_FRESH_CALIBRATION,bdg2_r1_cs16384_12c06c957d291792,11,0,16384,building,Eagle_health_Gregoria,Eagle_health_Gregoria,block_lz4_64,65536,68202,8200,76402,1.165802001953125,8108500,672600
+BDG2_JSS_FRESH_CALIBRATION,bdg2_r1_cs16384_12c06c957d291792,11,0,16384,building,Eagle_health_Gregoria,Eagle_health_Gregoria,block_lz4_256,65536,63744,2056,65800,1.0040283203125,5006100,196100
+BDG2_JSS_FRESH_CALIBRATION,bdg2_r1_cs16384_12c06c957d291792,11,0,16384,building,Eagle_health_Gregoria,Eagle_health_Gregoria,block_lz4_1024,65536,62723,520,63243,0.9650115966796875,8766600,66800

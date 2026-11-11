@@ -1,0 +1,114 @@
+{
+  "version": "1.4.1",
+  "target_journal": "Journal of Big Data",
+  "study_name": "Continuous Nonstationary Replay",
+  "query_stream_provenance": "semi-synthetic query streams over real BDG2 values",
+  "parent_s1_freeze_sha256": "3d20b6bbb53f55a0cbdf00d4b76dabeff06f67d7f66b584396966c90166f95c7",
+  "parent_afhc_freeze_sha256": "48092ee607251e1290441b7259daa63e063a481cb6d4f6ddbdd0aa787ba883fa",
+  "parent_b2_freeze_sha256": "1e7708807b1f44b3b3608a3dd2d0e590d3d74e78ac53dcb7652586ed6248f733",
+  "selection": {
+    "n_buildings": 32,
+    "meter_type_counts": {
+      "electricity": 10,
+      "chilledwater": 10,
+      "steam": 9,
+      "gas": 2,
+      "hotwater": 1
+    },
+    "site_count": 4,
+    "a2_overlap_count": 0,
+    "overlap_fallback_used": false,
+    "selected_buildings_sha256": "640adc23b0d35b6f1a9c34be18fc1fc210410f16cd5c308812e736fa5d194d20",
+    "chunk_manifest_sha256": "fd71053c235ec0eafb49469928a034ce74ce6f8d9c551808f83da62fa7b81027"
+  },
+  "chunk_sizes": [
+    8192,
+    16384
+  ],
+  "trace_names": [
+    "R1_A_gradual_periodic",
+    "R1_B_mean_reverting",
+    "R1_C_noisy_bursts"
+  ],
+  "global_queries_per_trace": 640000,
+  "expected_local_queries_per_building": 20000,
+  "policies": [
+    "initial_best",
+    "best_static",
+    "afhc_d_frozen",
+    "shape_ewma_be_frozen",
+    "repressdb_frozen",
+    "hindsight_oracle"
+  ],
+  "shape_ewma_config": {
+    "config_id": "EWMA_012",
+    "alpha": 0.01,
+    "deadband": 0.05,
+    "prediction_horizon": 300,
+    "decision_interval": 100,
+    "min_observations": 200,
+    "break_even_factor": 1.0,
+    "selection_dataset": "PEMS04",
+    "selection_protocol_sha256": "5439048582702cf434cb02253834f6014051421d4f1585158b01b4a566a82c79",
+    "selection_summary": {
+      "config_id": "EWMA_012",
+      "alpha": 0.01,
+      "deadband": 0.05,
+      "prediction_horizon": 300,
+      "action_geometric_mean_ratio": 0.8307346321750674,
+      "action_median_ratio": 0.8333965642363396,
+      "action_migration_count": 108,
+      "action_rewrite_bytes": 4623318,
+      "brief_median_ratio": 1.0047584707612862,
+      "stable_median_ratio": 1.0,
+      "brief_max_ratio": 1.009179381646658,
+      "stable_max_ratio": 1.0009935549522098,
+      "brief_safety_pass": true,
+      "stable_safety_pass": true,
+      "safe": true,
+      "best_action_score": 0.8277949255855587,
+      "tie_tolerance": 0.005,
+      "equivalent_config_count": 34
+    },
+    "frozen_for_holdouts_and_r1": true,
+    "may_not_be_retuned_after_holdout": true,
+    "s1_experiment_freeze_sha256": "3d20b6bbb53f55a0cbdf00d4b76dabeff06f67d7f66b584396966c90166f95c7"
+  },
+  "repressdb_frozen": {
+    "long_window": 300,
+    "short_window": 100,
+    "minimum_observations": 200,
+    "decision_interval": 100,
+    "confirmation_rounds": 3,
+    "cooldown_queries": 300,
+    "prediction_horizon": 1200,
+    "minimum_relative_improvement": 0.08,
+    "rewrite_safety_factor": 1.25
+  },
+  "shared_write_budget": {
+    "interval_global_queries": 1000,
+    "bytes_per_interval_rule": "maximum measured directed rewrite size in each size plan",
+    "online_policies": [
+      "afhc_d_frozen",
+      "shape_ewma_be_frozen",
+      "repressdb_frozen"
+    ]
+  },
+  "actual_audit": {
+    "trace": "R1_C_noisy_bursts",
+    "building_count": 8,
+    "chunk_sizes": [
+      8192,
+      16384
+    ],
+    "policies": [
+      "initial_best",
+      "shape_ewma_be_frozen",
+      "repressdb_frozen"
+    ]
+  },
+  "metric_definitions": {
+    "unamortized": "realized old-minus-new query saving until next migration or trace end is below measured migration cost",
+    "stale": "target is not the estimated best codec at both of the first two later decision opportunities for the same chunk"
+  }
+}

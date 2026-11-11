@@ -1,0 +1,32 @@
+{
+  "size": 8192,
+  "group": 2,
+  "family": "R1_A_gradual_periodic",
+  "policy": "repressdb",
+  "seed": 2026111295,
+  "n_queries": 160000,
+  "service_ns": 8434709400,
+  "p99_ns": 122900.0,
+  "p999_ns": 201400.10000000184,
+  "max_ns": 78910500,
+  "controller_ns": 361235400,
+  "migration_ns": 406114700,
+  "migration_count": 6,
+  "rewrite_bytes": 145146,
+  "budget_denied": 0,
+  "budget_limit_bytes": 38018,
+  "prediction_ns": 7390636500.0,
+  "elapsed_ns": 9268011500,
+  "truth_ns": 558947100,
+  "correct": true,
+  "integrity": {
+    "chunk_count": 8,
+    "invalid_chunks": [],
+    "non_idle_chunks": [],
+    "chunks_without_exactly_one_payload": [],
+    "temporary_file_count": 0,
+    "active_stored_bytes": 195655,
+    "pass": true
+  },
+  "code_sha256": "dd1e00b992b990073ebdb8becdedb2ebd82fbc9f51baa0e042b768059cb96763"
+}

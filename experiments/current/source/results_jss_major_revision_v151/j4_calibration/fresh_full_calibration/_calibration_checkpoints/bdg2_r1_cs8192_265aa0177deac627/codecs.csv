@@ -1,0 +1,6 @@
+dataset,chunk_id,series_index,chunk_start,chunk_size,unit_type,unit_id,building_id,codec,raw_size_bytes,payload_size_bytes,metadata_size_bytes,stored_size_bytes,compression_ratio,encode_ns,full_decode_ns
+BDG2_JSS_FRESH_CALIBRATION,bdg2_r1_cs8192_265aa0177deac627,18,0,8192,building,Eagle_office_Mable,Eagle_office_Mable,whole_lz4,32768,31481,0,31481,0.960723876953125,3637900,56800
+BDG2_JSS_FRESH_CALIBRATION,bdg2_r1_cs8192_265aa0177deac627,18,0,8192,building,Eagle_office_Mable,Eagle_office_Mable,whole_zstd,32768,28032,0,28032,0.85546875,4377900,42400
+BDG2_JSS_FRESH_CALIBRATION,bdg2_r1_cs8192_265aa0177deac627,18,0,8192,building,Eagle_office_Mable,Eagle_office_Mable,block_lz4_64,32768,35089,4104,39193,1.196075439453125,7239400,363100
+BDG2_JSS_FRESH_CALIBRATION,bdg2_r1_cs8192_265aa0177deac627,18,0,8192,building,Eagle_office_Mable,Eagle_office_Mable,block_lz4_256,32768,32736,1032,33768,1.030517578125,7380200,101700
+BDG2_JSS_FRESH_CALIBRATION,bdg2_r1_cs8192_265aa0177deac627,18,0,8192,building,Eagle_office_Mable,Eagle_office_Mable,block_lz4_1024,32768,32037,264,32301,0.985748291015625,9402300,37400

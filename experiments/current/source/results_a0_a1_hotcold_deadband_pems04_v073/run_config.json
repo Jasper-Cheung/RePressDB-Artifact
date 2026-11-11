@@ -1,0 +1,134 @@
+{
+  "version": "0.7.3",
+  "target_journal": "Journal of Big Data",
+  "parent_protocol_sha256": "196ac4312695a0b5255129ee1587e9d7112c3bf9f795ebe6763434334fad97e8",
+  "deadband_protocol_sha256": "8cf9f05722120cf66dc34b6ffc6c9a7bdb8715632db22829935b3b4e34a80ca7",
+  "experiment_freeze_sha256": "43e1acfab0ce04a9a0cb5f9c551a4fbcb0abc9481507c0c5e03d05db9fe7ee64",
+  "resumed_from": "D:\\python_projects\\python_project IPM\\RePressDB_E0_v0_1\\results_a0_a1_hotcold_pems04_v070",
+  "reused_artifacts": [
+    "calibration_records.csv",
+    "codec_records.csv",
+    "measured_migration_costs.csv",
+    "_candidate_storage/"
+  ],
+  "afhc_grid": {
+    "adaptation_periods": [
+      100,
+      300,
+      500,
+      1000
+    ],
+    "hot_fractions": [
+      0.25,
+      0.5,
+      0.75
+    ],
+    "cold_codecs": [
+      "whole_lz4",
+      "whole_zstd"
+    ],
+    "hot_codecs": [
+      "block_lz4_64",
+      "block_lz4_256",
+      "block_lz4_1024"
+    ],
+    "frequency_ema_alpha": 0.5,
+    "number_of_configurations": 72
+  },
+  "safety_rules": {
+    "maximum_stable_ratio": 1.05,
+    "maximum_burst_ratio": 1.05,
+    "maximum_burst_median_migrations_per_chunk": 2.0,
+    "tie_score_tolerance": 0.005
+  },
+  "afhc_deadband_design": {
+    "same_scan_optimal_initialization": true,
+    "deadband_factor": 1.5,
+    "neutral_preserves_current_layout": true,
+    "hot_fraction_is_capacity_cap": true,
+    "capacity_tie_break": "frozen manifest order"
+  },
+  "selected_configuration": {
+    "config_id": "AFHC_054",
+    "adaptation_period": 1000,
+    "hot_fraction": 0.25,
+    "cold_codec": "whole_lz4",
+    "hot_codec": "block_lz4_64",
+    "frequency_ema_alpha": 0.5,
+    "hot_rule": "hot if score >= 1.5*median, cold if score <= median/1.5; neutral preserves current layout; hot_fraction caps maximum hot-set size",
+    "deadband_protocol_sha256": "8cf9f05722120cf66dc34b6ffc6c9a7bdb8715632db22829935b3b4e34a80ca7",
+    "parent_protocol_sha256": "196ac4312695a0b5255129ee1587e9d7112c3bf9f795ebe6763434334fad97e8",
+    "selection_dataset": "PEMS04",
+    "selection_version": "0.7.3",
+    "selection_summary": {
+      "config_id": "AFHC_054",
+      "adaptation_period": 1000,
+      "hot_fraction": 0.25,
+      "cold_codec": "whole_lz4",
+      "hot_codec": "block_lz4_64",
+      "composite_median_ratio": 1.0,
+      "stable_median_ratio": 1.0,
+      "burst_median_ratio": 1.0,
+      "burst_median_migrations_per_chunk": 0.0,
+      "overall_median_migrations_per_chunk": 0.0,
+      "overall_median_rewrite_bytes": 0.0,
+      "safety_pass": true,
+      "failure_reasons": "",
+      "n_safety_failures": 0,
+      "stable_excess_over_limit": 0.0,
+      "burst_excess_over_limit": 0.0,
+      "burst_migration_excess_over_limit": 0.0,
+      "selection_status": "frozen_safe_configuration"
+    },
+    "frozen_for_holdouts": true,
+    "deadband_rule": "hot >= 1.5*median; cold <= median/1.5; neutral preserves current layout",
+    "deadband_factor": 1.5,
+    "initialization": "per-chunk scan-optimal representation, identical to initial-best and RePressDB",
+    "experiment_freeze_sha256": "43e1acfab0ce04a9a0cb5f9c551a4fbcb0abc9481507c0c5e03d05db9fe7ee64"
+  },
+  "repressdb_frozen_controller": {
+    "long_window": 300,
+    "short_window": 100,
+    "minimum_observations": 200,
+    "decision_interval": 100,
+    "confirmation_rounds": 3,
+    "cooldown_queries": 300,
+    "prediction_horizon": 1200,
+    "minimum_relative_improvement": 0.08,
+    "rewrite_safety_factor": 1.25
+  },
+  "trace_seeds": [
+    20260718,
+    20260719,
+    20260720
+  ],
+  "chunk_sizes": [
+    8192,
+    16384
+  ],
+  "trace_names": [
+    "shape_only",
+    "frequency_only",
+    "joint_orthogonal",
+    "brief_burst",
+    "stable_scan"
+  ],
+  "representations": [
+    "block_lz4_1024",
+    "block_lz4_256",
+    "block_lz4_64",
+    "whole_lz4",
+    "whole_zstd"
+  ],
+  "primary_execution_mode": "warm_slicedmeta",
+  "actual_audit": "Real file-backed replay with actual decode+encode+fsync migration and every query checked against NumPy truth.",
+  "environment": {
+    "python": "3.10.20 | packaged by conda-forge | (main, Mar  5 2026, 16:36:49) [MSC v.1944 64 bit (AMD64)]",
+    "platform": "Windows-10-10.0.26200-SP0",
+    "processor": "Intel64 Family 6 Model 183 Stepping 1, GenuineIntel",
+    "numpy": "2.2.6",
+    "pandas": "2.3.3",
+    "scipy": "1.15.2",
+    "timer": "time.perf_counter_ns"
+  }
+}

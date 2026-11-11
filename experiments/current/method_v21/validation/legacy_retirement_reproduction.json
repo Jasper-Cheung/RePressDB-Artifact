@@ -1,0 +1,8 @@
+{
+  "observed": true,
+  "interruption": "original cleanup transaction begins after previous block metadata was deleted",
+  "recovery_error": "FileNotFoundError",
+  "missing_path": "C:\\Users\\10746\\Documents\\ChatGPT\\JSS\u8f6c\u6295\\FGCS_revision\\experiments\\method_v21\\validation\\legacy_gap_store\\chunks\\bdg2_r1_cs16384_034763bbceb575fe\\v00000000__block_lz4_1024.meta.bin",
+  "original_source": "byte-preserved six-transaction executor",
+  "worker_exit": 73
+}

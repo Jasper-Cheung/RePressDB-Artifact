@@ -1,0 +1,6 @@
+dataset,chunk_id,series_index,chunk_start,chunk_size,unit_type,unit_id,building_id,codec,raw_size_bytes,payload_size_bytes,metadata_size_bytes,stored_size_bytes,compression_ratio,encode_ns,full_decode_ns
+BDG2_R1,bdg2_r1_cs16384_265aa0177deac627,18,0,16384,building,Eagle_office_Mable,Eagle_office_Mable,whole_lz4,65536,56014,0,56014,0.854705810546875,3756300,50900
+BDG2_R1,bdg2_r1_cs16384_265aa0177deac627,18,0,16384,building,Eagle_office_Mable,Eagle_office_Mable,whole_zstd,65536,50187,0,50187,0.7657928466796875,4935200,105300
+BDG2_R1,bdg2_r1_cs16384_265aa0177deac627,18,0,16384,building,Eagle_office_Mable,Eagle_office_Mable,block_lz4_64,65536,64487,8200,72687,1.1091156005859375,12379900,736500
+BDG2_R1,bdg2_r1_cs16384_265aa0177deac627,18,0,16384,building,Eagle_office_Mable,Eagle_office_Mable,block_lz4_256,65536,59344,2056,61400,0.9368896484375,7831100,255000
+BDG2_R1,bdg2_r1_cs16384_265aa0177deac627,18,0,16384,building,Eagle_office_Mable,Eagle_office_Mable,block_lz4_1024,65536,57404,520,57924,0.88385009765625,9696900,197300

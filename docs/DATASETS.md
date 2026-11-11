@@ -1,6 +1,6 @@
 # Dataset provenance
 
-The artifact does not redistribute third-party datasets.
+Original dataset distributions are not mirrored. The current evaluation includes derived Building Data Genome 2 chunks and calibration inputs needed to verify the recorded queries; source provenance and checksums accompany those inputs.
 
 ## PEMS04 and PEMS08
 
@@ -12,4 +12,4 @@ Building-meter series are used for cross-domain holdout, continuous replay, the 
 
 ## Integrity practice
 
-Keep downloaded datasets outside the Git repository. Record the local source path and source checksum before generating derived chunks. The published artifact should contain only derived manifests, frozen summaries, and scripts, not the original third-party data.
+Keep downloaded datasets outside the Git repository. Record the local source path and source checksum before generating derived chunks. The artifact contains derived evaluation inputs, manifests, frozen measurements, and scripts. Retain the source dataset attribution when reusing derived inputs.

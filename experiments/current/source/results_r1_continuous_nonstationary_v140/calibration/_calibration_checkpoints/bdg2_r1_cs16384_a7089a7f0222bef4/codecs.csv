@@ -1,0 +1,6 @@
+dataset,chunk_id,series_index,chunk_start,chunk_size,unit_type,unit_id,building_id,codec,raw_size_bytes,payload_size_bytes,metadata_size_bytes,stored_size_bytes,compression_ratio,encode_ns,full_decode_ns
+BDG2_R1,bdg2_r1_cs16384_a7089a7f0222bef4,28,0,16384,building,Hog_lodging_Ora,Hog_lodging_Ora,whole_lz4,65536,42186,0,42186,0.643707275390625,3881800,70400
+BDG2_R1,bdg2_r1_cs16384_a7089a7f0222bef4,28,0,16384,building,Hog_lodging_Ora,Hog_lodging_Ora,whole_zstd,65536,28729,0,28729,0.4383697509765625,4212000,142400
+BDG2_R1,bdg2_r1_cs16384_a7089a7f0222bef4,28,0,16384,building,Hog_lodging_Ora,Hog_lodging_Ora,block_lz4_64,65536,60280,8200,68480,1.044921875,12598600,1719000
+BDG2_R1,bdg2_r1_cs16384_a7089a7f0222bef4,28,0,16384,building,Hog_lodging_Ora,Hog_lodging_Ora,block_lz4_256,65536,50601,2056,52657,0.8034820556640625,9959300,219000
+BDG2_R1,bdg2_r1_cs16384_a7089a7f0222bef4,28,0,16384,building,Hog_lodging_Ora,Hog_lodging_Ora,block_lz4_1024,65536,45733,520,46253,0.7057647705078125,9139900,89400

@@ -1,0 +1,231 @@
+{
+  "version": "1.5.1",
+  "target_journal": "Journal of Systems and Software",
+  "study": "JSS major-revision experiment suite",
+  "parent_hashes": {
+    "s1_freeze_sha256": "3d20b6bbb53f55a0cbdf00d4b76dabeff06f67d7f66b584396966c90166f95c7",
+    "r1_freeze_sha256": "4927b003d599b6890df8609ac0cae3e7fe1d574543843ed634a1c8d1232e1ac1",
+    "b1_freeze_sha256": "89b5586712ab73ad9fdfb7ec018da5c2ad884276778682c65794e7f3f0f8d3ac",
+    "a2_freeze_sha256": "4a562be0427893c04fb72e4db69816638d046ba47142beec43f6dc8b44af5e0b",
+    "afhc_freeze_sha256": "48092ee607251e1290441b7259daa63e063a481cb6d4f6ddbdd0aa787ba883fa",
+    "shape_config_sha256": "d00a8d79135dd4946cac5734e1adfe1378385b83d62ba0adf9acb0a2e1a9b720"
+  },
+  "script_sha256": "6de56c6b47b8764de256379a3627722a93278f3c6b26b2e20a878477312a9637",
+  "j1_end_to_end": {
+    "building_count": 8,
+    "selection_rule": "deterministic round-robin across frozen R1 meter-type and site strata, with within-stratum SHA-256 ordering",
+    "trace_families": [
+      "R1_A_gradual_periodic",
+      "R1_B_mean_reverting",
+      "R1_C_noisy_bursts"
+    ],
+    "chunk_sizes": [
+      8192,
+      16384
+    ],
+    "policies": [
+      "initial_best",
+      "shape_ewma_be_frozen",
+      "repressdb_frozen"
+    ],
+    "repeats": 3,
+    "policy_order": "three cyclic Latin-square orders, each policy occupying each order position once within every trace-size stratum",
+    "fresh_process_per_policy_run": true,
+    "fresh_store_copy_per_policy_run": true,
+    "truth_check_every_query": true,
+    "fresh_prefix_queries": 5000,
+    "memory_pressure_subset": {
+      "trace": "R1_C_noisy_bursts",
+      "chunk_size": 16384,
+      "bytes": 1073741824,
+      "repeats": 3
+    }
+  },
+  "j2_multiseed": {
+    "trace_seeds": [
+      20260801,
+      20260802,
+      20260803
+    ],
+    "events_per_building": 10000,
+    "building_count": 32,
+    "trace_families": [
+      "R1_A_gradual_periodic",
+      "R1_B_mean_reverting",
+      "R1_C_noisy_bursts"
+    ],
+    "chunk_sizes": [
+      8192,
+      16384
+    ],
+    "policies": [
+      "initial_best",
+      "best_static",
+      "afhc_d_frozen",
+      "shape_ewma_be_frozen",
+      "repressdb_frozen",
+      "page_hinkley_be",
+      "hindsight_oracle"
+    ],
+    "primary_statistical_unit": "independently frozen trace realization",
+    "ph_be_development": {
+      "dataset": "PEMS04 only",
+      "deltas": [
+        0.005
+      ],
+      "thresholds": [
+        10.0
+      ],
+      "window_caps": [
+        300
+      ],
+      "deadbands": [
+        0.05
+      ],
+      "horizons": [
+        600
+      ],
+      "safety_limit": 1.02,
+      "tie_tolerance": 0.005
+    },
+    "ablation_variants": [
+      {
+        "name": "full_repressdb",
+        "use_long_agreement": true,
+        "confirmation_rounds": 3,
+        "break_even_factor": 1.25,
+        "cooldown_queries": 300,
+        "use_write_budget": true,
+        "long_window": 300,
+        "short_window": 100,
+        "min_observations": 200,
+        "decision_interval": 100,
+        "prediction_horizon": 1200,
+        "min_relative_improvement": 0.08
+      },
+      {
+        "name": "short_window_only",
+        "use_long_agreement": false,
+        "confirmation_rounds": 3,
+        "break_even_factor": 1.25,
+        "cooldown_queries": 300,
+        "use_write_budget": true,
+        "long_window": 300,
+        "short_window": 100,
+        "min_observations": 200,
+        "decision_interval": 100,
+        "prediction_horizon": 1200,
+        "min_relative_improvement": 0.08
+      },
+      {
+        "name": "no_confirmation",
+        "use_long_agreement": true,
+        "confirmation_rounds": 1,
+        "break_even_factor": 1.25,
+        "cooldown_queries": 300,
+        "use_write_budget": true,
+        "long_window": 300,
+        "short_window": 100,
+        "min_observations": 200,
+        "decision_interval": 100,
+        "prediction_horizon": 1200,
+        "min_relative_improvement": 0.08
+      },
+      {
+        "name": "no_break_even",
+        "use_long_agreement": true,
+        "confirmation_rounds": 3,
+        "break_even_factor": 0.0,
+        "cooldown_queries": 300,
+        "use_write_budget": true,
+        "long_window": 300,
+        "short_window": 100,
+        "min_observations": 200,
+        "decision_interval": 100,
+        "prediction_horizon": 1200,
+        "min_relative_improvement": 0.08
+      },
+      {
+        "name": "no_cooldown",
+        "use_long_agreement": true,
+        "confirmation_rounds": 3,
+        "break_even_factor": 1.25,
+        "cooldown_queries": 0,
+        "use_write_budget": true,
+        "long_window": 300,
+        "short_window": 100,
+        "min_observations": 200,
+        "decision_interval": 100,
+        "prediction_horizon": 1200,
+        "min_relative_improvement": 0.08
+      },
+      {
+        "name": "no_write_budget",
+        "use_long_agreement": true,
+        "confirmation_rounds": 3,
+        "break_even_factor": 1.25,
+        "cooldown_queries": 300,
+        "use_write_budget": false,
+        "long_window": 300,
+        "short_window": 100,
+        "min_observations": 200,
+        "decision_interval": 100,
+        "prediction_horizon": 1200,
+        "min_relative_improvement": 0.08
+      }
+    ]
+  },
+  "j3_crash_fuzz": {
+    "total_trials": 500,
+    "random_process_termination_trials": 300,
+    "payload_truncation_trials": 75,
+    "metadata_corruption_trials": 50,
+    "orphan_file_trials": 75,
+    "truth_queries_per_trial": 20,
+    "claim_boundary": "process-termination and corruption fuzz; not physical power-loss testing"
+  },
+  "j4_calibration": {
+    "fresh_full_calibration": true,
+    "sample_fractions": [
+      0.1,
+      0.25,
+      0.5
+    ],
+    "sample_seeds": [
+      20260811,
+      20260812,
+      20260813
+    ],
+    "bounded_error_levels": [
+      0.0,
+      0.05,
+      0.1,
+      0.2
+    ],
+    "error_seeds": [
+      20260821,
+      20260822,
+      20260823
+    ],
+    "decision_table_rule": "sampled/perturbed table is used only for decisions; true measured table is used for evaluation"
+  },
+  "shared_budget": {
+    "interval_global_queries": 1000,
+    "bytes_per_interval": "maximum measured directed rewrite size in each trace-size plan"
+  },
+  "worker_assets": {
+    "selected_buildings_sha256": "410b02f20252f57df71667255a04b67f07a7b9f39a28190a4dd0c2e613f60a5c",
+    "values_sha256": {
+      "8192": "defb7d3de9d848b05aebefcfc0c147ac13ae5fbc5287c685068e441a02896bae",
+      "16384": "d67f40d5ecff5d766b7ccd2a18f3c390d4b6735ee0c0bbd1efd2577ddb9c6e47"
+    },
+    "plan_sha256": {
+      "R1_A_gradual_periodic|8192": "3bec60f501fe7e7f66bc3ce5bf82fa92cedc78f9e6fb5e59a8c8026f00edab8b",
+      "R1_B_mean_reverting|8192": "4e674cadb5cebdd41e282e2a93f57508ff4969093962ea407d0e87b6cd3cbeed",
+      "R1_C_noisy_bursts|8192": "fea3dbda1c7202db31f3eaedb14ef54777dd5d9e5b10010a9406c20df9479cdd",
+      "R1_A_gradual_periodic|16384": "3e58485bf589bac0524911f0c8138e4ad64bc2e9c31edf410b884a846ff5ffab",
+      "R1_B_mean_reverting|16384": "cee102dbdfe4e589babebb791cd188b0308febc0cd08306301c9bec2c44d6c04",
+      "R1_C_noisy_bursts|16384": "310e4a2d49a812342d4e2b7bf49d0c10404d3eb3fc10b9bcbf51f8e044849deb"
+    }
+  }
+}

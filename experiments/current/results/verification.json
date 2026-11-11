@@ -1,0 +1,12 @@
+{
+  "pass": true,
+  "source_files_verified": 41,
+  "workload_cells": 90,
+  "raw_latency_entries": 14400000,
+  "logged_policy_migrations": 379,
+  "logged_policy_payload_bytes": 16814253,
+  "paired_boundary_observations": 240,
+  "original_recovery_trials": 1100,
+  "benchmark_code_sha256": "dd1e00b992b990073ebdb8becdedb2ebd82fbc9f51baa0e042b768059cb96763",
+  "all_completed_cells_preserved": true
+}

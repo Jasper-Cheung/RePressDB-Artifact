@@ -1,0 +1,70 @@
+{
+  "version": "1.3.1",
+  "target_journal": "Journal of Big Data",
+  "study": "Shape-EWMA-BE strong online baseline development and frozen holdout validation",
+  "parent_hashes": {
+    "v070_protocol_sha256": "196ac4312695a0b5255129ee1587e9d7112c3bf9f795ebe6763434334fad97e8",
+    "v074_experiment_freeze_sha256": "48092ee607251e1290441b7259daa63e063a481cb6d4f6ddbdd0aa787ba883fa",
+    "a2_experiment_freeze_sha256": "4a562be0427893c04fb72e4db69816638d046ba47142beec43f6dc8b44af5e0b"
+  },
+  "grid": {
+    "alphas": [
+      0.01,
+      0.02,
+      0.05,
+      0.1,
+      0.2
+    ],
+    "deadbands": [
+      0.0,
+      0.01,
+      0.02,
+      0.05
+    ],
+    "prediction_horizons": [
+      300,
+      600,
+      1200,
+      2400
+    ],
+    "configuration_count": 80
+  },
+  "decision_rule": {
+    "decision_interval": 100,
+    "minimum_observations": 200,
+    "single_ewma": true,
+    "dual_window": false,
+    "confirmation": false,
+    "cooldown": false,
+    "break_even_factor": 1.0,
+    "migration_cost_information": "previously measured directed cost table; no future actual migration time"
+  },
+  "selection": {
+    "dataset": "PEMS04 only",
+    "action_traces": [
+      "shape_only",
+      "joint_orthogonal"
+    ],
+    "primary_score": "geometric mean ratio to initial-best",
+    "brief_median_limit": 1.02,
+    "stable_median_limit": 1.02,
+    "tie_tolerance": 0.005
+  },
+  "holdouts": [
+    "PEMS08",
+    "BDG2"
+  ],
+  "actual_audit": {
+    "trace_seed": 20260718,
+    "traces": [
+      "shape_only",
+      "brief_burst",
+      "stable_scan"
+    ],
+    "chunk_sizes": [
+      8192,
+      16384
+    ],
+    "purpose": "file-backed validation of the frozen model baseline"
+  }
+}

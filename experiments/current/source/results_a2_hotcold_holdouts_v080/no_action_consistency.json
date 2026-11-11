@@ -1,0 +1,23 @@
+{
+  "datasets": {
+    "BDG2": {
+      "median_afhc_over_initial": 1.0013789100002413,
+      "required_interval": [
+        0.95,
+        1.05
+      ],
+      "afhc_migrations": 0,
+      "pass": true
+    },
+    "PEMS08": {
+      "median_afhc_over_initial": 1.0015553952833032,
+      "required_interval": [
+        0.95,
+        1.05
+      ],
+      "afhc_migrations": 0,
+      "pass": true
+    }
+  },
+  "all_datasets_pass": true
+}

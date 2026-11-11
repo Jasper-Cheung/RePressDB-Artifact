@@ -1,0 +1,11 @@
+{
+  "database_bytes": 933888,
+  "wal_bytes": 0,
+  "shm_bytes": 32768,
+  "total_catalog_files_bytes": 966656,
+  "page_size": 4096,
+  "page_count": 228,
+  "allocated_database_bytes": 933888,
+  "bytes_per_chunk_allocated": 1297.0666666666666,
+  "files_bytes_per_chunk": 1342.5777777777778
+}

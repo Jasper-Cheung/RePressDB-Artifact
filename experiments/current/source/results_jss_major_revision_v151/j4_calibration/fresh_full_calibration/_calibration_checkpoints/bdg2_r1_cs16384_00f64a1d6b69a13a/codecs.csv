@@ -1,0 +1,6 @@
+dataset,chunk_id,series_index,chunk_start,chunk_size,unit_type,unit_id,building_id,codec,raw_size_bytes,payload_size_bytes,metadata_size_bytes,stored_size_bytes,compression_ratio,encode_ns,full_decode_ns
+BDG2_JSS_FRESH_CALIBRATION,bdg2_r1_cs16384_00f64a1d6b69a13a,0,0,16384,building,Eagle_lodging_Edgardo,Eagle_lodging_Edgardo,whole_lz4,65536,52439,0,52439,0.8001556396484375,4210000,42800
+BDG2_JSS_FRESH_CALIBRATION,bdg2_r1_cs16384_00f64a1d6b69a13a,0,0,16384,building,Eagle_lodging_Edgardo,Eagle_lodging_Edgardo,whole_zstd,65536,41616,0,41616,0.635009765625,5501600,88000
+BDG2_JSS_FRESH_CALIBRATION,bdg2_r1_cs16384_00f64a1d6b69a13a,0,0,16384,building,Eagle_lodging_Edgardo,Eagle_lodging_Edgardo,block_lz4_64,65536,70168,8200,78368,1.19580078125,8475900,727300
+BDG2_JSS_FRESH_CALIBRATION,bdg2_r1_cs16384_00f64a1d6b69a13a,0,0,16384,building,Eagle_lodging_Edgardo,Eagle_lodging_Edgardo,block_lz4_256,65536,64445,2056,66501,1.0147247314453125,7723900,203500
+BDG2_JSS_FRESH_CALIBRATION,bdg2_r1_cs16384_00f64a1d6b69a13a,0,0,16384,building,Eagle_lodging_Edgardo,Eagle_lodging_Edgardo,block_lz4_1024,65536,60380,520,60900,0.92926025390625,9303700,86500

@@ -1,0 +1,191 @@
+{
+  "version": "0.7.4",
+  "target_journal": "Journal of Big Data",
+  "status": "A1 action-sensitive AF-HC-D selection and three-repeat paired actual audit complete",
+  "study_role": "PEMS04 development selection only. PEMS08 and BDG2 remain untouched holdouts.",
+  "parent_a0_protocol_sha256": "196ac4312695a0b5255129ee1587e9d7112c3bf9f795ebe6763434334fad97e8",
+  "parent_deadband_protocol_sha256": "8cf9f05722120cf66dc34b6ffc6c9a7bdb8715632db22829935b3b4e34a80ca7",
+  "v074_protocol_sha256": "8bed8e0a66202997b7cf5626102ce53e4c5bd3c02726cc37c3ce8c4f375ad058",
+  "experiment_freeze_sha256": "48092ee607251e1290441b7259daa63e063a481cb6d4f6ddbdd0aa787ba883fa",
+  "selected_configuration": {
+    "config_id": "AFHC_056",
+    "adaptation_period": 1000,
+    "hot_fraction": 0.25,
+    "cold_codec": "whole_lz4",
+    "hot_codec": "block_lz4_1024",
+    "frequency_ema_alpha": 0.5,
+    "hot_rule": "hot if score >= 1.5*median, cold if score <= median/1.5; neutral preserves current layout; hot_fraction caps maximum hot-set size",
+    "selection_dataset": "PEMS04",
+    "selection_version": "0.7.4",
+    "frozen_for_holdouts": true,
+    "deadband_factor": 1.5,
+    "deadband_protocol_sha256": "8cf9f05722120cf66dc34b6ffc6c9a7bdb8715632db22829935b3b4e34a80ca7",
+    "v074_protocol_sha256": "8bed8e0a66202997b7cf5626102ce53e4c5bd3c02726cc37c3ce8c4f375ad058",
+    "selection_objective": "geometric mean over frequency_only and joint_orthogonal action cells",
+    "selection_summary": {
+      "config_id": "AFHC_056",
+      "adaptation_period": 1000,
+      "hot_fraction": 0.25,
+      "cold_codec": "whole_lz4",
+      "hot_codec": "block_lz4_1024",
+      "action_geometric_mean_ratio": 0.9023705501389339,
+      "action_median_ratio": 1.0040733599008627,
+      "action_mean_ratio": 0.924369966393395,
+      "action_median_migrations_per_chunk": 0.75,
+      "action_median_rewrite_bytes": 555266.0,
+      "stable_median_ratio": 1.0,
+      "burst_median_ratio": 1.0,
+      "burst_median_migrations_per_chunk": 0.0,
+      "all_trace_median_migrations_per_chunk": 0.0,
+      "all_trace_median_rewrite_bytes": 0.0,
+      "safety_pass": true,
+      "failure_reasons": "",
+      "n_safety_failures": 0,
+      "stable_excess_over_limit": 0.0,
+      "burst_excess_over_limit": 0.0,
+      "burst_migration_excess_over_limit": 0.0,
+      "selection_status": "frozen_action_sensitive_configuration",
+      "best_action_score_before_tie_band": 0.9023705501389339,
+      "tie_band_relative_tolerance": 0.005,
+      "n_configs_in_tie_band": 9
+    },
+    "initialization": "per-chunk scan-optimal representation, identical to initial-best and RePressDB",
+    "experiment_freeze_sha256": "48092ee607251e1290441b7259daa63e063a481cb6d4f6ddbdd0aa787ba883fa"
+  },
+  "selected_action_score": {
+    "geometric_mean_ratio": 0.9023705501389339,
+    "action_traces": [
+      "frequency_only",
+      "joint_orthogonal"
+    ],
+    "number_of_action_cells": 12,
+    "safe_configuration_count": 72,
+    "configs_in_0_5_percent_tie_band": 9
+  },
+  "actual_audit": {
+    "repeats": 3,
+    "expected_policy_runs": 270,
+    "completed_policy_runs": 270,
+    "pairing_level": "repeat × seed × trace × chunk size × series",
+    "repressdb_vs_afhc": {
+      "shape_only|8192": {
+        "median_ratio": 0.9976321180617788,
+        "bootstrap_ci_low": 0.9961829793188417,
+        "bootstrap_ci_high": 0.9997883439368573,
+        "fraction_policy_faster": 0.6875,
+        "wilcoxon_log_ratio_p": 0.06498370366171002,
+        "n_independent_series": 32
+      },
+      "shape_only|16384": {
+        "median_ratio": 0.9851712617130307,
+        "bootstrap_ci_low": 0.8103561659757096,
+        "bootstrap_ci_high": 1.0028124377570085,
+        "fraction_policy_faster": 0.53125,
+        "wilcoxon_log_ratio_p": 0.006478707771748304,
+        "n_independent_series": 32
+      },
+      "frequency_only|8192": {
+        "median_ratio": 0.9901554077509505,
+        "bootstrap_ci_low": 0.643536477992904,
+        "bootstrap_ci_high": 0.9945067521655646,
+        "fraction_policy_faster": 0.78125,
+        "wilcoxon_log_ratio_p": 0.0015479698777198792,
+        "n_independent_series": 32
+      },
+      "frequency_only|16384": {
+        "median_ratio": 0.9713320784241402,
+        "bootstrap_ci_low": 0.9275052225879068,
+        "bootstrap_ci_high": 0.9922211297140401,
+        "fraction_policy_faster": 0.75,
+        "wilcoxon_log_ratio_p": 0.00033454643562436104,
+        "n_independent_series": 32
+      },
+      "joint_orthogonal|8192": {
+        "median_ratio": 0.998616269251598,
+        "bootstrap_ci_low": 0.989344842470667,
+        "bootstrap_ci_high": 1.0017491491548054,
+        "fraction_policy_faster": 0.625,
+        "wilcoxon_log_ratio_p": 0.1657568528316915,
+        "n_independent_series": 32
+      },
+      "joint_orthogonal|16384": {
+        "median_ratio": 0.9751062890112335,
+        "bootstrap_ci_low": 0.9673994805489717,
+        "bootstrap_ci_high": 0.9795764612895124,
+        "fraction_policy_faster": 0.8125,
+        "wilcoxon_log_ratio_p": 0.0099095250479877,
+        "n_independent_series": 32
+      },
+      "brief_burst|8192": {
+        "median_ratio": 0.9958762525801919,
+        "bootstrap_ci_low": 0.9944636301336995,
+        "bootstrap_ci_high": 0.9986120920081831,
+        "fraction_policy_faster": 0.78125,
+        "wilcoxon_log_ratio_p": 0.00025640055537223816,
+        "n_independent_series": 32
+      },
+      "brief_burst|16384": {
+        "median_ratio": 1.004443351983654,
+        "bootstrap_ci_low": 1.0015171435423356,
+        "bootstrap_ci_high": 1.006751043408828,
+        "fraction_policy_faster": 0.28125,
+        "wilcoxon_log_ratio_p": 0.00011030398309230804,
+        "n_independent_series": 32
+      },
+      "stable_scan|8192": {
+        "median_ratio": 0.9999108254460336,
+        "bootstrap_ci_low": 0.9979289455854043,
+        "bootstrap_ci_high": 1.0007263027830138,
+        "fraction_policy_faster": 0.5,
+        "wilcoxon_log_ratio_p": 0.4319446589797735,
+        "n_independent_series": 32
+      },
+      "stable_scan|16384": {
+        "median_ratio": 0.9928311433511119,
+        "bootstrap_ci_low": 0.9903675260685422,
+        "bootstrap_ci_high": 0.99668535019774,
+        "fraction_policy_faster": 0.6875,
+        "wilcoxon_log_ratio_p": 0.0010593757033348083,
+        "n_independent_series": 32
+      }
+    }
+  },
+  "no_action_consistency": {
+    "no_action_traces": [
+      "shape_only",
+      "brief_burst",
+      "stable_scan"
+    ],
+    "n_exact_paired_cells": 1728,
+    "overall_median_afhc_over_initial": 1.0028818575884335,
+    "required_interval": [
+      0.95,
+      1.05
+    ],
+    "overall_median_within_required_interval": true,
+    "afhc_total_migrations_in_no_action_traces": 0,
+    "zero_no_action_migrations": true,
+    "pass": true
+  },
+  "calibrated_replay_validation": {
+    "median_absolute_afhc_ratio_error": 0.00792132914869137,
+    "median_absolute_repressdb_ratio_error": 0.04153471633378736,
+    "required_maximum": 0.1,
+    "pass": true
+  },
+  "development_checks": {
+    "D1_exactly_72_grid_configurations": true,
+    "D2_at_least_one_configuration_passes_unchanged_safety": true,
+    "D3_one_and_only_one_action_sensitive_configuration_selected": true,
+    "D4_action_objective_is_non_degenerate": true,
+    "D5_three_repeat_audit_complete": true,
+    "D6_no_action_wallclock_consistency": true,
+    "D7_calibrated_replay_tracks_repeated_actual_ratios": true,
+    "D8_all_actual_queries_passed_truth_checks": true,
+    "D9_holdouts_remain_untouched": true,
+    "A2_go_primary_calibrated_replay": true,
+    "wallclock_primary_allowed": true
+  },
+  "interpretation_rule": "If A2_go_primary_calibrated_replay is true, the frozen AF-HC-D configuration may be evaluated on PEMS08 and BDG2. If wallclock_primary_allowed is false, calibrated replay remains the primary performance metric and repeated wall-clock results are retained as diagnostics.",
+  "next_gate": "Run A2 only with this exact hotcold_frozen_config.json and experiment-freeze hash. Do not modify AF-HC-D or RePressDB parameters after inspecting holdout results."
+}

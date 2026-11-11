@@ -1,1 +1,6 @@
 experiments/original/*.py -text
+
+experiments/current/** -text
+*.npz binary
+*.png binary
+*.pdf binary

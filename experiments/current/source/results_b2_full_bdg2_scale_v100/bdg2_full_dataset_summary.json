@@ -1,0 +1,31 @@
+{
+  "candidate_meter_series": 3053,
+  "eligible_meter_series": 564,
+  "eligible_unique_buildings": 468,
+  "eligible_meter_types": {
+    "chilledwater": 138,
+    "electricity": 302,
+    "gas": 26,
+    "hotwater": 30,
+    "irrigation": 1,
+    "steam": 64,
+    "water": 3
+  },
+  "eligible_sites": 13,
+  "views": {
+    "data_scale_8192": {
+      "chunk_size": 8192,
+      "chunk_count": 720,
+      "raw_bytes": 23592960,
+      "unique_series": 564,
+      "unique_buildings": 468
+    },
+    "catalog_scale_2048": {
+      "chunk_size": 2048,
+      "chunk_count": 3283,
+      "raw_bytes": 26894336,
+      "unique_series": 564,
+      "unique_buildings": 468
+    }
+  }
+}

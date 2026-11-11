@@ -1,0 +1,6 @@
+dataset,chunk_id,series_index,chunk_start,chunk_size,unit_type,unit_id,building_id,codec,raw_size_bytes,payload_size_bytes,metadata_size_bytes,stored_size_bytes,compression_ratio,encode_ns,full_decode_ns
+BDG2_R1,bdg2_r1_cs16384_034763bbceb575fe,1,0,16384,building,Eagle_health_Jodi,Eagle_health_Jodi,whole_lz4,65536,64771,0,64771,0.9883270263671875,5020900,63600
+BDG2_R1,bdg2_r1_cs16384_034763bbceb575fe,1,0,16384,building,Eagle_health_Jodi,Eagle_health_Jodi,whole_zstd,65536,58713,0,58713,0.8958892822265625,5219600,164800
+BDG2_R1,bdg2_r1_cs16384_034763bbceb575fe,1,0,16384,building,Eagle_health_Jodi,Eagle_health_Jodi,block_lz4_64,65536,70402,8200,78602,1.199371337890625,20980700,3197000
+BDG2_R1,bdg2_r1_cs16384_034763bbceb575fe,1,0,16384,building,Eagle_health_Jodi,Eagle_health_Jodi,block_lz4_256,65536,66036,2056,68092,1.03900146484375,10529800,1039400
+BDG2_R1,bdg2_r1_cs16384_034763bbceb575fe,1,0,16384,building,Eagle_health_Jodi,Eagle_health_Jodi,block_lz4_1024,65536,65040,520,65560,1.0003662109375,11404800,318900

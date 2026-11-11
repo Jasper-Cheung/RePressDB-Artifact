@@ -1,65 +1,50 @@
-# RePressDB Artifact
+# RePressDB
 
-This repository accompanies the manuscript:
+Risk-aware layout adaptation for immutable compressed time-series chunks.
 
-**RePressDB: A Dependable Self-Adaptive Storage Architecture for Nonstationary Time-Series Workloads**
-
-Authors: Zhichao Zhang, Xiaolu Peng, and Daoqi Sun.
+Authors: Zhichao Zhang, Daoqi Sun, Xiaolu Peng.
 
 ## Contents
 
-- `src/repressdb/`: organized reference implementation of the storage architecture described in the paper.
-- `experiments/original/`: byte-for-byte snapshots of the eight original experiment entry scripts recorded in `manifests/original_experiment_scripts.json`.
-- `results/frozen_summaries/`: frozen CSV/JSON summaries used for the paper.
-- `paper/`: manuscript source, supplementary material, final figures, and figure/table generation scripts.
-- `environment/`: software and hardware metadata for the measured campaigns.
-- `scripts/`: verification, hardware capture, and smoke-test utilities.
-- `docs/`: reproduction notes, dataset provenance, artifact map, and release instructions.
-- `manifests/`: checksums and source-script provenance.
+| Path | Contents |
+| --- | --- |
+| `paper/current/` | Current manuscript, figures, bibliography, and PDF |
+| `experiments/current/method_v22/` | Final controller, durable executor, frozen protocol, and results |
+| `experiments/current/source/` | Original experiment modules and calibration inputs |
+| `experiments/current/review_analysis_v23/` | Decision, migration-episode, and stable-window analyses |
+| `experiments/current/figure_revision_v26/` | Figure-generation script and plotted values |
+| `src/repressdb/` | Reference storage implementation |
 
-The public datasets used by the study are not redistributed here. Dataset acquisition and placement are described in `docs/DATASETS.md`.
+The current comparison contains 144 executions, six policies, 24 paired instances, and 23,040,000 checked events. Continuous-mixture and persistent-shift results are reported separately. Calibration and controller initialization are accounted for separately from service time.
 
-## Quick verification
+## Environment
 
-Create an environment and install the pinned dependencies:
-
-```bash
-python -m venv .venv
-# Windows
-.venv\Scripts\activate
-# Linux/macOS
-# source .venv/bin/activate
-pip install -r environment/requirements.txt
-```
-
-Verify the repository and frozen evidence:
+Measurements used Python 3.10.20, NumPy 2.2.6, Pandas 2.3.3, LZ4 4.4.5, Zstandard 0.25.0, and psutil 7.2.2 on Windows/NTFS. Install the recorded dependencies:
 
 ```bash
-python scripts/verify_artifact.py
+pip install -r experiments/current/requirements.txt
 ```
 
-Run the architecture smoke test:
+## Verification
+
+Download `RePressDB-evidence-2026-11-11.zip` from the **artifact-2026-11-11** release and install the event arrays:
 
 ```bash
-python scripts/smoke_test.py
+python scripts/install_measurements.py RePressDB-evidence-2026-11-11.zip
+python experiments/current/method_v22/check_method.py
+python experiments/current/method_v22/verify_v2.py
+python experiments/current/review_analysis_v23/verify_review.py
 ```
 
-Regenerate paper-level numerical macros and figures from the frozen summaries:
+The installer checks the archive checksum. Verification covers source hashes, calibration records, per-event component sums, migration records, payload budgets, and recovery outcomes. The release retains the complete measurements and development records. Git tracks the source, summaries, derived evaluation inputs, and analysis tables.
+
+## Manuscript and figures
 
 ```bash
-python scripts/regenerate_paper_assets.py
+cd paper/current
+latexmk -pdf -interaction=nonstopmode -halt-on-error main.tex
 ```
 
-Detailed instructions are in `docs/REPRODUCTION.md`.
+Figures 2--4 can be regenerated with `experiments/current/figure_revision_v26/render_figures.py`. Plotting uses the dependencies in `experiments/current/requirements-figures.txt` and installed Times New Roman fonts. Figure 1 is supplied as a separate image.
 
-## Experimental environment
-
-The paired file-backed campaign was run on Windows 11 using an Intel Core i7-14700HX (20 physical cores, 28 logical processors), 16 GB RAM, and a YMTC YMSS2ED08D25MC NVMe SSD. SQLite used WAL mode with `synchronous=FULL`. Exact metadata is preserved in `environment/hardware_exact.json` and `environment/environment_report.json`.
-
-## Releases
-
-The complete raw result archives are packaged for distribution as a GitHub Release asset rather than committed to Git history. The release asset contains the v1.5.1 and v1.7.0 core and raw-latency archives; GitHub provides source archives for the release tag separately. `release_assets/README.md` gives the contents and checksum procedure.
-
-## License
-
-Source code is released under the MIT License. Frozen result tables and documentation are released under CC BY 4.0; see `LICENSE_RESULTS`.
+Original experiment snapshots and the preceding manuscript remain in their existing directories. Dataset information is in `docs/DATASETS.md`. Source code uses the MIT License; result tables and documentation use CC BY 4.0.

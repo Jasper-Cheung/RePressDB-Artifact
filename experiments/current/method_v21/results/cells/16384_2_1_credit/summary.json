@@ -1,0 +1,48 @@
+{
+  "size": 16384,
+  "group": 2,
+  "family": "R1_B_mean_reverting",
+  "policy": "credit",
+  "seed": 2026126607,
+  "n_queries": 160000,
+  "service_ns": 19391127400,
+  "query_ns": 18176044700,
+  "controller_ns": 800389900,
+  "migration_ns": 414692800,
+  "p99_ns": 411402.00000000186,
+  "p999_ns": 1619802.7000000495,
+  "max_ns": 69019900,
+  "migration_count": 7,
+  "rewrite_bytes": 332170,
+  "budget_denied": 0,
+  "budget_limit_bytes": 76363,
+  "prediction_ns": 10321253276.5625,
+  "elapsed_ns": 21350916600,
+  "truth_ns": 1236234500,
+  "correct": true,
+  "integrity": {
+    "chunk_count": 8,
+    "invalid_chunks": [],
+    "non_idle_chunks": [],
+    "chunks_without_exactly_one_payload": [],
+    "temporary_file_count": 0,
+    "active_stored_bytes": 392881,
+    "pass": true
+  },
+  "sources": {
+    "benchmark_v2.py": "0b5d262a4faaf06b776a26a134b405db3159fd2696cb1e74f2f626fc90a7eaa9",
+    "efficient_executor.py": "aa47bb9e1bf3d615e0b09837c6bec449dd423df9b2bf014bc8373ce403830dab",
+    "risk_controller.py": "3264395f85158ee4ccfdb0220e0d3a4f109a9f65e98be9bb9e37cc833221475f",
+    "fgcs_benchmark.py": "dd1e00b992b990073ebdb8becdedb2ebd82fbc9f51baa0e042b768059cb96763"
+  },
+  "initial_codecs": [
+    "whole_lz4",
+    "whole_lz4",
+    "whole_lz4",
+    "whole_lz4",
+    "whole_lz4",
+    "whole_lz4",
+    "whole_lz4",
+    "whole_lz4"
+  ]
+}

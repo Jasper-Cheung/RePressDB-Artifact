@@ -1,0 +1,231 @@
+{
+  "version": "0.7.3",
+  "target_journal": "Journal of Big Data",
+  "status": "A0 protocol frozen and A1 PEMS04 AF-HC development selection complete",
+  "study_role": "Nearest-baseline development selection only. PEMS08 and BDG2 remain untouched holdouts for A2.",
+  "protocol_sha256": "8cf9f05722120cf66dc34b6ffc6c9a7bdb8715632db22829935b3b4e34a80ca7",
+  "selected_configuration": {
+    "config_id": "AFHC_054",
+    "adaptation_period": 1000,
+    "hot_fraction": 0.25,
+    "cold_codec": "whole_lz4",
+    "hot_codec": "block_lz4_64",
+    "frequency_ema_alpha": 0.5,
+    "hot_rule": "hot if score >= 1.5*median, cold if score <= median/1.5; neutral preserves current layout; hot_fraction caps maximum hot-set size",
+    "deadband_protocol_sha256": "8cf9f05722120cf66dc34b6ffc6c9a7bdb8715632db22829935b3b4e34a80ca7",
+    "parent_protocol_sha256": "196ac4312695a0b5255129ee1587e9d7112c3bf9f795ebe6763434334fad97e8",
+    "selection_dataset": "PEMS04",
+    "selection_version": "0.7.3",
+    "selection_summary": {
+      "config_id": "AFHC_054",
+      "adaptation_period": 1000,
+      "hot_fraction": 0.25,
+      "cold_codec": "whole_lz4",
+      "hot_codec": "block_lz4_64",
+      "composite_median_ratio": 1.0,
+      "stable_median_ratio": 1.0,
+      "burst_median_ratio": 1.0,
+      "burst_median_migrations_per_chunk": 0.0,
+      "overall_median_migrations_per_chunk": 0.0,
+      "overall_median_rewrite_bytes": 0.0,
+      "safety_pass": true,
+      "failure_reasons": "",
+      "n_safety_failures": 0,
+      "stable_excess_over_limit": 0.0,
+      "burst_excess_over_limit": 0.0,
+      "burst_migration_excess_over_limit": 0.0,
+      "selection_status": "frozen_safe_configuration"
+    },
+    "frozen_for_holdouts": true,
+    "deadband_rule": "hot >= 1.5*median; cold <= median/1.5; neutral preserves current layout",
+    "deadband_factor": 1.5,
+    "initialization": "per-chunk scan-optimal representation, identical to initial-best and RePressDB",
+    "experiment_freeze_sha256": "43e1acfab0ce04a9a0cb5f9c551a4fbcb0abc9481507c0c5e03d05db9fe7ee64"
+  },
+  "selected_grid_results": {
+    "composite_median_ratio": 1.0,
+    "stable_median_ratio": 1.0,
+    "brief_burst_median_ratio": 1.0,
+    "median_migrations_per_chunk": 0.0
+  },
+  "actual_audit_repressdb_vs_afhc": {
+    "shape_only|8192": {
+      "median_ratio_repressdb_over_afhc": 1.0262535849929797,
+      "bootstrap_ci_low": 1.0228998038928963,
+      "bootstrap_ci_high": 1.028254073308951,
+      "fraction_repressdb_faster": 0.09375,
+      "wilcoxon_p": 0.0009061265736818314
+    },
+    "frequency_only|8192": {
+      "median_ratio_repressdb_over_afhc": 0.47027752092978237,
+      "bootstrap_ci_low": 0.3412898055038223,
+      "bootstrap_ci_high": 0.5269462237488839,
+      "fraction_repressdb_faster": 0.90625,
+      "wilcoxon_p": 6.51925802230835e-09
+    },
+    "joint_orthogonal|8192": {
+      "median_ratio_repressdb_over_afhc": 0.5081690106141974,
+      "bootstrap_ci_low": 0.3337194234156405,
+      "bootstrap_ci_high": 0.5513198492965793,
+      "fraction_repressdb_faster": 0.90625,
+      "wilcoxon_p": 1.7276033759117126e-07
+    },
+    "brief_burst|8192": {
+      "median_ratio_repressdb_over_afhc": 1.0314739942825109,
+      "bootstrap_ci_low": 1.028921631875033,
+      "bootstrap_ci_high": 1.034591932922972,
+      "fraction_repressdb_faster": 0.0,
+      "wilcoxon_p": 4.656612873077393e-10
+    },
+    "stable_scan|8192": {
+      "median_ratio_repressdb_over_afhc": 0.9980254621897617,
+      "bootstrap_ci_low": 0.9959644924209703,
+      "bootstrap_ci_high": 0.9998300394492023,
+      "fraction_repressdb_faster": 0.65625,
+      "wilcoxon_p": 0.004412336274981499
+    },
+    "shape_only|16384": {
+      "median_ratio_repressdb_over_afhc": 0.9204605270820332,
+      "bootstrap_ci_low": 0.7908648107797874,
+      "bootstrap_ci_high": 0.9871356081230352,
+      "fraction_repressdb_faster": 1.0,
+      "wilcoxon_p": 4.656612873077393e-10
+    },
+    "frequency_only|16384": {
+      "median_ratio_repressdb_over_afhc": 0.42811990325319116,
+      "bootstrap_ci_low": 0.24022530019548577,
+      "bootstrap_ci_high": 0.893388419390432,
+      "fraction_repressdb_faster": 1.0,
+      "wilcoxon_p": 4.656612873077393e-10
+    },
+    "joint_orthogonal|16384": {
+      "median_ratio_repressdb_over_afhc": 0.3499992706451543,
+      "bootstrap_ci_low": 0.12337012001063712,
+      "bootstrap_ci_high": 0.7842527673640722,
+      "fraction_repressdb_faster": 0.96875,
+      "wilcoxon_p": 9.313225746154785e-10
+    },
+    "brief_burst|16384": {
+      "median_ratio_repressdb_over_afhc": 0.8393399364043763,
+      "bootstrap_ci_low": 0.8374966081194798,
+      "bootstrap_ci_high": 0.8415078321919189,
+      "fraction_repressdb_faster": 0.90625,
+      "wilcoxon_p": 2.0042061805725098e-06
+    },
+    "stable_scan|16384": {
+      "median_ratio_repressdb_over_afhc": 1.019420224954791,
+      "bootstrap_ci_low": 1.0169897274030166,
+      "bootstrap_ci_high": 1.0222914611046587,
+      "fraction_repressdb_faster": 0.0,
+      "wilcoxon_p": 4.656612873077393e-10
+    }
+  },
+  "calibrated_replay_validation": {
+    "median_absolute_afhc_ratio_error": 0.16314567431110716,
+    "median_absolute_repressdb_ratio_error": 0.04556677328122971
+  },
+  "development_checks": {
+    "D1_exactly_72_grid_configurations": true,
+    "D2_at_least_one_configuration_passes_safety": true,
+    "D3_one_and_only_one_frozen_configuration": true,
+    "D4_actual_audit_has_all_policy_trace_size_seed_cells": true,
+    "D5_shape_only_development_signal_repressdb_faster": true,
+    "D6_frequency_only_development_noncatastrophic": true,
+    "D7_stable_development_noncatastrophic": true,
+    "D8_calibrated_replay_tracks_actual_ratios": false,
+    "all_eight": false
+  },
+  "interpretation_boundary": "A1 can establish that a fair AF-HC configuration has been selected and that the implementation behaves as intended on PEMS04. It cannot establish the paper's nearest-baseline claim; that claim requires the frozen PEMS08 and BDG2 A2 holdouts.",
+  "next_gate": "Run A2 with hotcold_frozen_config.json unchanged. Do not alter AF-HC or RePressDB parameters after inspecting A2 results.",
+  "parent_protocol_sha256": "196ac4312695a0b5255129ee1587e9d7112c3bf9f795ebe6763434334fad97e8",
+  "deadband_protocol_sha256": "8cf9f05722120cf66dc34b6ffc6c9a7bdb8715632db22829935b3b4e34a80ca7",
+  "implementation_repair": {
+    "version": "0.7.3",
+    "parent_protocol_sha256": "196ac4312695a0b5255129ee1587e9d7112c3bf9f795ebe6763434334fad97e8",
+    "change_classification": "nearest-baseline redesign after preregistered no-go diagnostic",
+    "baseline_name": "AF-HC-D",
+    "deadband_factor": 1.5,
+    "deadband_derivation": "With 32 equally accessed chunks and the shortest 100-query classification interval, deterministic round truncation creates at most a 4/3 count ratio. A fixed 1.5 factor rejects that artifact while retaining the protocol's 4:1 frequency contrast.",
+    "classification": {
+      "hot": "score >= 1.5 * median_score",
+      "cold": "score <= median_score / 1.5",
+      "neutral": "preserve the current representation",
+      "hot_fraction_role": "maximum hot-set capacity among chunks passing the hot threshold; equal-score capacity ties use frozen manifest order",
+      "frequency_ema_alpha": 0.5
+    },
+    "fair_initialization": "AF-HC-D, initial-best, and RePressDB all begin from each chunk's scan-optimal representation.",
+    "information_boundary": {
+      "allowed": [
+        "per-chunk access counts",
+        "frequency EMA",
+        "fixed reclassification period",
+        "fixed 1.5 deadband",
+        "maximum hot-set fraction",
+        "fixed hot and cold codecs"
+      ],
+      "forbidden": [
+        "query class or query shape",
+        "point/scan/aggregate proportions",
+        "dual-timescale estimates",
+        "predicted saving",
+        "break-even",
+        "confirmation rounds",
+        "cooldown",
+        "future phase labels"
+      ]
+    },
+    "unchanged": {
+      "pems04_series_selection": true,
+      "pems08_reserved_selection": true,
+      "bdg2_reserved_selection": true,
+      "chunk_sizes": [
+        8192,
+        16384
+      ],
+      "trace_names": [
+        "shape_only",
+        "frequency_only",
+        "joint_orthogonal",
+        "brief_burst",
+        "stable_scan"
+      ],
+      "trace_seeds": [
+        20260718,
+        20260719,
+        20260720
+      ],
+      "grid_size": 72,
+      "adaptation_periods": [
+        100,
+        300,
+        500,
+        1000
+      ],
+      "hot_fractions": [
+        0.25,
+        0.5,
+        0.75
+      ],
+      "cold_codecs": [
+        "whole_lz4",
+        "whole_zstd"
+      ],
+      "hot_codecs": [
+        "block_lz4_64",
+        "block_lz4_256",
+        "block_lz4_1024"
+      ],
+      "stable_ratio_limit": 1.05,
+      "burst_ratio_limit": 1.05,
+      "burst_migration_limit": 2.0,
+      "repressdb_controller": "unchanged and frozen"
+    },
+    "previous_diagnostic": {
+      "version": "0.7.2",
+      "status": "no safe naive-percentile AF-HC configuration",
+      "scientific_use": "diagnostic only; not the nearest baseline"
+    },
+    "holdout_status": "PEMS08 and BDG2 have not been evaluated under AF-HC-D."
+  },
+  "safe_configuration_count": 72
+}

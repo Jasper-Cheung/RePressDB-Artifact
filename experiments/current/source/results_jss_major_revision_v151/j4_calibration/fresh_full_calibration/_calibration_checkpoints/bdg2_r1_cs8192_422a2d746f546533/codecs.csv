@@ -1,0 +1,6 @@
+dataset,chunk_id,series_index,chunk_start,chunk_size,unit_type,unit_id,building_id,codec,raw_size_bytes,payload_size_bytes,metadata_size_bytes,stored_size_bytes,compression_ratio,encode_ns,full_decode_ns
+BDG2_JSS_FRESH_CALIBRATION,bdg2_r1_cs8192_422a2d746f546533,20,0,8192,building,Lamb_industrial_Venessa,Lamb_industrial_Venessa,whole_lz4,32768,21580,0,21580,0.6585693359375,4503300,62700
+BDG2_JSS_FRESH_CALIBRATION,bdg2_r1_cs8192_422a2d746f546533,20,0,8192,building,Lamb_industrial_Venessa,Lamb_industrial_Venessa,whole_zstd,32768,11068,0,11068,0.3377685546875,3483000,101300
+BDG2_JSS_FRESH_CALIBRATION,bdg2_r1_cs8192_422a2d746f546533,20,0,8192,building,Lamb_industrial_Venessa,Lamb_industrial_Venessa,block_lz4_64,32768,27039,4104,31143,0.950408935546875,7785100,1015500
+BDG2_JSS_FRESH_CALIBRATION,bdg2_r1_cs8192_422a2d746f546533,20,0,8192,building,Lamb_industrial_Venessa,Lamb_industrial_Venessa,block_lz4_256,32768,23253,1032,24285,0.741119384765625,7594300,342100
+BDG2_JSS_FRESH_CALIBRATION,bdg2_r1_cs8192_422a2d746f546533,20,0,8192,building,Lamb_industrial_Venessa,Lamb_industrial_Venessa,block_lz4_1024,32768,22122,264,22386,0.68316650390625,8931100,117200

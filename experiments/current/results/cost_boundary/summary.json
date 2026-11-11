@@ -1,0 +1,10 @@
+{
+  "pairs": 80,
+  "observations": 240,
+  "kernel_median_ms": 7.9304,
+  "transaction_median_ms": 56.7498,
+  "median_paired_multiplier": 7.516465976332688,
+  "multiplier_p10": 5.881724555382562,
+  "multiplier_p90": 12.678348750603371,
+  "all_correct": true
+}

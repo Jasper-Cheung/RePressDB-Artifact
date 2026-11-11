@@ -1,0 +1,383 @@
+{
+  "passed": true,
+  "new_performance_executions": 0,
+  "paired_observations": 240,
+  "directed_pairs": 80,
+  "executor_median_ratio": 0.785757809531721,
+  "policy_points": 10,
+  "event_arrays_checked": 72,
+  "trajectory_points": 640,
+  "trajectory_endpoints": [
+    {
+      "stratum": "continuous",
+      "denominator": "static",
+      "n": 18,
+      "ratio": 1.0233691777746357
+    },
+    {
+      "stratum": "continuous",
+      "denominator": "credit",
+      "n": 18,
+      "ratio": 1.0256170833101905
+    },
+    {
+      "stratum": "persistent",
+      "denominator": "static",
+      "n": 6,
+      "ratio": 0.7504496573705474
+    },
+    {
+      "stratum": "persistent",
+      "denominator": "credit",
+      "n": 6,
+      "ratio": 1.039200881547938
+    }
+  ],
+  "figure4_y_limits_by_column": [
+    [
+      0.7028936498070577,
+      1.1171210981874915
+    ],
+    [
+      0.8578461108285481,
+      1.1007554120742593
+    ]
+  ],
+  "figure1_method_sha256": "c1c990b6fc12fd5f6cc191e86fce132816eaf4b930ad87c2869f49a7a6ab774b",
+  "inputs": [
+    {
+      "file": "experiments/current/fgcs_benchmark.py",
+      "sha256": "dd1e00b992b990073ebdb8becdedb2ebd82fbc9f51baa0e042b768059cb96763"
+    },
+    {
+      "file": "experiments/current/method_v22/benchmark_v2.py",
+      "sha256": "1a1a866482c90bf98392f5d70ee4d62b754374c08cfd22c5c0cc45aeabe21047"
+    },
+    {
+      "file": "experiments/current/method_v22/efficient_executor.py",
+      "sha256": "aa47bb9e1bf3d615e0b09837c6bec449dd423df9b2bf014bc8373ce403830dab"
+    },
+    {
+      "file": "experiments/current/method_v22/results/cells/16384_0_0_credit/latencies.npz",
+      "sha256": "166dc6eeead3ef3f8327fd9c19b5d775f4864c2b5700a6d2c11fff9a29841004"
+    },
+    {
+      "file": "experiments/current/method_v22/results/cells/16384_0_0_risk/latencies.npz",
+      "sha256": "c93b39753b9e370c55738fdd7c86cf1e14a5350c7c8290d6e210b5c18cb6fdea"
+    },
+    {
+      "file": "experiments/current/method_v22/results/cells/16384_0_0_static/latencies.npz",
+      "sha256": "92415a095e7ca07638bbb043c045206475834798e9c79dd9de6919de131970b2"
+    },
+    {
+      "file": "experiments/current/method_v22/results/cells/16384_0_1_credit/latencies.npz",
+      "sha256": "ca13ac0ed12b000cef0154babae8ea39fc8fb0bc9dbcd0de0e9b4ceeb8efb695"
+    },
+    {
+      "file": "experiments/current/method_v22/results/cells/16384_0_1_risk/latencies.npz",
+      "sha256": "291946945359371e6c69f9bf156aed6a25c33bb4c6bfcbc0fb41706f91f00e9c"
+    },
+    {
+      "file": "experiments/current/method_v22/results/cells/16384_0_1_static/latencies.npz",
+      "sha256": "a699f4d0e9fcd316824b0832b3fffc578e26a9ae621ef3b5e550cdb0789c9f16"
+    },
+    {
+      "file": "experiments/current/method_v22/results/cells/16384_0_2_credit/latencies.npz",
+      "sha256": "393cc8b0f385fe42abec89fbd9358c284fb9824914df999ffeeca177d0c54b7b"
+    },
+    {
+      "file": "experiments/current/method_v22/results/cells/16384_0_2_risk/latencies.npz",
+      "sha256": "d2968ecf6dbbf72e7cdc5b408e3093906bc16ab2083f51ab19d00e91c0345cca"
+    },
+    {
+      "file": "experiments/current/method_v22/results/cells/16384_0_2_static/latencies.npz",
+      "sha256": "fe7cc3c3a6e837caf94d0bd9f1414028fc650fe537086f692b0d94a268463dfa"
+    },
+    {
+      "file": "experiments/current/method_v22/results/cells/16384_0_3_credit/latencies.npz",
+      "sha256": "4c294d48ab46eee07e1bb90bbd53ae52d6b7258c3c7775b2d8a31ea8e81aa38f"
+    },
+    {
+      "file": "experiments/current/method_v22/results/cells/16384_0_3_risk/latencies.npz",
+      "sha256": "c34b8079eb0fc0391cdd1e866929d606ea713057c35989e7a75de07ff2859e5c"
+    },
+    {
+      "file": "experiments/current/method_v22/results/cells/16384_0_3_static/latencies.npz",
+      "sha256": "f558e799587977521c3ea6fa7edf8ebdde683f33ea401a44c438acaac40f776e"
+    },
+    {
+      "file": "experiments/current/method_v22/results/cells/16384_1_0_credit/latencies.npz",
+      "sha256": "b2405301d0d8385fe683eeee26d8aa882212aafa77a4c273bc4e18afd9e94c70"
+    },
+    {
+      "file": "experiments/current/method_v22/results/cells/16384_1_0_risk/latencies.npz",
+      "sha256": "1070413ba9aa89e0fc3271ece1ff7a17219910e364865cc1836deb203d1bd0c2"
+    },
+    {
+      "file": "experiments/current/method_v22/results/cells/16384_1_0_static/latencies.npz",
+      "sha256": "9ab7e015ef96d00986a751a46e9a3e8b7f27ad3311851453985b878797381106"
+    },
+    {
+      "file": "experiments/current/method_v22/results/cells/16384_1_1_credit/latencies.npz",
+      "sha256": "b46e79f4a257e09bf80051f1846ee358d278217a2a2a8f8a36190b98673cdc4c"
+    },
+    {
+      "file": "experiments/current/method_v22/results/cells/16384_1_1_risk/latencies.npz",
+      "sha256": "6acc88849f4f2458b67407e117dd33b1f0f532c2e1ee6419a7af56f494e841b7"
+    },
+    {
+      "file": "experiments/current/method_v22/results/cells/16384_1_1_static/latencies.npz",
+      "sha256": "2d428b8a172d626afd3a9152d2620ab4089fabf6776ed2bcefe7e013b9e0cc27"
+    },
+    {
+      "file": "experiments/current/method_v22/results/cells/16384_1_2_credit/latencies.npz",
+      "sha256": "70f8aedf11f5606d912525bfefc36795c65bcbddc2c425d6ef06832a29081ac2"
+    },
+    {
+      "file": "experiments/current/method_v22/results/cells/16384_1_2_risk/latencies.npz",
+      "sha256": "4a9b339909b0d3cf7feada59c85591b71f6762e07878bbb1967050adb2221d6c"
+    },
+    {
+      "file": "experiments/current/method_v22/results/cells/16384_1_2_static/latencies.npz",
+      "sha256": "8d791242d14b0bab3d949f8872b69f12c75ad4fd185e66d4fd36cdc4c04405da"
+    },
+    {
+      "file": "experiments/current/method_v22/results/cells/16384_1_3_credit/latencies.npz",
+      "sha256": "34e208ab66e38c001df7173015aac74655af044f76130560336991b755767a96"
+    },
+    {
+      "file": "experiments/current/method_v22/results/cells/16384_1_3_risk/latencies.npz",
+      "sha256": "4b6179ce772a0f75d1d127d9a6792af909953224131bfaa2899c6d1ac2afa77e"
+    },
+    {
+      "file": "experiments/current/method_v22/results/cells/16384_1_3_static/latencies.npz",
+      "sha256": "760094f83a5b2d29e6e7438a6195dfdb782e7650861d69f12eb51bfcbf3a87b8"
+    },
+    {
+      "file": "experiments/current/method_v22/results/cells/16384_2_0_credit/latencies.npz",
+      "sha256": "6b1c5f37d3db9c1e823780f657f761acd79f5bed16b38272266b8c28421f7dac"
+    },
+    {
+      "file": "experiments/current/method_v22/results/cells/16384_2_0_risk/latencies.npz",
+      "sha256": "5348b7c35b0e0713d11afd063a8dba3f487131672314e2d76cfdbbb782e76f36"
+    },
+    {
+      "file": "experiments/current/method_v22/results/cells/16384_2_0_static/latencies.npz",
+      "sha256": "270fbdffa779f350f61c3436ed5738d08561fd112106c3ec9b86ec306e2cbe6d"
+    },
+    {
+      "file": "experiments/current/method_v22/results/cells/16384_2_1_credit/latencies.npz",
+      "sha256": "717e1d880b25df2bb323ce9a41bae0ecae52664c023a4e07aeca1669779d88ff"
+    },
+    {
+      "file": "experiments/current/method_v22/results/cells/16384_2_1_risk/latencies.npz",
+      "sha256": "b784a494cfbcb06ad2d209831781c5a0548f47329dd82347ade447d5ae206403"
+    },
+    {
+      "file": "experiments/current/method_v22/results/cells/16384_2_1_static/latencies.npz",
+      "sha256": "d870299bf66d3ac4c0562dc3072828af12e99fb0705b3560c557c3efbc138d35"
+    },
+    {
+      "file": "experiments/current/method_v22/results/cells/16384_2_2_credit/latencies.npz",
+      "sha256": "d2ed4c4eb84d92636ca45682c75adc44823d9cb1f06b36c758ad87ec1605e732"
+    },
+    {
+      "file": "experiments/current/method_v22/results/cells/16384_2_2_risk/latencies.npz",
+      "sha256": "74b33d4dc9077d8968ecdcbe472629c59b696af486ca1205b03494013d3838fc"
+    },
+    {
+      "file": "experiments/current/method_v22/results/cells/16384_2_2_static/latencies.npz",
+      "sha256": "6e639f3edbb050b8d2fb607b391ed54dcba0cc151df5a8efca83f0414ea44125"
+    },
+    {
+      "file": "experiments/current/method_v22/results/cells/16384_2_3_credit/latencies.npz",
+      "sha256": "1103d14ef78bf0e0053a7baa1129f326dfb6eefcbd78cac824e90468c933318d"
+    },
+    {
+      "file": "experiments/current/method_v22/results/cells/16384_2_3_risk/latencies.npz",
+      "sha256": "986beedccf2f57085afc3439fffd5ac33ff0b6b00e316cfa0214606aaea5892b"
+    },
+    {
+      "file": "experiments/current/method_v22/results/cells/16384_2_3_static/latencies.npz",
+      "sha256": "0dcaf66085aca839a6d43cec9f78ac63d72d5e824647a16c8da5fa8d74236cad"
+    },
+    {
+      "file": "experiments/current/method_v22/results/cells/8192_0_0_credit/latencies.npz",
+      "sha256": "b5aa8ec2adb7dddafcbbf1b0c3f4e495dfe64f7d36f62548bbbe5d3046378a3c"
+    },
+    {
+      "file": "experiments/current/method_v22/results/cells/8192_0_0_risk/latencies.npz",
+      "sha256": "2a56377a781ac3b3924e77b7dad231fa34d446307b575788d4e389b582c6868a"
+    },
+    {
+      "file": "experiments/current/method_v22/results/cells/8192_0_0_static/latencies.npz",
+      "sha256": "2ff4fff0aa253e161ad2f24a3ec58242f95ae69d820900898c6b193fae60d658"
+    },
+    {
+      "file": "experiments/current/method_v22/results/cells/8192_0_1_credit/latencies.npz",
+      "sha256": "1cf53921c71e7c3f9bf4654e6f81389a8b173ccaddae53d1c2e9b610331837c6"
+    },
+    {
+      "file": "experiments/current/method_v22/results/cells/8192_0_1_risk/latencies.npz",
+      "sha256": "04893895a50db392f9a023d32bd821b170a0d9dba47066982078065849b987b5"
+    },
+    {
+      "file": "experiments/current/method_v22/results/cells/8192_0_1_static/latencies.npz",
+      "sha256": "afebdae09b248ae77714e5a18eab7800a6c7e7bf4914840385bddd8009171a81"
+    },
+    {
+      "file": "experiments/current/method_v22/results/cells/8192_0_2_credit/latencies.npz",
+      "sha256": "8afa8ffd68ec4475690514524cd5635aa7f4a4f1e36f7dd34904fc6820176de5"
+    },
+    {
+      "file": "experiments/current/method_v22/results/cells/8192_0_2_risk/latencies.npz",
+      "sha256": "2511ec8e46946e0393e0c3c233b835fb4456f0c0e44e05c53c9a3da1e85e7716"
+    },
+    {
+      "file": "experiments/current/method_v22/results/cells/8192_0_2_static/latencies.npz",
+      "sha256": "58a2c105116bd0f667e5a95ff8182c00c5b4b55aa1226a64d398e345e3314420"
+    },
+    {
+      "file": "experiments/current/method_v22/results/cells/8192_0_3_credit/latencies.npz",
+      "sha256": "25fe786164c779f3790be734d3238600a8454d22e353a1c2b74fae3008de6a77"
+    },
+    {
+      "file": "experiments/current/method_v22/results/cells/8192_0_3_risk/latencies.npz",
+      "sha256": "27bd9049d71b51fc5a7af5fc4e98f44307826c1500ee1e1bedd4aa9835a3ebd4"
+    },
+    {
+      "file": "experiments/current/method_v22/results/cells/8192_0_3_static/latencies.npz",
+      "sha256": "5242968202360fc1d9daa6825010c3d34d2b6ad7809000870f47aca7c52f17a0"
+    },
+    {
+      "file": "experiments/current/method_v22/results/cells/8192_1_0_credit/latencies.npz",
+      "sha256": "acdd0d69725545b635b150f794e634180f63f192d75dd4e947802c43c9290045"
+    },
+    {
+      "file": "experiments/current/method_v22/results/cells/8192_1_0_risk/latencies.npz",
+      "sha256": "f379bc205f453dec7e7ce3bb7667c1d61b5e23e8fb76871e980bd6615c12ca0c"
+    },
+    {
+      "file": "experiments/current/method_v22/results/cells/8192_1_0_static/latencies.npz",
+      "sha256": "08f93b528851197822c3bfc2e5df885e218aab8a3c84dc655a70caee452a959f"
+    },
+    {
+      "file": "experiments/current/method_v22/results/cells/8192_1_1_credit/latencies.npz",
+      "sha256": "8f7723eca992820f4d5ea5748108ee60294b28b133dea07d3d014ed5b706a7d4"
+    },
+    {
+      "file": "experiments/current/method_v22/results/cells/8192_1_1_risk/latencies.npz",
+      "sha256": "26d0a596bd3260783c8b0b79b839762d0ece7a595e28d4330810ccb44402b591"
+    },
+    {
+      "file": "experiments/current/method_v22/results/cells/8192_1_1_static/latencies.npz",
+      "sha256": "d2cc550b2c30d7d4d12c677a18391fd4aa68cc6aa2a4cc0207a1e7d51d0777f3"
+    },
+    {
+      "file": "experiments/current/method_v22/results/cells/8192_1_2_credit/latencies.npz",
+      "sha256": "e99430d8af0c435f94545a166ef56bf99bc25a0294dbb7b7d2dea5337f66fc82"
+    },
+    {
+      "file": "experiments/current/method_v22/results/cells/8192_1_2_risk/latencies.npz",
+      "sha256": "b8e8385d04abf091c720e5b96c42e7236be8375be4fa9c3f9cf32490bcae56ed"
+    },
+    {
+      "file": "experiments/current/method_v22/results/cells/8192_1_2_static/latencies.npz",
+      "sha256": "506e458fe131262079e60071bf5a4704c629f34dd7553e9ab8243fbdee862457"
+    },
+    {
+      "file": "experiments/current/method_v22/results/cells/8192_1_3_credit/latencies.npz",
+      "sha256": "3c368b5c73601a55a9e5a0f4ec92b2e573e5893f3ec63f4d6d40c161ae1e86f3"
+    },
+    {
+      "file": "experiments/current/method_v22/results/cells/8192_1_3_risk/latencies.npz",
+      "sha256": "bfaca432af1f4521377c57fa275f77c0ecd6835c04ade367db31e05f5b1b999c"
+    },
+    {
+      "file": "experiments/current/method_v22/results/cells/8192_1_3_static/latencies.npz",
+      "sha256": "cc4cbf2baf374c56bb47767918877a31de293959500edd0a6a260417328843e3"
+    },
+    {
+      "file": "experiments/current/method_v22/results/cells/8192_2_0_credit/latencies.npz",
+      "sha256": "650a487cac136b53b2a277a2d4fa0d5614db897d7e68c3278645e144757b0aee"
+    },
+    {
+      "file": "experiments/current/method_v22/results/cells/8192_2_0_risk/latencies.npz",
+      "sha256": "46cac8febec85802789adaf2e7a3c07beaceb05e09436fd2b948f35773ac8dae"
+    },
+    {
+      "file": "experiments/current/method_v22/results/cells/8192_2_0_static/latencies.npz",
+      "sha256": "46214eedd202698a31e405d4fb2ad3f73efc78464937b6051c3ef50c9243ee6b"
+    },
+    {
+      "file": "experiments/current/method_v22/results/cells/8192_2_1_credit/latencies.npz",
+      "sha256": "6b6ffdcee351ab91874f98c2f3e0508603d697ce6a4920f93815deef995a0f4b"
+    },
+    {
+      "file": "experiments/current/method_v22/results/cells/8192_2_1_risk/latencies.npz",
+      "sha256": "03a77f18083be844325fffd3e8ce5a899b2aa6668284dafc52c954a560e1dabd"
+    },
+    {
+      "file": "experiments/current/method_v22/results/cells/8192_2_1_static/latencies.npz",
+      "sha256": "add768bc38267a61101e17628b67d2b881dc687060b9d238896eba794c7279d4"
+    },
+    {
+      "file": "experiments/current/method_v22/results/cells/8192_2_2_credit/latencies.npz",
+      "sha256": "0ecdcec3178c0b7f1c3d9f4d8741318b91f2a60b37c3ebf7d8fc8244cec1bc59"
+    },
+    {
+      "file": "experiments/current/method_v22/results/cells/8192_2_2_risk/latencies.npz",
+      "sha256": "89d945657e2e16e390d03f817b392b831a8a3a2fa665babe4a61bbc53f47dfcf"
+    },
+    {
+      "file": "experiments/current/method_v22/results/cells/8192_2_2_static/latencies.npz",
+      "sha256": "5ef4d5e2478641aa853e4e03c3fb511ff2f6a79d0541b9b6fd6dbfcdb2d32ffa"
+    },
+    {
+      "file": "experiments/current/method_v22/results/cells/8192_2_3_credit/latencies.npz",
+      "sha256": "c9d6922c88a80c0022540b3dd60991964f04f998a33b7d45405e1e4000d6bf6b"
+    },
+    {
+      "file": "experiments/current/method_v22/results/cells/8192_2_3_risk/latencies.npz",
+      "sha256": "992665df6c5111c18592f06debbad83f1cd32c3f7192288109998a1c7bfd966f"
+    },
+    {
+      "file": "experiments/current/method_v22/results/cells/8192_2_3_static/latencies.npz",
+      "sha256": "f246e7bcdeac94b7aa123b81db70a1b0a3b05f88e0f997e67820ee2892e5728f"
+    },
+    {
+      "file": "experiments/current/method_v22/results/paired_statistics.csv",
+      "sha256": "774ee0ee229e8cfd49d2b0594b020e0d06e30af37d4ecec217abe29c53a03c05"
+    },
+    {
+      "file": "experiments/current/method_v22/results/protocol.json",
+      "sha256": "3afb8de46e2f36054e0e5cc0b91a121e65610bca391d842a08a95c87d17e7dcc"
+    },
+    {
+      "file": "experiments/current/method_v22/results/stratified_statistics.csv",
+      "sha256": "5a0902303b707d4c7964494674f800d419b9645f8d9d0e654f965492573c122e"
+    },
+    {
+      "file": "experiments/current/method_v22/results/summary.csv",
+      "sha256": "fc4cb365c8c9f4ed399a13bd2c0aaf2bcc0d48659f57b44e08510bafc39acc7b"
+    },
+    {
+      "file": "experiments/current/method_v22/results/verification.json",
+      "sha256": "07e76ed0e5af31e79934a97ddb5377ad51e41ec6927986b2babeeb0833beca17"
+    },
+    {
+      "file": "experiments/current/method_v22/risk_controller.py",
+      "sha256": "ca87facbe17b8becc15605b3db8322a60c885bee97a8313234786f5d8a818346"
+    },
+    {
+      "file": "experiments/current/method_v22/validation/paired_migrations.csv",
+      "sha256": "d5dfbfd6de58c31bd6caa0a090ea7c75ee459f22b816c9e0e25082269d950f42"
+    }
+  ],
+  "figure_hashes": {
+    "executor_cost.pdf": "35df8daca5bfa6a8e9eeb4466804af606d99756ac2511587343a09b71ce37c06",
+    "policy_comparison.pdf": "6ef24e00f0d894f621f878d85d1114553bbedb5596d83854709625a103847787",
+    "service_trajectories.pdf": "f72cf10f606ffe0445959257df88d4574282c19283ec129e1fc8d31edceab507"
+  },
+  "render_source_sha256": "1f1d070c728dda0d42edcf2d55b7f05a5898441384d75a9251ccd97590eade32"
+}

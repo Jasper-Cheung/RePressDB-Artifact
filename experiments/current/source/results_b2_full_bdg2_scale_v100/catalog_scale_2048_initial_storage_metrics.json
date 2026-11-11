@@ -1,0 +1,16 @@
+{
+  "chunk_count": 3283,
+  "raw_bytes": 26894336,
+  "payload_bytes": 19127042,
+  "metadata_bytes": 0,
+  "active_stored_bytes": 19127042,
+  "stored_over_raw": 0.7111922004692736,
+  "compression_factor_raw_over_stored": 1.4060896609104534,
+  "codec_distribution": [
+    {
+      "active_codec": "whole_lz4",
+      "chunk_count": 3283,
+      "stored_bytes": 19127042
+    }
+  ]
+}

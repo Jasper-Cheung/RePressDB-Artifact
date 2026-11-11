@@ -1,0 +1,17 @@
+{
+  "selection": "first two manifest-ordered chunks of building group 0 at each size; no performance-based selection",
+  "chunk_ids": [
+    "bdg2_r1_cs8192_034763bbceb575fe",
+    "bdg2_r1_cs8192_036e1f4d0182c29c",
+    "bdg2_r1_cs16384_034763bbceb575fe",
+    "bdg2_r1_cs16384_036e1f4d0182c29c"
+  ],
+  "pairs": 20,
+  "repeats": 3,
+  "order": "alternating kernel-first and transaction-first",
+  "processor_affinity": [
+    0
+  ],
+  "script_sha256": "3757e0c958f32e38bb094c72b8f54a4dd016601847079c1077e3c687a8953519",
+  "primary_kernel": "unchanged e1.perform_actual_migration; validates outside its measured interval"
+}

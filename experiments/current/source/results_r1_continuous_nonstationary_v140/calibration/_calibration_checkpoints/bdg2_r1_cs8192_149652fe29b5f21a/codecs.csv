@@ -1,0 +1,6 @@
+dataset,chunk_id,series_index,chunk_start,chunk_size,unit_type,unit_id,building_id,codec,raw_size_bytes,payload_size_bytes,metadata_size_bytes,stored_size_bytes,compression_ratio,encode_ns,full_decode_ns
+BDG2_R1,bdg2_r1_cs8192_149652fe29b5f21a,12,0,8192,building,Shrew_office_Doug,Shrew_office_Doug,whole_lz4,32768,22893,0,22893,0.698638916015625,2471800,27900
+BDG2_R1,bdg2_r1_cs8192_149652fe29b5f21a,12,0,8192,building,Shrew_office_Doug,Shrew_office_Doug,whole_zstd,32768,13794,0,13794,0.42095947265625,3454100,51700
+BDG2_R1,bdg2_r1_cs8192_149652fe29b5f21a,12,0,8192,building,Shrew_office_Doug,Shrew_office_Doug,block_lz4_64,32768,32970,4104,37074,1.13140869140625,7255600,327700
+BDG2_R1,bdg2_r1_cs8192_149652fe29b5f21a,12,0,8192,building,Shrew_office_Doug,Shrew_office_Doug,block_lz4_256,32768,28231,1032,29263,0.893035888671875,6601000,104300
+BDG2_R1,bdg2_r1_cs8192_149652fe29b5f21a,12,0,8192,building,Shrew_office_Doug,Shrew_office_Doug,block_lz4_1024,32768,24943,264,25207,0.769256591796875,8102800,45200

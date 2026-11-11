@@ -13,3 +13,7 @@ Thumbs.db
 build/
 dist/
 release_assets/*.zip
+
+experiments/current/**/latencies.npz
+experiments/current/**/__pycache__/
+experiments/current/**/store/

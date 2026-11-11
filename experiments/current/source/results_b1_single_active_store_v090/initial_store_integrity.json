@@ -1,0 +1,9 @@
+{
+  "chunk_count": 32,
+  "invalid_chunks": [],
+  "non_idle_chunks": [],
+  "chunks_without_exactly_one_payload": [],
+  "temporary_file_count": 0,
+  "active_stored_bytes": 1373210,
+  "pass": true
+}

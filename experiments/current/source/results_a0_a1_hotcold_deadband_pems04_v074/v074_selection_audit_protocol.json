@@ -1,0 +1,63 @@
+{
+  "version": "0.7.4",
+  "parent_deadband_protocol_sha256": "8cf9f05722120cf66dc34b6ffc6c9a7bdb8715632db22829935b3b4e34a80ca7",
+  "parent_a0_protocol_sha256": "196ac4312695a0b5255129ee1587e9d7112c3bf9f795ebe6763434334fad97e8",
+  "change_classification": "selection-objective correction and measurement reliability improvement",
+  "unchanged": {
+    "AF_HC_D_deadband_factor": 1.5,
+    "AF_HC_D_information_boundary": true,
+    "grid_size": 72,
+    "data_selection": true,
+    "trace_assignments": true,
+    "trace_seeds": [
+      20260718,
+      20260719,
+      20260720
+    ],
+    "chunk_sizes": [
+      8192,
+      16384
+    ],
+    "stable_ratio_limit": 1.05,
+    "brief_burst_ratio_limit": 1.05,
+    "brief_burst_migration_limit": 2.0,
+    "RePressDB_controller": "unchanged and frozen"
+  },
+  "selection": {
+    "action_traces": [
+      "frequency_only",
+      "joint_orthogonal"
+    ],
+    "number_of_action_cells": 12,
+    "score": "geometric mean of AF-HC-D / initial-best total-cost ratios",
+    "equivalence_tolerance": 0.005,
+    "tie_break_order": [
+      "fewer action migrations",
+      "fewer action rewrite bytes",
+      "longer adaptation period",
+      "lexicographically smaller config id"
+    ],
+    "safety_traces": [
+      "stable_scan",
+      "brief_burst"
+    ]
+  },
+  "actual_audit": {
+    "repeats": 3,
+    "policies": [
+      "initial_best",
+      "afhc_frozen",
+      "repressdb"
+    ],
+    "full_warmup_before_every_policy_run": true,
+    "policy_order_randomized_per_repeat": true,
+    "pairing": "ratios are computed within exact repeat, seed, trace, size, and series cells",
+    "no_action_consistency_interval": [
+      0.95,
+      1.05
+    ],
+    "model_actual_median_error_limit": 0.1,
+    "checkpoint_resume": true
+  },
+  "holdout_status": "PEMS08 and BDG2 are not accessed by this program."
+}

@@ -1,0 +1,1273 @@
+{
+  "policies": {
+    "static": {
+      "service_ratio": 1.0,
+      "ci": [
+        1.0,
+        1.0
+      ],
+      "p99_ratio": 1.0,
+      "migrations": 0,
+      "rewrite_mib": 0.0,
+      "controller_percent": 0.0
+    },
+    "shape": {
+      "service_ratio": 1.0543184388613511,
+      "ci": [
+        1.0251936596146134,
+        1.0847126570864358
+      ],
+      "p99_ratio": 1.0377805919616103,
+      "migrations": 0,
+      "rewrite_mib": 0.0,
+      "controller_percent": 3.8060790821980137
+    },
+    "horizon": {
+      "service_ratio": 0.9976835304828438,
+      "ci": [
+        0.9339083054264552,
+        1.0444303010933316
+      ],
+      "p99_ratio": 1.1258799289650177,
+      "migrations": 35,
+      "rewrite_mib": 1.4259824752807617,
+      "controller_percent": 3.150464456035671
+    },
+    "work_function": {
+      "service_ratio": 1.0074762016258396,
+      "ci": [
+        0.9705836724941331,
+        1.0419299128042232
+      ],
+      "p99_ratio": 1.0542780417443127,
+      "migrations": 13,
+      "rewrite_mib": 0.5103540420532227,
+      "controller_percent": 2.3441016299829687
+    },
+    "credit": {
+      "service_ratio": 0.9203241728009112,
+      "ci": [
+        0.853143824496015,
+        0.9864258364681703
+      ],
+      "p99_ratio": 1.2636514669564907,
+      "migrations": 155,
+      "rewrite_mib": 5.595364570617676,
+      "controller_percent": 5.159468475009763
+    },
+    "risk": {
+      "service_ratio": 0.94701016435131,
+      "ci": [
+        0.8841113538631564,
+        1.0052932363782687
+      ],
+      "p99_ratio": 1.1024885991980857,
+      "migrations": 66,
+      "rewrite_mib": 2.375497817993164,
+      "controller_percent": 2.0401042440359034
+    }
+  },
+  "paired": [
+    {
+      "metric": "service_ns",
+      "denominator": "static",
+      "gm_ratio": 0.94701016435131,
+      "ci_low": 0.8841113538631564,
+      "ci_high": 1.0052932363782687,
+      "wins": 13
+    },
+    {
+      "metric": "service_ns",
+      "denominator": "shape",
+      "gm_ratio": 0.8982202429979956,
+      "ci_low": 0.8374072195150749,
+      "ci_high": 0.9559567833989364,
+      "wins": 19
+    },
+    {
+      "metric": "service_ns",
+      "denominator": "horizon",
+      "gm_ratio": 0.9492089780142912,
+      "ci_low": 0.9040008231222896,
+      "ci_high": 0.989454806037372,
+      "wins": 16
+    },
+    {
+      "metric": "service_ns",
+      "denominator": "work_function",
+      "gm_ratio": 0.939982664427258,
+      "ci_low": 0.8813884260166979,
+      "ci_high": 0.998664127682807,
+      "wins": 13
+    },
+    {
+      "metric": "service_ns",
+      "denominator": "credit",
+      "gm_ratio": 1.028996295369688,
+      "ci_low": 0.995330046237786,
+      "ci_high": 1.064837616662501,
+      "wins": 9
+    },
+    {
+      "metric": "p99_ns",
+      "denominator": "static",
+      "gm_ratio": 1.1024885991980855,
+      "ci_low": 1.059087737530268,
+      "ci_high": 1.1464859517775152,
+      "wins": 3
+    },
+    {
+      "metric": "p99_ns",
+      "denominator": "shape",
+      "gm_ratio": 1.0623523004165694,
+      "ci_low": 1.0027497834248489,
+      "ci_high": 1.136355683684046,
+      "wins": 5
+    },
+    {
+      "metric": "p99_ns",
+      "denominator": "horizon",
+      "gm_ratio": 0.9792239570444828,
+      "ci_low": 0.931911084399942,
+      "ci_high": 1.0258055599774765,
+      "wins": 11
+    },
+    {
+      "metric": "p99_ns",
+      "denominator": "work_function",
+      "gm_ratio": 1.045728503814808,
+      "ci_low": 0.9941586895844275,
+      "ci_high": 1.096434948991158,
+      "wins": 5
+    },
+    {
+      "metric": "p99_ns",
+      "denominator": "credit",
+      "gm_ratio": 0.8724625642649976,
+      "ci_low": 0.8162357607100588,
+      "ci_high": 0.927829730305232,
+      "wins": 20
+    },
+    {
+      "metric": "p999_ns",
+      "denominator": "static",
+      "gm_ratio": 1.021808634515877,
+      "ci_low": 0.9579432255770644,
+      "ci_high": 1.1093645197817223,
+      "wins": 10
+    },
+    {
+      "metric": "p999_ns",
+      "denominator": "shape",
+      "gm_ratio": 1.0046601716127654,
+      "ci_low": 0.9278227669251488,
+      "ci_high": 1.1035766593618233,
+      "wins": 13
+    },
+    {
+      "metric": "p999_ns",
+      "denominator": "horizon",
+      "gm_ratio": 1.0235829033900616,
+      "ci_low": 0.9783103556310606,
+      "ci_high": 1.0878491130865842,
+      "wins": 14
+    },
+    {
+      "metric": "p999_ns",
+      "denominator": "work_function",
+      "gm_ratio": 1.0181919804090525,
+      "ci_low": 0.9589316646060502,
+      "ci_high": 1.106176912337913,
+      "wins": 15
+    },
+    {
+      "metric": "p999_ns",
+      "denominator": "credit",
+      "gm_ratio": 0.9430604621815936,
+      "ci_low": 0.8438993445120909,
+      "ci_high": 1.0412763750922778,
+      "wins": 15
+    }
+  ],
+  "stratified": [
+    {
+      "stratum": "continuous",
+      "metric": "service_ns",
+      "denominator": "static",
+      "instances": 18,
+      "gm_ratio": 1.0233691777746357,
+      "ci_low": 0.9950495251930684,
+      "ci_high": 1.052202393932384,
+      "wins": 7
+    },
+    {
+      "stratum": "continuous",
+      "metric": "service_ns",
+      "denominator": "shape",
+      "instances": 18,
+      "gm_ratio": 0.9735376815018528,
+      "ci_low": 0.9455075615371435,
+      "ci_high": 1.002442663263296,
+      "wins": 13
+    },
+    {
+      "stratum": "continuous",
+      "metric": "service_ns",
+      "denominator": "horizon",
+      "instances": 18,
+      "gm_ratio": 0.9873250980144932,
+      "ci_low": 0.9653350085789264,
+      "ci_high": 1.0120283569483888,
+      "wins": 11
+    },
+    {
+      "stratum": "continuous",
+      "metric": "service_ns",
+      "denominator": "work_function",
+      "instances": 18,
+      "gm_ratio": 1.0134877681221617,
+      "ci_low": 0.9794012698940842,
+      "ci_high": 1.0542327259053872,
+      "wins": 7
+    },
+    {
+      "stratum": "continuous",
+      "metric": "service_ns",
+      "denominator": "credit",
+      "instances": 18,
+      "gm_ratio": 1.0256170833101903,
+      "ci_low": 0.9885375180837288,
+      "ci_high": 1.0661903350024995,
+      "wins": 8
+    },
+    {
+      "stratum": "continuous",
+      "metric": "p99_ns",
+      "denominator": "static",
+      "instances": 18,
+      "gm_ratio": 1.1402345301211996,
+      "ci_low": 1.1006056440565464,
+      "ci_high": 1.1844186314837384,
+      "wins": 1
+    },
+    {
+      "stratum": "continuous",
+      "metric": "p99_ns",
+      "denominator": "shape",
+      "instances": 18,
+      "gm_ratio": 1.1156148766250622,
+      "ci_low": 1.0564715237644138,
+      "ci_high": 1.2030752375935896,
+      "wins": 1
+    },
+    {
+      "stratum": "continuous",
+      "metric": "p99_ns",
+      "denominator": "horizon",
+      "instances": 18,
+      "gm_ratio": 0.9805502641275352,
+      "ci_low": 0.9201408432191104,
+      "ci_high": 1.039842842087632,
+      "wins": 8
+    },
+    {
+      "stratum": "continuous",
+      "metric": "p99_ns",
+      "denominator": "work_function",
+      "instances": 18,
+      "gm_ratio": 1.080226429627671,
+      "ci_low": 1.0257108849962668,
+      "ci_high": 1.134354873840252,
+      "wins": 1
+    },
+    {
+      "stratum": "continuous",
+      "metric": "p99_ns",
+      "denominator": "credit",
+      "instances": 18,
+      "gm_ratio": 0.8247884942036554,
+      "ci_low": 0.7685743645724852,
+      "ci_high": 0.8797994430157661,
+      "wins": 18
+    },
+    {
+      "stratum": "continuous",
+      "metric": "p999_ns",
+      "denominator": "static",
+      "instances": 18,
+      "gm_ratio": 1.0429391451603978,
+      "ci_low": 0.9582855637873726,
+      "ci_high": 1.1589766725410444,
+      "wins": 4
+    },
+    {
+      "stratum": "continuous",
+      "metric": "p999_ns",
+      "denominator": "shape",
+      "instances": 18,
+      "gm_ratio": 1.0228033736409234,
+      "ci_low": 0.9173472273159892,
+      "ci_high": 1.1510333931217835,
+      "wins": 8
+    },
+    {
+      "stratum": "continuous",
+      "metric": "p999_ns",
+      "denominator": "horizon",
+      "instances": 18,
+      "gm_ratio": 1.0326628090366865,
+      "ci_low": 0.9730514529787948,
+      "ci_high": 1.1189693145404906,
+      "wins": 9
+    },
+    {
+      "stratum": "continuous",
+      "metric": "p999_ns",
+      "denominator": "work_function",
+      "instances": 18,
+      "gm_ratio": 1.048048624068295,
+      "ci_low": 0.9819167565479848,
+      "ci_high": 1.1586602384370888,
+      "wins": 10
+    },
+    {
+      "stratum": "continuous",
+      "metric": "p999_ns",
+      "denominator": "credit",
+      "instances": 18,
+      "gm_ratio": 0.9508477178133588,
+      "ci_low": 0.8330288774141522,
+      "ci_high": 1.066629674690938,
+      "wins": 14
+    },
+    {
+      "stratum": "persistent",
+      "metric": "service_ns",
+      "denominator": "static",
+      "instances": 6,
+      "gm_ratio": 0.7504496573705474,
+      "ci_low": 0.6680406757946636,
+      "ci_high": 0.8297723327971337,
+      "wins": 6
+    },
+    {
+      "stratum": "persistent",
+      "metric": "service_ns",
+      "denominator": "shape",
+      "instances": 6,
+      "gm_ratio": 0.7054610755087285,
+      "ci_low": 0.6261034328381618,
+      "ci_high": 0.7901629034742075,
+      "wins": 6
+    },
+    {
+      "stratum": "persistent",
+      "metric": "service_ns",
+      "denominator": "horizon",
+      "instances": 6,
+      "gm_ratio": 0.8434645186202021,
+      "ci_low": 0.7475155266619739,
+      "ci_high": 0.9610321287899444,
+      "wins": 5
+    },
+    {
+      "stratum": "persistent",
+      "metric": "service_ns",
+      "denominator": "work_function",
+      "instances": 6,
+      "gm_ratio": 0.7499353789099219,
+      "ci_low": 0.6979223346948226,
+      "ci_high": 0.8102381924050117,
+      "wins": 6
+    },
+    {
+      "stratum": "persistent",
+      "metric": "service_ns",
+      "denominator": "credit",
+      "instances": 6,
+      "gm_ratio": 1.039200881547938,
+      "ci_low": 0.966412941405594,
+      "ci_high": 1.109528939592557,
+      "wins": 1
+    },
+    {
+      "stratum": "persistent",
+      "metric": "p99_ns",
+      "denominator": "static",
+      "instances": 6,
+      "gm_ratio": 0.996583889644237,
+      "ci_low": 0.9261419015902884,
+      "ci_high": 1.0529336284600812,
+      "wins": 2
+    },
+    {
+      "stratum": "persistent",
+      "metric": "p99_ns",
+      "denominator": "shape",
+      "instances": 6,
+      "gm_ratio": 0.9173421731733132,
+      "ci_low": 0.851383376169371,
+      "ci_high": 0.9903619735746656,
+      "wins": 4
+    },
+    {
+      "stratum": "persistent",
+      "metric": "p99_ns",
+      "denominator": "horizon",
+      "instances": 6,
+      "gm_ratio": 0.9752557899901748,
+      "ci_low": 0.9261975099437684,
+      "ci_high": 1.0265634518539788,
+      "wins": 3
+    },
+    {
+      "stratum": "persistent",
+      "metric": "p99_ns",
+      "denominator": "work_function",
+      "instances": 6,
+      "gm_ratio": 0.9487054316936288,
+      "ci_low": 0.8653832260909239,
+      "ci_high": 1.0245485723633052,
+      "wins": 4
+    },
+    {
+      "stratum": "persistent",
+      "metric": "p99_ns",
+      "denominator": "credit",
+      "instances": 6,
+      "gm_ratio": 1.032664918113441,
+      "ci_low": 0.9995565502662276,
+      "ci_high": 1.0676830215112614,
+      "wins": 2
+    },
+    {
+      "stratum": "persistent",
+      "metric": "p999_ns",
+      "denominator": "static",
+      "instances": 6,
+      "gm_ratio": 0.9609512762911844,
+      "ci_low": 0.9257048724369272,
+      "ci_high": 0.9867830037572884,
+      "wins": 6
+    },
+    {
+      "stratum": "persistent",
+      "metric": "p999_ns",
+      "denominator": "shape",
+      "instances": 6,
+      "gm_ratio": 0.9521388518195244,
+      "ci_low": 0.9201507535472484,
+      "ci_high": 0.9826458069806416,
+      "wins": 5
+    },
+    {
+      "stratum": "persistent",
+      "metric": "p999_ns",
+      "denominator": "horizon",
+      "instances": 6,
+      "gm_ratio": 0.9968194066062144,
+      "ci_low": 0.9766969989160372,
+      "ci_high": 1.022905553664735,
+      "wins": 5
+    },
+    {
+      "stratum": "persistent",
+      "metric": "p999_ns",
+      "denominator": "work_function",
+      "instances": 6,
+      "gm_ratio": 0.9336291263040382,
+      "ci_low": 0.8444840598146295,
+      "ci_high": 0.9912210753727768,
+      "wins": 5
+    },
+    {
+      "stratum": "persistent",
+      "metric": "p999_ns",
+      "denominator": "credit",
+      "instances": 6,
+      "gm_ratio": 0.9200792668535122,
+      "ci_low": 0.7356983222334775,
+      "ci_high": 1.0398071628128225,
+      "wins": 1
+    },
+    {
+      "stratum": "R1_A_gradual_periodic",
+      "metric": "service_ns",
+      "denominator": "static",
+      "instances": 6,
+      "gm_ratio": 1.033849412723271,
+      "ci_low": 0.9990754845779072,
+      "ci_high": 1.0708797546907525,
+      "wins": 2
+    },
+    {
+      "stratum": "R1_A_gradual_periodic",
+      "metric": "service_ns",
+      "denominator": "shape",
+      "instances": 6,
+      "gm_ratio": 0.9956230552554112,
+      "ci_low": 0.9706050912307496,
+      "ci_high": 1.0223223411827973,
+      "wins": 4
+    },
+    {
+      "stratum": "R1_A_gradual_periodic",
+      "metric": "service_ns",
+      "denominator": "horizon",
+      "instances": 6,
+      "gm_ratio": 0.9968936817678608,
+      "ci_low": 0.9745010134976848,
+      "ci_high": 1.0233783334826927,
+      "wins": 4
+    },
+    {
+      "stratum": "R1_A_gradual_periodic",
+      "metric": "service_ns",
+      "denominator": "work_function",
+      "instances": 6,
+      "gm_ratio": 1.0182629842764606,
+      "ci_low": 0.973106414023369,
+      "ci_high": 1.069193476158378,
+      "wins": 2
+    },
+    {
+      "stratum": "R1_A_gradual_periodic",
+      "metric": "service_ns",
+      "denominator": "credit",
+      "instances": 6,
+      "gm_ratio": 1.040409634208875,
+      "ci_low": 0.9797303309950935,
+      "ci_high": 1.1126570071441548,
+      "wins": 2
+    },
+    {
+      "stratum": "R1_A_gradual_periodic",
+      "metric": "p99_ns",
+      "denominator": "static",
+      "instances": 6,
+      "gm_ratio": 1.199498620289677,
+      "ci_low": 1.1115764714332168,
+      "ci_high": 1.2943107478199711,
+      "wins": 0
+    },
+    {
+      "stratum": "R1_A_gradual_periodic",
+      "metric": "p99_ns",
+      "denominator": "shape",
+      "instances": 6,
+      "gm_ratio": 1.1425748918769252,
+      "ci_low": 1.0713508939082823,
+      "ci_high": 1.2274349694828897,
+      "wins": 0
+    },
+    {
+      "stratum": "R1_A_gradual_periodic",
+      "metric": "p99_ns",
+      "denominator": "horizon",
+      "instances": 6,
+      "gm_ratio": 1.0789717533250214,
+      "ci_low": 1.036409157008943,
+      "ci_high": 1.1301429675328782,
+      "wins": 1
+    },
+    {
+      "stratum": "R1_A_gradual_periodic",
+      "metric": "p99_ns",
+      "denominator": "work_function",
+      "instances": 6,
+      "gm_ratio": 1.105937926826056,
+      "ci_low": 1.0352825068238305,
+      "ci_high": 1.205025311480355,
+      "wins": 0
+    },
+    {
+      "stratum": "R1_A_gradual_periodic",
+      "metric": "p99_ns",
+      "denominator": "credit",
+      "instances": 6,
+      "gm_ratio": 0.87318395414158,
+      "ci_low": 0.7866436533859591,
+      "ci_high": 0.9547562468058928,
+      "wins": 6
+    },
+    {
+      "stratum": "R1_A_gradual_periodic",
+      "metric": "p999_ns",
+      "denominator": "static",
+      "instances": 6,
+      "gm_ratio": 1.1693170257971215,
+      "ci_low": 1.003776996349428,
+      "ci_high": 1.5018834457969434,
+      "wins": 2
+    },
+    {
+      "stratum": "R1_A_gradual_periodic",
+      "metric": "p999_ns",
+      "denominator": "shape",
+      "instances": 6,
+      "gm_ratio": 1.1640715986071275,
+      "ci_low": 0.9997839595381752,
+      "ci_high": 1.5133647659597962,
+      "wins": 2
+    },
+    {
+      "stratum": "R1_A_gradual_periodic",
+      "metric": "p999_ns",
+      "denominator": "horizon",
+      "instances": 6,
+      "gm_ratio": 1.1001591663664512,
+      "ci_low": 0.967406673411161,
+      "ci_high": 1.3477773934273614,
+      "wins": 2
+    },
+    {
+      "stratum": "R1_A_gradual_periodic",
+      "metric": "p999_ns",
+      "denominator": "work_function",
+      "instances": 6,
+      "gm_ratio": 1.1683829580302,
+      "ci_low": 1.0099881912848974,
+      "ci_high": 1.5091844961367251,
+      "wins": 2
+    },
+    {
+      "stratum": "R1_A_gradual_periodic",
+      "metric": "p999_ns",
+      "denominator": "credit",
+      "instances": 6,
+      "gm_ratio": 1.0848680578836487,
+      "ci_low": 0.9547384538428104,
+      "ci_high": 1.3333196053012066,
+      "wins": 4
+    },
+    {
+      "stratum": "R1_B_mean_reverting",
+      "metric": "service_ns",
+      "denominator": "static",
+      "instances": 6,
+      "gm_ratio": 1.0029669243124986,
+      "ci_low": 0.978309668021568,
+      "ci_high": 1.0321087777553783,
+      "wins": 3
+    },
+    {
+      "stratum": "R1_B_mean_reverting",
+      "metric": "service_ns",
+      "denominator": "shape",
+      "instances": 6,
+      "gm_ratio": 0.9757638088797422,
+      "ci_low": 0.9273419499249952,
+      "ci_high": 1.038021628617658,
+      "wins": 4
+    },
+    {
+      "stratum": "R1_B_mean_reverting",
+      "metric": "service_ns",
+      "denominator": "horizon",
+      "instances": 6,
+      "gm_ratio": 0.989362782821346,
+      "ci_low": 0.9426874903685344,
+      "ci_high": 1.0509074544716748,
+      "wins": 4
+    },
+    {
+      "stratum": "R1_B_mean_reverting",
+      "metric": "service_ns",
+      "denominator": "work_function",
+      "instances": 6,
+      "gm_ratio": 1.0379794179909865,
+      "ci_low": 0.96894516887584,
+      "ci_high": 1.1367555884270537,
+      "wins": 2
+    },
+    {
+      "stratum": "R1_B_mean_reverting",
+      "metric": "service_ns",
+      "denominator": "credit",
+      "instances": 6,
+      "gm_ratio": 1.0582836630200678,
+      "ci_low": 0.99872967673981,
+      "ci_high": 1.1277147460952304,
+      "wins": 1
+    },
+    {
+      "stratum": "R1_B_mean_reverting",
+      "metric": "p99_ns",
+      "denominator": "static",
+      "instances": 6,
+      "gm_ratio": 1.0782084144301187,
+      "ci_low": 1.0268077338348616,
+      "ci_high": 1.1086049516888783,
+      "wins": 1
+    },
+    {
+      "stratum": "R1_B_mean_reverting",
+      "metric": "p99_ns",
+      "denominator": "shape",
+      "instances": 6,
+      "gm_ratio": 1.1611396638298743,
+      "ci_low": 1.038956900820163,
+      "ci_high": 1.4108270433019592,
+      "wins": 0
+    },
+    {
+      "stratum": "R1_B_mean_reverting",
+      "metric": "p99_ns",
+      "denominator": "horizon",
+      "instances": 6,
+      "gm_ratio": 0.9541705142592888,
+      "ci_low": 0.8793212195603171,
+      "ci_high": 1.028847679104733,
+      "wins": 4
+    },
+    {
+      "stratum": "R1_B_mean_reverting",
+      "metric": "p99_ns",
+      "denominator": "work_function",
+      "instances": 6,
+      "gm_ratio": 1.1093564435402072,
+      "ci_low": 1.0569469213464318,
+      "ci_high": 1.1973543115197949,
+      "wins": 0
+    },
+    {
+      "stratum": "R1_B_mean_reverting",
+      "metric": "p99_ns",
+      "denominator": "credit",
+      "instances": 6,
+      "gm_ratio": 0.83749469334689,
+      "ci_low": 0.7695742179517644,
+      "ci_high": 0.9010734336753918,
+      "wins": 6
+    },
+    {
+      "stratum": "R1_B_mean_reverting",
+      "metric": "p999_ns",
+      "denominator": "static",
+      "instances": 6,
+      "gm_ratio": 1.0230135948802794,
+      "ci_low": 1.0088035685472605,
+      "ci_high": 1.0398448999193846,
+      "wins": 0
+    },
+    {
+      "stratum": "R1_B_mean_reverting",
+      "metric": "p999_ns",
+      "denominator": "shape",
+      "instances": 6,
+      "gm_ratio": 1.041834882862031,
+      "ci_low": 0.9833057958535538,
+      "ci_high": 1.1398957499537163,
+      "wins": 2
+    },
+    {
+      "stratum": "R1_B_mean_reverting",
+      "metric": "p999_ns",
+      "denominator": "horizon",
+      "instances": 6,
+      "gm_ratio": 1.0266800681535375,
+      "ci_low": 0.9303491964316885,
+      "ci_high": 1.1453340057264572,
+      "wins": 2
+    },
+    {
+      "stratum": "R1_B_mean_reverting",
+      "metric": "p999_ns",
+      "denominator": "work_function",
+      "instances": 6,
+      "gm_ratio": 1.018728340553105,
+      "ci_low": 0.9637817157522304,
+      "ci_high": 1.0997965721616696,
+      "wins": 4
+    },
+    {
+      "stratum": "R1_B_mean_reverting",
+      "metric": "p999_ns",
+      "denominator": "credit",
+      "instances": 6,
+      "gm_ratio": 0.9656675861997968,
+      "ci_low": 0.8833703326207002,
+      "ci_high": 1.0735431687334038,
+      "wins": 5
+    },
+    {
+      "stratum": "R1_C_noisy_bursts",
+      "metric": "service_ns",
+      "denominator": "static",
+      "instances": 6,
+      "gm_ratio": 1.0336014292997442,
+      "ci_low": 0.9619233749372106,
+      "ci_high": 1.1037616698545538,
+      "wins": 2
+    },
+    {
+      "stratum": "R1_C_noisy_bursts",
+      "metric": "service_ns",
+      "denominator": "shape",
+      "instances": 6,
+      "gm_ratio": 0.9497704354711034,
+      "ci_low": 0.8976279337051781,
+      "ci_high": 1.002418763783196,
+      "wins": 5
+    },
+    {
+      "stratum": "R1_C_noisy_bursts",
+      "metric": "service_ns",
+      "denominator": "horizon",
+      "instances": 6,
+      "gm_ratio": 0.975834387574966,
+      "ci_low": 0.9419918271403196,
+      "ci_high": 1.009453413600743,
+      "wins": 3
+    },
+    {
+      "stratum": "R1_C_noisy_bursts",
+      "metric": "service_ns",
+      "denominator": "work_function",
+      "instances": 6,
+      "gm_ratio": 0.9849333339421724,
+      "ci_low": 0.9366664299943094,
+      "ci_high": 1.03134625495108,
+      "wins": 3
+    },
+    {
+      "stratum": "R1_C_noisy_bursts",
+      "metric": "service_ns",
+      "denominator": "credit",
+      "instances": 6,
+      "gm_ratio": 0.9798267263195538,
+      "ci_low": 0.9314732225771364,
+      "ci_high": 1.039377868919111,
+      "wins": 5
+    },
+    {
+      "stratum": "R1_C_noisy_bursts",
+      "metric": "p99_ns",
+      "denominator": "static",
+      "instances": 6,
+      "gm_ratio": 1.1462519743861008,
+      "ci_low": 1.1167699198373475,
+      "ci_high": 1.179382070387531,
+      "wins": 0
+    },
+    {
+      "stratum": "R1_C_noisy_bursts",
+      "metric": "p99_ns",
+      "denominator": "shape",
+      "instances": 6,
+      "gm_ratio": 1.0465831877744562,
+      "ci_low": 1.0152802281778994,
+      "ci_high": 1.091105139703151,
+      "wins": 1
+    },
+    {
+      "stratum": "R1_C_noisy_bursts",
+      "metric": "p99_ns",
+      "denominator": "horizon",
+      "instances": 6,
+      "gm_ratio": 0.9157428065158114,
+      "ci_low": 0.8121299754768682,
+      "ci_high": 1.0384372803149782,
+      "wins": 3
+    },
+    {
+      "stratum": "R1_C_noisy_bursts",
+      "metric": "p99_ns",
+      "denominator": "work_function",
+      "instances": 6,
+      "gm_ratio": 1.027407033121889,
+      "ci_low": 0.9217560500784292,
+      "ci_high": 1.1078727819151144,
+      "wins": 1
+    },
+    {
+      "stratum": "R1_C_noisy_bursts",
+      "metric": "p99_ns",
+      "denominator": "credit",
+      "instances": 6,
+      "gm_ratio": 0.7672554313464498,
+      "ci_low": 0.6656699459198313,
+      "ci_high": 0.88434351068258,
+      "wins": 6
+    },
+    {
+      "stratum": "R1_C_noisy_bursts",
+      "metric": "p999_ns",
+      "denominator": "static",
+      "instances": 6,
+      "gm_ratio": 0.948338160653776,
+      "ci_low": 0.812392336148867,
+      "ci_high": 1.0525490407238265,
+      "wins": 2
+    },
+    {
+      "stratum": "R1_C_noisy_bursts",
+      "metric": "p999_ns",
+      "denominator": "shape",
+      "instances": 6,
+      "gm_ratio": 0.8822625966316324,
+      "ci_low": 0.7288274738338704,
+      "ci_high": 1.0207525649848015,
+      "wins": 4
+    },
+    {
+      "stratum": "R1_C_noisy_bursts",
+      "metric": "p999_ns",
+      "denominator": "horizon",
+      "instances": 6,
+      "gm_ratio": 0.9749558661418344,
+      "ci_low": 0.9560518133226942,
+      "ci_high": 0.9914691057127488,
+      "wins": 5
+    },
+    {
+      "stratum": "R1_C_noisy_bursts",
+      "metric": "p999_ns",
+      "denominator": "work_function",
+      "instances": 6,
+      "gm_ratio": 0.9671652732606256,
+      "ci_low": 0.930482502946456,
+      "ci_high": 0.9979782842384708,
+      "wins": 4
+    },
+    {
+      "stratum": "R1_C_noisy_bursts",
+      "metric": "p999_ns",
+      "denominator": "credit",
+      "instances": 6,
+      "gm_ratio": 0.8205939845691425,
+      "ci_low": 0.6037025221669154,
+      "ci_high": 0.9969486126459493,
+      "wins": 5
+    },
+    {
+      "stratum": "R2_D_persistent_shift",
+      "metric": "service_ns",
+      "denominator": "static",
+      "instances": 6,
+      "gm_ratio": 0.7504496573705474,
+      "ci_low": 0.6688782390249062,
+      "ci_high": 0.8297723327971337,
+      "wins": 6
+    },
+    {
+      "stratum": "R2_D_persistent_shift",
+      "metric": "service_ns",
+      "denominator": "shape",
+      "instances": 6,
+      "gm_ratio": 0.7054610755087285,
+      "ci_low": 0.6261034328381618,
+      "ci_high": 0.790071558712318,
+      "wins": 6
+    },
+    {
+      "stratum": "R2_D_persistent_shift",
+      "metric": "service_ns",
+      "denominator": "horizon",
+      "instances": 6,
+      "gm_ratio": 0.8434645186202021,
+      "ci_low": 0.7475155266619739,
+      "ci_high": 0.953421451424888,
+      "wins": 5
+    },
+    {
+      "stratum": "R2_D_persistent_shift",
+      "metric": "service_ns",
+      "denominator": "work_function",
+      "instances": 6,
+      "gm_ratio": 0.7499353789099219,
+      "ci_low": 0.699112801238236,
+      "ci_high": 0.811469898633033,
+      "wins": 6
+    },
+    {
+      "stratum": "R2_D_persistent_shift",
+      "metric": "service_ns",
+      "denominator": "credit",
+      "instances": 6,
+      "gm_ratio": 1.039200881547938,
+      "ci_low": 0.9650198645102696,
+      "ci_high": 1.108517687388471,
+      "wins": 1
+    },
+    {
+      "stratum": "R2_D_persistent_shift",
+      "metric": "p99_ns",
+      "denominator": "static",
+      "instances": 6,
+      "gm_ratio": 0.996583889644237,
+      "ci_low": 0.9261298608905396,
+      "ci_high": 1.052676492018411,
+      "wins": 2
+    },
+    {
+      "stratum": "R2_D_persistent_shift",
+      "metric": "p99_ns",
+      "denominator": "shape",
+      "instances": 6,
+      "gm_ratio": 0.9173421731733132,
+      "ci_low": 0.8521412387072457,
+      "ci_high": 0.9903619735746656,
+      "wins": 4
+    },
+    {
+      "stratum": "R2_D_persistent_shift",
+      "metric": "p99_ns",
+      "denominator": "horizon",
+      "instances": 6,
+      "gm_ratio": 0.9752557899901748,
+      "ci_low": 0.9265124860929208,
+      "ci_high": 1.0265634518539788,
+      "wins": 3
+    },
+    {
+      "stratum": "R2_D_persistent_shift",
+      "metric": "p99_ns",
+      "denominator": "work_function",
+      "instances": 6,
+      "gm_ratio": 0.9487054316936288,
+      "ci_low": 0.8635658499918348,
+      "ci_high": 1.0245485723633052,
+      "wins": 4
+    },
+    {
+      "stratum": "R2_D_persistent_shift",
+      "metric": "p99_ns",
+      "denominator": "credit",
+      "instances": 6,
+      "gm_ratio": 1.032664918113441,
+      "ci_low": 1.0003183344629063,
+      "ci_high": 1.0676830215112614,
+      "wins": 2
+    },
+    {
+      "stratum": "R2_D_persistent_shift",
+      "metric": "p999_ns",
+      "denominator": "static",
+      "instances": 6,
+      "gm_ratio": 0.9609512762911844,
+      "ci_low": 0.9257048724369272,
+      "ci_high": 0.9865827425800788,
+      "wins": 6
+    },
+    {
+      "stratum": "R2_D_persistent_shift",
+      "metric": "p999_ns",
+      "denominator": "shape",
+      "instances": 6,
+      "gm_ratio": 0.9521388518195244,
+      "ci_low": 0.9201507535472484,
+      "ci_high": 0.9826729087432992,
+      "wins": 5
+    },
+    {
+      "stratum": "R2_D_persistent_shift",
+      "metric": "p999_ns",
+      "denominator": "horizon",
+      "instances": 6,
+      "gm_ratio": 0.9968194066062144,
+      "ci_low": 0.9766969989160372,
+      "ci_high": 1.0229007643197272,
+      "wins": 5
+    },
+    {
+      "stratum": "R2_D_persistent_shift",
+      "metric": "p999_ns",
+      "denominator": "work_function",
+      "instances": 6,
+      "gm_ratio": 0.9336291263040382,
+      "ci_low": 0.8442726709014282,
+      "ci_high": 0.9912210753727768,
+      "wins": 5
+    },
+    {
+      "stratum": "R2_D_persistent_shift",
+      "metric": "p999_ns",
+      "denominator": "credit",
+      "instances": 6,
+      "gm_ratio": 0.9200792668535122,
+      "ci_low": 0.7356983222334775,
+      "ci_high": 1.0398071628128225,
+      "wins": 1
+    }
+  ],
+  "controller_setup": {
+    "median_ms": 8.689,
+    "max_ms": 12.8806,
+    "lookup_bytes_median": 380320.5,
+    "lookup_bytes_max": 508718
+  },
+  "equivalence": {
+    "passed": true,
+    "events": 2880000,
+    "decision_boundaries": 11181,
+    "original_decision_median_ns": 90100.0,
+    "cached_decision_median_ns": 47100.0,
+    "median_paired_time_ratio": 0.5228031145717463,
+    "original_source_sha256": "3264395f85158ee4ccfdb0220e0d3a4f109a9f65e98be9bb9e37cc833221475f",
+    "cached_source_sha256": "ca87facbe17b8becc15605b3db8322a60c885bee97a8313234786f5d8a818346",
+    "note": "alternating component timings; exact request, decision, credit, and recorded-action equivalence; lookup initialization recorded separately"
+  },
+  "worst_static_instance": {
+    "size": 8192,
+    "group": 0,
+    "family": "R1_C_noisy_bursts",
+    "policies": {
+      "credit": {
+        "seed": 2026118513,
+        "n_queries": 160000,
+        "service_ns": 8626057100,
+        "query_ns": 7897758300,
+        "controller_ns": 490145500,
+        "migration_ns": 238153300,
+        "p99_ns": 129201.00000000092,
+        "p999_ns": 1145002.500000046,
+        "max_ns": 51471000,
+        "migration_count": 5,
+        "rewrite_bytes": 148105,
+        "budget_denied": 0,
+        "budget_limit_bytes": 39789,
+        "prediction_ns": 7473411082.8125,
+        "elapsed_ns": 9668997900,
+        "truth_ns": 638323800,
+        "correct": true,
+        "integrity": "{'chunk_count': 8, 'invalid_chunks': [], 'non_idle_chunks': [], 'chunks_without_exactly_one_payload': [], 'temporary_file_count': 0, 'active_stored_bytes': 233268, 'pass': True}",
+        "sources": "{'benchmark_v2.py': '1a1a866482c90bf98392f5d70ee4d62b754374c08cfd22c5c0cc45aeabe21047', 'efficient_executor.py': 'aa47bb9e1bf3d615e0b09837c6bec449dd423df9b2bf014bc8373ce403830dab', 'risk_controller.py': 'ca87facbe17b8becc15605b3db8322a60c885bee97a8313234786f5d8a818346', 'fgcs_benchmark.py': 'dd1e00b992b990073ebdb8becdedb2ebd82fbc9f51baa0e042b768059cb96763'}",
+        "initial_codecs": "['whole_lz4', 'whole_lz4', 'whole_lz4', 'block_lz4_1024', 'whole_lz4', 'block_lz4_4096', 'whole_lz4', 'whole_lz4']",
+        "controller_setup_ns": 17600
+      },
+      "horizon": {
+        "seed": 2026118513,
+        "n_queries": 160000,
+        "service_ns": 8297748800,
+        "query_ns": 7993900500,
+        "controller_ns": 303848300,
+        "migration_ns": 0,
+        "p99_ns": 106200.0,
+        "p999_ns": 1139002.500000046,
+        "max_ns": 8734500,
+        "migration_count": 0,
+        "rewrite_bytes": 0,
+        "budget_denied": 0,
+        "budget_limit_bytes": 39789,
+        "prediction_ns": 8994838140.625,
+        "elapsed_ns": 9245435700,
+        "truth_ns": 578484100,
+        "correct": true,
+        "integrity": "{'chunk_count': 8, 'invalid_chunks': [], 'non_idle_chunks': [], 'chunks_without_exactly_one_payload': [], 'temporary_file_count': 0, 'active_stored_bytes': 225803, 'pass': True}",
+        "sources": "{'benchmark_v2.py': '1a1a866482c90bf98392f5d70ee4d62b754374c08cfd22c5c0cc45aeabe21047', 'efficient_executor.py': 'aa47bb9e1bf3d615e0b09837c6bec449dd423df9b2bf014bc8373ce403830dab', 'risk_controller.py': 'ca87facbe17b8becc15605b3db8322a60c885bee97a8313234786f5d8a818346', 'fgcs_benchmark.py': 'dd1e00b992b990073ebdb8becdedb2ebd82fbc9f51baa0e042b768059cb96763'}",
+        "initial_codecs": "['whole_lz4', 'whole_lz4', 'whole_lz4', 'block_lz4_1024', 'whole_lz4', 'block_lz4_4096', 'whole_lz4', 'whole_lz4']",
+        "controller_setup_ns": 34100
+      },
+      "risk": {
+        "seed": 2026118513,
+        "n_queries": 160000,
+        "service_ns": 8579467200,
+        "query_ns": 8341014200,
+        "controller_ns": 183661300,
+        "migration_ns": 54791700,
+        "p99_ns": 120600.0,
+        "p999_ns": 1142800.100000002,
+        "max_ns": 54934100,
+        "migration_count": 1,
+        "rewrite_bytes": 24604,
+        "budget_denied": 0,
+        "budget_limit_bytes": 39789,
+        "prediction_ns": 8953743131.25,
+        "elapsed_ns": 9524643200,
+        "truth_ns": 584157700,
+        "correct": true,
+        "integrity": "{'chunk_count': 8, 'invalid_chunks': [], 'non_idle_chunks': [], 'chunks_without_exactly_one_payload': [], 'temporary_file_count': 0, 'active_stored_bytes': 227476, 'pass': True}",
+        "sources": "{'benchmark_v2.py': '1a1a866482c90bf98392f5d70ee4d62b754374c08cfd22c5c0cc45aeabe21047', 'efficient_executor.py': 'aa47bb9e1bf3d615e0b09837c6bec449dd423df9b2bf014bc8373ce403830dab', 'risk_controller.py': 'ca87facbe17b8becc15605b3db8322a60c885bee97a8313234786f5d8a818346', 'fgcs_benchmark.py': 'dd1e00b992b990073ebdb8becdedb2ebd82fbc9f51baa0e042b768059cb96763'}",
+        "initial_codecs": "['whole_lz4', 'whole_lz4', 'whole_lz4', 'block_lz4_1024', 'whole_lz4', 'block_lz4_4096', 'whole_lz4', 'whole_lz4']",
+        "controller_setup_ns": 9064800
+      },
+      "shape": {
+        "seed": 2026118513,
+        "n_queries": 160000,
+        "service_ns": 8156425800,
+        "query_ns": 7750016500,
+        "controller_ns": 406409300,
+        "migration_ns": 0,
+        "p99_ns": 104801.00000000092,
+        "p999_ns": 1140102.2000000405,
+        "max_ns": 9321900,
+        "migration_count": 0,
+        "rewrite_bytes": 0,
+        "budget_denied": 0,
+        "budget_limit_bytes": 39789,
+        "prediction_ns": 8994838140.625,
+        "elapsed_ns": 9116087300,
+        "truth_ns": 598349800,
+        "correct": true,
+        "integrity": "{'chunk_count': 8, 'invalid_chunks': [], 'non_idle_chunks': [], 'chunks_without_exactly_one_payload': [], 'temporary_file_count': 0, 'active_stored_bytes': 225803, 'pass': True}",
+        "sources": "{'benchmark_v2.py': '1a1a866482c90bf98392f5d70ee4d62b754374c08cfd22c5c0cc45aeabe21047', 'efficient_executor.py': 'aa47bb9e1bf3d615e0b09837c6bec449dd423df9b2bf014bc8373ce403830dab', 'risk_controller.py': 'ca87facbe17b8becc15605b3db8322a60c885bee97a8313234786f5d8a818346', 'fgcs_benchmark.py': 'dd1e00b992b990073ebdb8becdedb2ebd82fbc9f51baa0e042b768059cb96763'}",
+        "initial_codecs": "['whole_lz4', 'whole_lz4', 'whole_lz4', 'block_lz4_1024', 'whole_lz4', 'block_lz4_4096', 'whole_lz4', 'whole_lz4']",
+        "controller_setup_ns": 22700
+      },
+      "static": {
+        "seed": 2026118513,
+        "n_queries": 160000,
+        "service_ns": 7409672300,
+        "query_ns": 7409672300,
+        "controller_ns": 0,
+        "migration_ns": 0,
+        "p99_ns": 99200.0,
+        "p999_ns": 1133000.8000000147,
+        "max_ns": 5765800,
+        "migration_count": 0,
+        "rewrite_bytes": 0,
+        "budget_denied": 0,
+        "budget_limit_bytes": 39789,
+        "prediction_ns": 8994838140.625,
+        "elapsed_ns": 8299177800,
+        "truth_ns": 571101200,
+        "correct": true,
+        "integrity": "{'chunk_count': 8, 'invalid_chunks': [], 'non_idle_chunks': [], 'chunks_without_exactly_one_payload': [], 'temporary_file_count': 0, 'active_stored_bytes': 225803, 'pass': True}",
+        "sources": "{'benchmark_v2.py': '1a1a866482c90bf98392f5d70ee4d62b754374c08cfd22c5c0cc45aeabe21047', 'efficient_executor.py': 'aa47bb9e1bf3d615e0b09837c6bec449dd423df9b2bf014bc8373ce403830dab', 'risk_controller.py': 'ca87facbe17b8becc15605b3db8322a60c885bee97a8313234786f5d8a818346', 'fgcs_benchmark.py': 'dd1e00b992b990073ebdb8becdedb2ebd82fbc9f51baa0e042b768059cb96763'}",
+        "initial_codecs": "['whole_lz4', 'whole_lz4', 'whole_lz4', 'block_lz4_1024', 'whole_lz4', 'block_lz4_4096', 'whole_lz4', 'whole_lz4']",
+        "controller_setup_ns": 2700
+      },
+      "work_function": {
+        "seed": 2026118513,
+        "n_queries": 160000,
+        "service_ns": 8064768000,
+        "query_ns": 7799093900,
+        "controller_ns": 218811700,
+        "migration_ns": 46862400,
+        "p99_ns": 106500.0,
+        "p999_ns": 1138400.100000002,
+        "max_ns": 46971700,
+        "migration_count": 1,
+        "rewrite_bytes": 24604,
+        "budget_denied": 0,
+        "budget_limit_bytes": 39789,
+        "prediction_ns": 8917982175.0,
+        "elapsed_ns": 8991825700,
+        "truth_ns": 581699800,
+        "correct": true,
+        "integrity": "{'chunk_count': 8, 'invalid_chunks': [], 'non_idle_chunks': [], 'chunks_without_exactly_one_payload': [], 'temporary_file_count': 0, 'active_stored_bytes': 227476, 'pass': True}",
+        "sources": "{'benchmark_v2.py': '1a1a866482c90bf98392f5d70ee4d62b754374c08cfd22c5c0cc45aeabe21047', 'efficient_executor.py': 'aa47bb9e1bf3d615e0b09837c6bec449dd423df9b2bf014bc8373ce403830dab', 'risk_controller.py': 'ca87facbe17b8becc15605b3db8322a60c885bee97a8313234786f5d8a818346', 'fgcs_benchmark.py': 'dd1e00b992b990073ebdb8becdedb2ebd82fbc9f51baa0e042b768059cb96763'}",
+        "initial_codecs": "['whole_lz4', 'whole_lz4', 'whole_lz4', 'block_lz4_1024', 'whole_lz4', 'block_lz4_4096', 'whole_lz4', 'whole_lz4']",
+        "controller_setup_ns": 22700
+      }
+    }
+  },
+  "executor": {
+    "observations": 240,
+    "directed_pairs": 80,
+    "original_median_ms": 49.83455,
+    "efficient_median_ms": 39.60885,
+    "median_paired_ratio": 0.785757809531721,
+    "ratio_p10": 0.7239087155803542,
+    "ratio_p90": 0.8284338094130602,
+    "all_correct": true
+  },
+  "faults": {
+    "trials": 492,
+    "passed": 492,
+    "additional_trials": 42,
+    "old_retirement_failure_reproduced": true,
+    "source_sha256": "aa47bb9e1bf3d615e0b09837c6bec449dd423df9b2bf014bc8373ce403830dab"
+  }
+}

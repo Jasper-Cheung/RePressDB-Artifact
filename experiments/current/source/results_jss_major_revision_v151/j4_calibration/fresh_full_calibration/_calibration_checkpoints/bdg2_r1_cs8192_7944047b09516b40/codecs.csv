@@ -1,0 +1,6 @@
+dataset,chunk_id,series_index,chunk_start,chunk_size,unit_type,unit_id,building_id,codec,raw_size_bytes,payload_size_bytes,metadata_size_bytes,stored_size_bytes,compression_ratio,encode_ns,full_decode_ns
+BDG2_JSS_FRESH_CALIBRATION,bdg2_r1_cs8192_7944047b09516b40,24,0,8192,building,Hog_services_Danny,Hog_services_Danny,whole_lz4,32768,20270,0,20270,0.61859130859375,3450700,29500
+BDG2_JSS_FRESH_CALIBRATION,bdg2_r1_cs8192_7944047b09516b40,24,0,8192,building,Hog_services_Danny,Hog_services_Danny,whole_zstd,32768,16797,0,16797,0.512603759765625,3296500,83100
+BDG2_JSS_FRESH_CALIBRATION,bdg2_r1_cs8192_7944047b09516b40,24,0,8192,building,Hog_services_Danny,Hog_services_Danny,block_lz4_64,32768,28197,4104,32301,0.985748291015625,9495200,357700
+BDG2_JSS_FRESH_CALIBRATION,bdg2_r1_cs8192_7944047b09516b40,24,0,8192,building,Hog_services_Danny,Hog_services_Danny,block_lz4_256,32768,24346,1032,25378,0.77447509765625,7044500,290800
+BDG2_JSS_FRESH_CALIBRATION,bdg2_r1_cs8192_7944047b09516b40,24,0,8192,building,Hog_services_Danny,Hog_services_Danny,block_lz4_1024,32768,22074,264,22338,0.68170166015625,8750400,44900

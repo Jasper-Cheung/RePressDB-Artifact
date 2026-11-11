@@ -1,0 +1,6 @@
+dataset,chunk_id,series_index,chunk_start,chunk_size,unit_type,unit_id,building_id,codec,raw_size_bytes,payload_size_bytes,metadata_size_bytes,stored_size_bytes,compression_ratio,encode_ns,full_decode_ns
+BDG2_JSS_FRESH_CALIBRATION,bdg2_r1_cs8192_1a4c9cb38187f089,15,0,8192,building,Lamb_education_Camille,Lamb_education_Camille,whole_lz4,32768,22609,0,22609,0.689971923828125,4248400,43900
+BDG2_JSS_FRESH_CALIBRATION,bdg2_r1_cs8192_1a4c9cb38187f089,15,0,8192,building,Lamb_education_Camille,Lamb_education_Camille,whole_zstd,32768,14049,0,14049,0.428741455078125,3954600,96700
+BDG2_JSS_FRESH_CALIBRATION,bdg2_r1_cs8192_1a4c9cb38187f089,15,0,8192,building,Lamb_education_Camille,Lamb_education_Camille,block_lz4_64,32768,31907,4104,36011,1.098968505859375,8633100,599800
+BDG2_JSS_FRESH_CALIBRATION,bdg2_r1_cs8192_1a4c9cb38187f089,15,0,8192,building,Lamb_education_Camille,Lamb_education_Camille,block_lz4_256,32768,27397,1032,28429,0.867584228515625,6935300,298000
+BDG2_JSS_FRESH_CALIBRATION,bdg2_r1_cs8192_1a4c9cb38187f089,15,0,8192,building,Lamb_education_Camille,Lamb_education_Camille,block_lz4_1024,32768,24770,264,25034,0.76397705078125,8560600,115800

@@ -1,0 +1,33 @@
+{
+  "version": "1.0.0",
+  "target_journal": "Journal of Big Data",
+  "b2_protocol_sha256": "726a83e0f9b7917a096a6fc59120315fdfef9047065d27e2a55a135d6d2eaab2",
+  "b2_experiment_freeze_sha256": "1e7708807b1f44b3b3608a3dd2d0e590d3d74e78ac53dcb7652586ed6248f733",
+  "parent_b1_experiment_freeze_sha256": "89b5586712ab73ad9fdfb7ec018da5c2ad884276778682c65794e7f3f0f8d3ac",
+  "views": {
+    "data_scale_8192": {
+      "chunk_size": 8192,
+      "query_count": 500000,
+      "migration_count": 500
+    },
+    "catalog_scale_2048": {
+      "chunk_size": 2048,
+      "query_count": 500000,
+      "migration_count": 500
+    }
+  },
+  "qualification_batch_size": 192,
+  "ingest_column_batch_size": 64,
+  "query_insert_batch": 1000,
+  "maximum_open_handles": 256,
+  "environment": {
+    "python": "3.10.20 | packaged by conda-forge | (main, Mar  5 2026, 16:36:49) [MSC v.1944 64 bit (AMD64)]",
+    "platform": "Windows-10-10.0.26200-SP0",
+    "processor": "Intel64 Family 6 Model 183 Stepping 1, GenuineIntel",
+    "numpy": "2.2.6",
+    "pandas": "2.3.3",
+    "sqlite_version": "3.53.1",
+    "memory_measurement": "psutil_rss",
+    "timer": "time.perf_counter_ns"
+  }
+}

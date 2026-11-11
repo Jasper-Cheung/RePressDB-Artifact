@@ -1,0 +1,6 @@
+dataset,chunk_id,series_index,chunk_start,chunk_size,unit_type,unit_id,building_id,codec,raw_size_bytes,payload_size_bytes,metadata_size_bytes,stored_size_bytes,compression_ratio,encode_ns,full_decode_ns
+BDG2_JSS_FRESH_CALIBRATION,bdg2_r1_cs8192_0663f43faff04a56,3,0,8192,building,Eagle_public_Henry,Eagle_public_Henry,whole_lz4,32768,31014,0,31014,0.94647216796875,5267300,19400
+BDG2_JSS_FRESH_CALIBRATION,bdg2_r1_cs8192_0663f43faff04a56,3,0,8192,building,Eagle_public_Henry,Eagle_public_Henry,whole_zstd,32768,27459,0,27459,0.837982177734375,2991600,43500
+BDG2_JSS_FRESH_CALIBRATION,bdg2_r1_cs8192_0663f43faff04a56,3,0,8192,building,Eagle_public_Henry,Eagle_public_Henry,block_lz4_64,32768,35114,4104,39218,1.19683837890625,7427900,342200
+BDG2_JSS_FRESH_CALIBRATION,bdg2_r1_cs8192_0663f43faff04a56,3,0,8192,building,Eagle_public_Henry,Eagle_public_Henry,block_lz4_256,32768,32596,1032,33628,1.0262451171875,6894900,108600
+BDG2_JSS_FRESH_CALIBRATION,bdg2_r1_cs8192_0663f43faff04a56,3,0,8192,building,Eagle_public_Henry,Eagle_public_Henry,block_lz4_1024,32768,31532,264,31796,0.9703369140625,7710500,45000

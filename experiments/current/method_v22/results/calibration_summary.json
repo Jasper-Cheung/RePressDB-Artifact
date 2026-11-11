@@ -1,0 +1,11 @@
+{
+  "query_records": 8352,
+  "query_events": 567936,
+  "durable_observations": 4320,
+  "wall_ns": 400949302200,
+  "hashes": {
+    "query_calibration.json": "d02e4d3a58f94d0995dbf2f9d6e0f776a1460d20712b29cc8bbc095c719357bc",
+    "durable_calibration.csv": "cbd8a7de70988700dcd5ebc78ee9558e582ad12accc5dc7d375f39ac1679f731",
+    "codec_sizes.csv": "c4680cea8bba59e51f4cb96a70b6a66ba9b287de4d8756bc96ffd1150907564a"
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "passed": true,
+  "input_hashes_checked": 151,
+  "frozen_code_hashes_checked": 4,
+  "decisions": 14524,
+  "episodes": 66,
+  "stable_windows": 14328,
+  "instances": 24,
+  "new_performance_executions": 0,
+  "analysis_summary_sha256": "5a0e2b129ee2ec076b94be9014e47e129f5711650201240440203e16b61f666e",
+  "derived_file_hashes": {
+    "amortization_scenarios.csv": "48b5d2a28b604d8ed62f2cfe3f803faeb0a514ad2265a700eaff6002f1e00bbb",
+    "decisions.csv": "d9c6ebc0fc3aea610ce98063373a2b2fd36c139a8f75eba22f2f43427a9cf3a4",
+    "migration_episodes.csv": "2ed667e3752025c4a9abfb9415c4f94a2e103fa7bd74142e65bd4ca7eef0dabc",
+    "stable_windows.csv": "9f4aaf9285ea0dd4ca2e3947c7dab53e7991c4d91871e5419fd8ccbe657eced3"
+  }
+}

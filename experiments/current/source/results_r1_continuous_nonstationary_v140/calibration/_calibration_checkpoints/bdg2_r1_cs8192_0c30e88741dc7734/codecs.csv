@@ -1,0 +1,6 @@
+dataset,chunk_id,series_index,chunk_start,chunk_size,unit_type,unit_id,building_id,codec,raw_size_bytes,payload_size_bytes,metadata_size_bytes,stored_size_bytes,compression_ratio,encode_ns,full_decode_ns
+BDG2_R1,bdg2_r1_cs8192_0c30e88741dc7734,8,0,8192,building,Lamb_assembly_Theresa,Lamb_assembly_Theresa,whole_lz4,32768,18301,0,18301,0.558502197265625,2692200,29100
+BDG2_R1,bdg2_r1_cs8192_0c30e88741dc7734,8,0,8192,building,Lamb_assembly_Theresa,Lamb_assembly_Theresa,whole_zstd,32768,8759,0,8759,0.267303466796875,3296600,48400
+BDG2_R1,bdg2_r1_cs8192_0c30e88741dc7734,8,0,8192,building,Lamb_assembly_Theresa,Lamb_assembly_Theresa,block_lz4_64,32768,26453,4104,30557,0.932525634765625,7225800,336600
+BDG2_R1,bdg2_r1_cs8192_0c30e88741dc7734,8,0,8192,building,Lamb_assembly_Theresa,Lamb_assembly_Theresa,block_lz4_256,32768,21197,1032,22229,0.678375244140625,6541300,145800
+BDG2_R1,bdg2_r1_cs8192_0c30e88741dc7734,8,0,8192,building,Lamb_assembly_Theresa,Lamb_assembly_Theresa,block_lz4_1024,32768,19034,264,19298,0.58892822265625,7704400,47300

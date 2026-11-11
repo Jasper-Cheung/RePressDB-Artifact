@@ -1,0 +1,702 @@
+{
+  "analysis": "existing records only; no new performance execution",
+  "mechanism": {
+    "decisions": 14524,
+    "outcomes": {
+      "stable_or_disagreement": 11751,
+      "waiting_credit": 1141,
+      "waiting_confirmation": 1137,
+      "gain": 428,
+      "proposed_normal": 64,
+      "proposed_repair": 3
+    },
+    "any_infeasible": 13473,
+    "unconstrained_target_filtered": 7620,
+    "price_eligible": 1205,
+    "return_price_binding": 364,
+    "proposals": 67,
+    "committed": 66,
+    "budget_deferred": 1,
+    "proposals_by_reason": {
+      "candidate": 64,
+      "risk_repair": 3
+    },
+    "actions_by_reason": {
+      "candidate": 63,
+      "risk_repair": 3
+    }
+  },
+  "payback": [
+    {
+      "stratum": "continuous",
+      "reason": "candidate",
+      "episodes": 20,
+      "closed": 3,
+      "right_censored": 17,
+      "covered_forward": 14,
+      "covered_reserved": 12,
+      "median_saving_forward_ratio": 1.5599298332116773,
+      "total_modeled_saving_ns": 2771442615.625,
+      "total_executed_forward_ns": 1481628700
+    },
+    {
+      "stratum": "continuous",
+      "reason": "risk_repair",
+      "episodes": 3,
+      "closed": 0,
+      "right_censored": 3,
+      "covered_forward": 0,
+      "covered_reserved": 0,
+      "median_saving_forward_ratio": -16.534144953676574,
+      "total_modeled_saving_ns": -1773398065.625,
+      "total_executed_forward_ns": 126677900
+    },
+    {
+      "stratum": "persistent",
+      "reason": "candidate",
+      "episodes": 43,
+      "closed": 0,
+      "right_censored": 43,
+      "covered_forward": 40,
+      "covered_reserved": 41,
+      "median_saving_forward_ratio": 6.301601953238063,
+      "total_modeled_saving_ns": 24193257764.0625,
+      "total_executed_forward_ns": 2459371900
+    }
+  ],
+  "agreement": [
+    {
+      "role": "adapted",
+      "stable_windows": 2477,
+      "model_feasible": 2467,
+      "query_within": 1744,
+      "event_within": 1580
+    },
+    {
+      "role": "reference",
+      "stable_windows": 11851,
+      "model_feasible": 11851,
+      "query_within": 6084,
+      "event_within": 3967
+    }
+  ],
+  "amortization": {
+    "scope": "conditional fixed-rate reuse scenario; full measured group commissioning assigned to adaptation and zero to Static; measured service savings per query held fixed",
+    "persistent_cases": 6,
+    "min_queries": 1685204.3725006208,
+    "max_queries": 11686934.116232261,
+    "median_queries": 5452371.908917634,
+    "continuous_positive_estimates": 7
+  },
+  "measured_roundtrips": 3,
+  "modeled_roundtrips_covered": 1,
+  "prediction_checks": 24,
+  "rewrites_reduction_percent": 57.545253968483934,
+  "inputs": [
+    {
+      "file": "method_v2\\results\\calibration_16384_0.json",
+      "sha256": "902312c6eaabbf06f64315c9e41df6828ce9c011a7044021b8ec1acb77731991"
+    },
+    {
+      "file": "method_v2\\results\\calibration_16384_1.json",
+      "sha256": "8497986892ae565c2bba89747a752d67c03f58a49c2000755d07ccf5b972ea0f"
+    },
+    {
+      "file": "method_v2\\results\\calibration_16384_2.json",
+      "sha256": "77ab8aca6f8ae2a6d4394b1c1c9eb8715d36a43e373871f4cdf5f283c4af4422"
+    },
+    {
+      "file": "method_v2\\results\\calibration_8192_0.json",
+      "sha256": "a5da9fc040f11e17aa5c18c5176ae569abba5fb5ecadd32b421db70a2931e20c"
+    },
+    {
+      "file": "method_v2\\results\\calibration_8192_1.json",
+      "sha256": "a7bec37757db4a76c9f8b0d1337125283b32fc939129759d09cef23e7db7d9be"
+    },
+    {
+      "file": "method_v2\\results\\calibration_8192_2.json",
+      "sha256": "8a4852a22835901677606bfee38ad3d008b266b0c6b03110277b0394fa14261e"
+    },
+    {
+      "file": "method_v22\\results\\cells\\16384_0_0_risk\\decisions.json",
+      "sha256": "1416b41069b0b2d26b3ec56de34f20896d14efc6e39b6c09cb69f7e2d5cc1d91"
+    },
+    {
+      "file": "method_v22\\results\\cells\\16384_0_0_risk\\latencies.npz",
+      "sha256": "c93b39753b9e370c55738fdd7c86cf1e14a5350c7c8290d6e210b5c18cb6fdea"
+    },
+    {
+      "file": "method_v22\\results\\cells\\16384_0_0_risk\\migrations.csv",
+      "sha256": "a047f0d72bec6da6adc2f6858c0e2bf8cc03d56ce240cdd65dc62a5a8300d011"
+    },
+    {
+      "file": "method_v22\\results\\cells\\16384_0_0_risk\\summary.json",
+      "sha256": "ff6a065413a51a7a22139c0d88fad86b44b49e9fdd49ee810fee0e5e4dc2d73a"
+    },
+    {
+      "file": "method_v22\\results\\cells\\16384_0_0_static\\latencies.npz",
+      "sha256": "92415a095e7ca07638bbb043c045206475834798e9c79dd9de6919de131970b2"
+    },
+    {
+      "file": "method_v22\\results\\cells\\16384_0_0_static\\summary.json",
+      "sha256": "5fdf7d6b94f23b10f2228b82161cdb06929edd689e8fa97a39add437832a69be"
+    },
+    {
+      "file": "method_v22\\results\\cells\\16384_0_1_risk\\decisions.json",
+      "sha256": "866046921e97619a33e4730187d1a77ab9b00cc05d0104b89a7669935c5f6771"
+    },
+    {
+      "file": "method_v22\\results\\cells\\16384_0_1_risk\\latencies.npz",
+      "sha256": "291946945359371e6c69f9bf156aed6a25c33bb4c6bfcbc0fb41706f91f00e9c"
+    },
+    {
+      "file": "method_v22\\results\\cells\\16384_0_1_risk\\summary.json",
+      "sha256": "877b21c42cac7c22d510d8931302495ea558fdf02a51cbd65d98f546fc913aa3"
+    },
+    {
+      "file": "method_v22\\results\\cells\\16384_0_1_static\\latencies.npz",
+      "sha256": "a699f4d0e9fcd316824b0832b3fffc578e26a9ae621ef3b5e550cdb0789c9f16"
+    },
+    {
+      "file": "method_v22\\results\\cells\\16384_0_1_static\\summary.json",
+      "sha256": "7d46cd1e8e55cf55d40d1daf91b26d892adddf3c624eab1770479652ed20a2b4"
+    },
+    {
+      "file": "method_v22\\results\\cells\\16384_0_2_risk\\decisions.json",
+      "sha256": "867ecb5dc81fbb3a23cf7a6dfb1cf02e9ff32d016a9908834bf176b0976cd3ef"
+    },
+    {
+      "file": "method_v22\\results\\cells\\16384_0_2_risk\\latencies.npz",
+      "sha256": "d2968ecf6dbbf72e7cdc5b408e3093906bc16ab2083f51ab19d00e91c0345cca"
+    },
+    {
+      "file": "method_v22\\results\\cells\\16384_0_2_risk\\summary.json",
+      "sha256": "b829cd11c5e8ba584a293c183b63a48687ebb2c6a545143cfe159a94af57e82e"
+    },
+    {
+      "file": "method_v22\\results\\cells\\16384_0_2_static\\latencies.npz",
+      "sha256": "fe7cc3c3a6e837caf94d0bd9f1414028fc650fe537086f692b0d94a268463dfa"
+    },
+    {
+      "file": "method_v22\\results\\cells\\16384_0_2_static\\summary.json",
+      "sha256": "8c66a0089f6fd3735c47dec8ce093feee1981b6b321ad1b66c323e1ffa174ae8"
+    },
+    {
+      "file": "method_v22\\results\\cells\\16384_0_3_risk\\decisions.json",
+      "sha256": "5a4698bd871b3ca72e0ef390d4b16cbd92b3c4b8858f036d71e2543a6d84b31a"
+    },
+    {
+      "file": "method_v22\\results\\cells\\16384_0_3_risk\\latencies.npz",
+      "sha256": "c34b8079eb0fc0391cdd1e866929d606ea713057c35989e7a75de07ff2859e5c"
+    },
+    {
+      "file": "method_v22\\results\\cells\\16384_0_3_risk\\migrations.csv",
+      "sha256": "3f85585aa52aa0eb7f9c845300a254086ff26d62f762c1bac27b5534fddd2698"
+    },
+    {
+      "file": "method_v22\\results\\cells\\16384_0_3_risk\\summary.json",
+      "sha256": "87f1f56ce625769d8f5c347698130a546ae09ffc14222c5af5341e67908c5574"
+    },
+    {
+      "file": "method_v22\\results\\cells\\16384_0_3_static\\latencies.npz",
+      "sha256": "f558e799587977521c3ea6fa7edf8ebdde683f33ea401a44c438acaac40f776e"
+    },
+    {
+      "file": "method_v22\\results\\cells\\16384_0_3_static\\summary.json",
+      "sha256": "9431ec9018dfc14b70a81e66ff7650f7218ca95c9af3d1b2a3d63bbb61952fec"
+    },
+    {
+      "file": "method_v22\\results\\cells\\16384_1_0_risk\\decisions.json",
+      "sha256": "2fceda06b9059a0ad109eda75ca379f0a0d6e7e9ac9f8a339c4f9d9a96aec39e"
+    },
+    {
+      "file": "method_v22\\results\\cells\\16384_1_0_risk\\latencies.npz",
+      "sha256": "1070413ba9aa89e0fc3271ece1ff7a17219910e364865cc1836deb203d1bd0c2"
+    },
+    {
+      "file": "method_v22\\results\\cells\\16384_1_0_risk\\migrations.csv",
+      "sha256": "8177a0a6bf8a97d9760114a74a3f74451af3912f56630e0d5cf31d041c5717ce"
+    },
+    {
+      "file": "method_v22\\results\\cells\\16384_1_0_risk\\summary.json",
+      "sha256": "4833e580edcd5bf74c9ab1bc1519e19db901820a3ae4aca1609c02dc742a7f58"
+    },
+    {
+      "file": "method_v22\\results\\cells\\16384_1_0_static\\latencies.npz",
+      "sha256": "9ab7e015ef96d00986a751a46e9a3e8b7f27ad3311851453985b878797381106"
+    },
+    {
+      "file": "method_v22\\results\\cells\\16384_1_0_static\\summary.json",
+      "sha256": "db7909d570cc4cb13612644f613c571bfefa76e522edc0f179ebac61fbc963a2"
+    },
+    {
+      "file": "method_v22\\results\\cells\\16384_1_1_risk\\decisions.json",
+      "sha256": "0fde8c9c6a13db376968609c4760d6c7624ec1564fbc0d7ad74161877df21593"
+    },
+    {
+      "file": "method_v22\\results\\cells\\16384_1_1_risk\\latencies.npz",
+      "sha256": "6acc88849f4f2458b67407e117dd33b1f0f532c2e1ee6419a7af56f494e841b7"
+    },
+    {
+      "file": "method_v22\\results\\cells\\16384_1_1_risk\\summary.json",
+      "sha256": "bf02fa2b237bbdfee8398d721e0721e9c0cfb69b3ff23b21aa04f1634038c728"
+    },
+    {
+      "file": "method_v22\\results\\cells\\16384_1_1_static\\latencies.npz",
+      "sha256": "2d428b8a172d626afd3a9152d2620ab4089fabf6776ed2bcefe7e013b9e0cc27"
+    },
+    {
+      "file": "method_v22\\results\\cells\\16384_1_1_static\\summary.json",
+      "sha256": "0d19eb075ddba3dd81e685295118fe50f376008ac533994392936fa953dbde3c"
+    },
+    {
+      "file": "method_v22\\results\\cells\\16384_1_2_risk\\decisions.json",
+      "sha256": "21d7a03b97c7254a002dd290a944fc085e15a8232a572b6eb18947a67e28b114"
+    },
+    {
+      "file": "method_v22\\results\\cells\\16384_1_2_risk\\latencies.npz",
+      "sha256": "4a9b339909b0d3cf7feada59c85591b71f6762e07878bbb1967050adb2221d6c"
+    },
+    {
+      "file": "method_v22\\results\\cells\\16384_1_2_risk\\summary.json",
+      "sha256": "6153bd8b59200385ac9141142688270853aa007043f940179bc90cc6450b457a"
+    },
+    {
+      "file": "method_v22\\results\\cells\\16384_1_2_static\\latencies.npz",
+      "sha256": "8d791242d14b0bab3d949f8872b69f12c75ad4fd185e66d4fd36cdc4c04405da"
+    },
+    {
+      "file": "method_v22\\results\\cells\\16384_1_2_static\\summary.json",
+      "sha256": "ae878f83ba941835cef5c86f4f511171c501c50024bcc1c46666457447ebbcd5"
+    },
+    {
+      "file": "method_v22\\results\\cells\\16384_1_3_risk\\decisions.json",
+      "sha256": "dfbbc303236bd09675a3c24a6b1ebba4cb985843ee305735dafb414fdb3dd17d"
+    },
+    {
+      "file": "method_v22\\results\\cells\\16384_1_3_risk\\latencies.npz",
+      "sha256": "4b6179ce772a0f75d1d127d9a6792af909953224131bfaa2899c6d1ac2afa77e"
+    },
+    {
+      "file": "method_v22\\results\\cells\\16384_1_3_risk\\migrations.csv",
+      "sha256": "096b98aa04efa76c6d15c8ca5cac289b636829560cdc1d9871d6d784fdc0c8d0"
+    },
+    {
+      "file": "method_v22\\results\\cells\\16384_1_3_risk\\summary.json",
+      "sha256": "b00d54994a15ea2b08bbb1399f775be181e6b04712e44ae9fc876b0dc5d0e974"
+    },
+    {
+      "file": "method_v22\\results\\cells\\16384_1_3_static\\latencies.npz",
+      "sha256": "760094f83a5b2d29e6e7438a6195dfdb782e7650861d69f12eb51bfcbf3a87b8"
+    },
+    {
+      "file": "method_v22\\results\\cells\\16384_1_3_static\\summary.json",
+      "sha256": "64b273f3fd202dff36a30de4fad826eb8ead58204251dfd3fda9fb2b68b5468a"
+    },
+    {
+      "file": "method_v22\\results\\cells\\16384_2_0_risk\\decisions.json",
+      "sha256": "8fdf392a4540f03ca074e8d6db664519afd295445f0f1af846bf1793971df559"
+    },
+    {
+      "file": "method_v22\\results\\cells\\16384_2_0_risk\\latencies.npz",
+      "sha256": "5348b7c35b0e0713d11afd063a8dba3f487131672314e2d76cfdbbb782e76f36"
+    },
+    {
+      "file": "method_v22\\results\\cells\\16384_2_0_risk\\migrations.csv",
+      "sha256": "1ea956d89ef950da1c2cd066588c90c0f631dfe5511989ff75d5a8743a989d50"
+    },
+    {
+      "file": "method_v22\\results\\cells\\16384_2_0_risk\\summary.json",
+      "sha256": "d53fb71f6b34e52be430063de46ee821e6dd3c34f360ebca685f1709f88dfa1f"
+    },
+    {
+      "file": "method_v22\\results\\cells\\16384_2_0_static\\latencies.npz",
+      "sha256": "270fbdffa779f350f61c3436ed5738d08561fd112106c3ec9b86ec306e2cbe6d"
+    },
+    {
+      "file": "method_v22\\results\\cells\\16384_2_0_static\\summary.json",
+      "sha256": "9014d6d8520f681ad99335bc5d443edb39a2663b4e82fdeb58060cb43c5f9170"
+    },
+    {
+      "file": "method_v22\\results\\cells\\16384_2_1_risk\\decisions.json",
+      "sha256": "f19889d7d93bdaf62764370cef76a88046ebdcb367b427eda8572f94d882014f"
+    },
+    {
+      "file": "method_v22\\results\\cells\\16384_2_1_risk\\latencies.npz",
+      "sha256": "b784a494cfbcb06ad2d209831781c5a0548f47329dd82347ade447d5ae206403"
+    },
+    {
+      "file": "method_v22\\results\\cells\\16384_2_1_risk\\summary.json",
+      "sha256": "5033e37e51104103cb3d1bde0af8b9143b1957a0312037ee126abe5c91635d8d"
+    },
+    {
+      "file": "method_v22\\results\\cells\\16384_2_1_static\\latencies.npz",
+      "sha256": "d870299bf66d3ac4c0562dc3072828af12e99fb0705b3560c557c3efbc138d35"
+    },
+    {
+      "file": "method_v22\\results\\cells\\16384_2_1_static\\summary.json",
+      "sha256": "97a2bc4e093935ee27ccd68c22da6ef1309dcdded538a64487d4bda2b3f282ba"
+    },
+    {
+      "file": "method_v22\\results\\cells\\16384_2_2_risk\\decisions.json",
+      "sha256": "ccf8ea904976f18036d118c2a04dd2b3c3244de39ca58a554df4ffd450f4a26e"
+    },
+    {
+      "file": "method_v22\\results\\cells\\16384_2_2_risk\\latencies.npz",
+      "sha256": "74b33d4dc9077d8968ecdcbe472629c59b696af486ca1205b03494013d3838fc"
+    },
+    {
+      "file": "method_v22\\results\\cells\\16384_2_2_risk\\summary.json",
+      "sha256": "62ff5aea47e44c6968e9f039014eae8212ff36fa0a393887859c3f83208fa201"
+    },
+    {
+      "file": "method_v22\\results\\cells\\16384_2_2_static\\latencies.npz",
+      "sha256": "6e639f3edbb050b8d2fb607b391ed54dcba0cc151df5a8efca83f0414ea44125"
+    },
+    {
+      "file": "method_v22\\results\\cells\\16384_2_2_static\\summary.json",
+      "sha256": "c21b932e9866d648163d455b6b25443bc6264b4090f5a0da552943fd45cba6e2"
+    },
+    {
+      "file": "method_v22\\results\\cells\\16384_2_3_risk\\decisions.json",
+      "sha256": "1d13eb5a12dbf4aff568522dace17aabb208979698ca4825f0514df79fa0efbd"
+    },
+    {
+      "file": "method_v22\\results\\cells\\16384_2_3_risk\\latencies.npz",
+      "sha256": "986beedccf2f57085afc3439fffd5ac33ff0b6b00e316cfa0214606aaea5892b"
+    },
+    {
+      "file": "method_v22\\results\\cells\\16384_2_3_risk\\migrations.csv",
+      "sha256": "5c4475c672888502f2a3a6c99cb3d88e9e55127c391ee4c726f676be89725c82"
+    },
+    {
+      "file": "method_v22\\results\\cells\\16384_2_3_risk\\summary.json",
+      "sha256": "10bd35bae9b39522cbc17d87a1b9ae5d371164efdb777ce12918583c26cdc933"
+    },
+    {
+      "file": "method_v22\\results\\cells\\16384_2_3_static\\latencies.npz",
+      "sha256": "0dcaf66085aca839a6d43cec9f78ac63d72d5e824647a16c8da5fa8d74236cad"
+    },
+    {
+      "file": "method_v22\\results\\cells\\16384_2_3_static\\summary.json",
+      "sha256": "5f7de1fa6bf815556885b138cb4fed4a7b54be42bf27c925ce72934c846af425"
+    },
+    {
+      "file": "method_v22\\results\\cells\\8192_0_0_risk\\decisions.json",
+      "sha256": "bed740c2122c7b0ee56f9a81a9a724d62b31bbef0db680d712af3a91b1892f7e"
+    },
+    {
+      "file": "method_v22\\results\\cells\\8192_0_0_risk\\latencies.npz",
+      "sha256": "2a56377a781ac3b3924e77b7dad231fa34d446307b575788d4e389b582c6868a"
+    },
+    {
+      "file": "method_v22\\results\\cells\\8192_0_0_risk\\migrations.csv",
+      "sha256": "99abe5c24337f5b74eab44ae0b72d6451f79d39a05e0b1b724e681b5cba19c66"
+    },
+    {
+      "file": "method_v22\\results\\cells\\8192_0_0_risk\\summary.json",
+      "sha256": "6cac8524d56e6f8e4806bc689ca7acf3fdd14895e36b5c3f94dd2630233e58c2"
+    },
+    {
+      "file": "method_v22\\results\\cells\\8192_0_0_static\\latencies.npz",
+      "sha256": "2ff4fff0aa253e161ad2f24a3ec58242f95ae69d820900898c6b193fae60d658"
+    },
+    {
+      "file": "method_v22\\results\\cells\\8192_0_0_static\\summary.json",
+      "sha256": "5bcef4199d1479dcdfab08b2ea5f66bdea6ca41f449da4cafc584fef3fbb1a1e"
+    },
+    {
+      "file": "method_v22\\results\\cells\\8192_0_1_risk\\decisions.json",
+      "sha256": "7142e4f3ee3de2346a9d218c2421928199d7173846001dac5402a214c3fa6d71"
+    },
+    {
+      "file": "method_v22\\results\\cells\\8192_0_1_risk\\latencies.npz",
+      "sha256": "04893895a50db392f9a023d32bd821b170a0d9dba47066982078065849b987b5"
+    },
+    {
+      "file": "method_v22\\results\\cells\\8192_0_1_risk\\migrations.csv",
+      "sha256": "bea1ca1f7b4e23e1bfecdcd64c92af60b2aa730ebb7f0d48dd8ea23210ef66ab"
+    },
+    {
+      "file": "method_v22\\results\\cells\\8192_0_1_risk\\summary.json",
+      "sha256": "fbfcb68a0946e0a442451f8975bc200b8f8276f754d682234dc7f53e01b09488"
+    },
+    {
+      "file": "method_v22\\results\\cells\\8192_0_1_static\\latencies.npz",
+      "sha256": "afebdae09b248ae77714e5a18eab7800a6c7e7bf4914840385bddd8009171a81"
+    },
+    {
+      "file": "method_v22\\results\\cells\\8192_0_1_static\\summary.json",
+      "sha256": "93c128a449da8d64e697e3bd3fa09eb034b33c03d29083f1d8d78cc7613df74d"
+    },
+    {
+      "file": "method_v22\\results\\cells\\8192_0_2_risk\\decisions.json",
+      "sha256": "6d94f27ae617496a44325b1e325be163e9dd18193a38b9a69b4bdad759de8429"
+    },
+    {
+      "file": "method_v22\\results\\cells\\8192_0_2_risk\\latencies.npz",
+      "sha256": "2511ec8e46946e0393e0c3c233b835fb4456f0c0e44e05c53c9a3da1e85e7716"
+    },
+    {
+      "file": "method_v22\\results\\cells\\8192_0_2_risk\\migrations.csv",
+      "sha256": "d19154c759fed5e89c5bd81b39dd3292801b44743da98f3ed8c8e919346bd709"
+    },
+    {
+      "file": "method_v22\\results\\cells\\8192_0_2_risk\\summary.json",
+      "sha256": "6e4c6b971134476b7bbd4ee8906179ef137ad0e1f1dae37f67d1872d36a31015"
+    },
+    {
+      "file": "method_v22\\results\\cells\\8192_0_2_static\\latencies.npz",
+      "sha256": "58a2c105116bd0f667e5a95ff8182c00c5b4b55aa1226a64d398e345e3314420"
+    },
+    {
+      "file": "method_v22\\results\\cells\\8192_0_2_static\\summary.json",
+      "sha256": "e96a5ed593e388665684daf6b6f3f543d4c5708c054067c1a4eb81b1fbeaed13"
+    },
+    {
+      "file": "method_v22\\results\\cells\\8192_0_3_risk\\decisions.json",
+      "sha256": "19df67e31e04a66aab32e354685bb490f2fa83e8b172d49b97c42ae24dc7b76a"
+    },
+    {
+      "file": "method_v22\\results\\cells\\8192_0_3_risk\\latencies.npz",
+      "sha256": "27bd9049d71b51fc5a7af5fc4e98f44307826c1500ee1e1bedd4aa9835a3ebd4"
+    },
+    {
+      "file": "method_v22\\results\\cells\\8192_0_3_risk\\migrations.csv",
+      "sha256": "f4efde4185e7a27af146988369187443e2d40d58352124e2a15abd63487ae7cf"
+    },
+    {
+      "file": "method_v22\\results\\cells\\8192_0_3_risk\\summary.json",
+      "sha256": "d8651974730de6fd9703fddcece18cd93010c52496c1edf51f9688b0b7e10878"
+    },
+    {
+      "file": "method_v22\\results\\cells\\8192_0_3_static\\latencies.npz",
+      "sha256": "5242968202360fc1d9daa6825010c3d34d2b6ad7809000870f47aca7c52f17a0"
+    },
+    {
+      "file": "method_v22\\results\\cells\\8192_0_3_static\\summary.json",
+      "sha256": "f08c42b2c900659bf82f9494e2d6e97f9bdb95a23215fdf007d1898c82dd398f"
+    },
+    {
+      "file": "method_v22\\results\\cells\\8192_1_0_risk\\decisions.json",
+      "sha256": "0d80412768a357740bc019974eef23a2eab52b72e5fab0ed5af5b4568205cfeb"
+    },
+    {
+      "file": "method_v22\\results\\cells\\8192_1_0_risk\\latencies.npz",
+      "sha256": "f379bc205f453dec7e7ce3bb7667c1d61b5e23e8fb76871e980bd6615c12ca0c"
+    },
+    {
+      "file": "method_v22\\results\\cells\\8192_1_0_risk\\migrations.csv",
+      "sha256": "1c33b5e663f4163ff26d7145983501fda6b0c6723e0218e2cae2deeb7c3b71b8"
+    },
+    {
+      "file": "method_v22\\results\\cells\\8192_1_0_risk\\summary.json",
+      "sha256": "789aeaeee25bb5c771858236d62646a0c2f1d915aaa063e005c7c36f9ac12882"
+    },
+    {
+      "file": "method_v22\\results\\cells\\8192_1_0_static\\latencies.npz",
+      "sha256": "08f93b528851197822c3bfc2e5df885e218aab8a3c84dc655a70caee452a959f"
+    },
+    {
+      "file": "method_v22\\results\\cells\\8192_1_0_static\\summary.json",
+      "sha256": "2e2e89f8928d6fbe788de4e2d7d9aa7ce6064b34b7b5adf032d56d5d4b587b4c"
+    },
+    {
+      "file": "method_v22\\results\\cells\\8192_1_1_risk\\decisions.json",
+      "sha256": "73ae905a80ad49fe0425e217ad91ff958bc0d1cbbd6fe83259c6d737cda52d31"
+    },
+    {
+      "file": "method_v22\\results\\cells\\8192_1_1_risk\\latencies.npz",
+      "sha256": "26d0a596bd3260783c8b0b79b839762d0ece7a595e28d4330810ccb44402b591"
+    },
+    {
+      "file": "method_v22\\results\\cells\\8192_1_1_risk\\summary.json",
+      "sha256": "08e828899770c3a759e1f7f6f6cd5677a824e160653486ba4d8416c70ff670bb"
+    },
+    {
+      "file": "method_v22\\results\\cells\\8192_1_1_static\\latencies.npz",
+      "sha256": "d2cc550b2c30d7d4d12c677a18391fd4aa68cc6aa2a4cc0207a1e7d51d0777f3"
+    },
+    {
+      "file": "method_v22\\results\\cells\\8192_1_1_static\\summary.json",
+      "sha256": "0ea9afc168c29e75ae6c106f05ddfb283d0adab556d0c3775883263d14a09c54"
+    },
+    {
+      "file": "method_v22\\results\\cells\\8192_1_2_risk\\decisions.json",
+      "sha256": "aed401d8aa690d1b8c33a506a93d1e089a2f4aa87993100fd6fd405325ba44b4"
+    },
+    {
+      "file": "method_v22\\results\\cells\\8192_1_2_risk\\latencies.npz",
+      "sha256": "b8e8385d04abf091c720e5b96c42e7236be8375be4fa9c3f9cf32490bcae56ed"
+    },
+    {
+      "file": "method_v22\\results\\cells\\8192_1_2_risk\\summary.json",
+      "sha256": "e4db7797ee65a5e188234b4c8c85d4c11d792f5fe6e904ca787e0751b060696a"
+    },
+    {
+      "file": "method_v22\\results\\cells\\8192_1_2_static\\latencies.npz",
+      "sha256": "506e458fe131262079e60071bf5a4704c629f34dd7553e9ab8243fbdee862457"
+    },
+    {
+      "file": "method_v22\\results\\cells\\8192_1_2_static\\summary.json",
+      "sha256": "67f2fad05a7590eea45a9b4eafff482ed73c5a0aeaa9240b581bbf6071bb7c22"
+    },
+    {
+      "file": "method_v22\\results\\cells\\8192_1_3_risk\\decisions.json",
+      "sha256": "34358342baa235a9eaf30dc3c5efe06725a4dcf542d5cf3a36cfecf0dcd99763"
+    },
+    {
+      "file": "method_v22\\results\\cells\\8192_1_3_risk\\latencies.npz",
+      "sha256": "bfaca432af1f4521377c57fa275f77c0ecd6835c04ade367db31e05f5b1b999c"
+    },
+    {
+      "file": "method_v22\\results\\cells\\8192_1_3_risk\\migrations.csv",
+      "sha256": "06a182d68bd5332c9b8065b58fc98c71a281cb9e3c7db27b8aed0a5b130a91a7"
+    },
+    {
+      "file": "method_v22\\results\\cells\\8192_1_3_risk\\summary.json",
+      "sha256": "4602f217c089dc44ea017ddaf98660d4d17dc7a1424d1d7339b3b3724b1c0a2f"
+    },
+    {
+      "file": "method_v22\\results\\cells\\8192_1_3_static\\latencies.npz",
+      "sha256": "cc4cbf2baf374c56bb47767918877a31de293959500edd0a6a260417328843e3"
+    },
+    {
+      "file": "method_v22\\results\\cells\\8192_1_3_static\\summary.json",
+      "sha256": "6a55a2fb8e1f100362a0d69f28e2ad09bd27c9c661d07469bebc4a6583133e65"
+    },
+    {
+      "file": "method_v22\\results\\cells\\8192_2_0_risk\\decisions.json",
+      "sha256": "20fe86cb76f965cb9fbebff22ece16548e16c75f9c68ed1cfdeac961900853a4"
+    },
+    {
+      "file": "method_v22\\results\\cells\\8192_2_0_risk\\latencies.npz",
+      "sha256": "46cac8febec85802789adaf2e7a3c07beaceb05e09436fd2b948f35773ac8dae"
+    },
+    {
+      "file": "method_v22\\results\\cells\\8192_2_0_risk\\migrations.csv",
+      "sha256": "f67fb2ff7200a1714073d53a0cc355f17cf65354e0078104467f5fa15122ceeb"
+    },
+    {
+      "file": "method_v22\\results\\cells\\8192_2_0_risk\\summary.json",
+      "sha256": "7ceb07f5521f34b0c377c5ab2ff0cc538dd468ed48f5aa2bccca0f2c4b6029ba"
+    },
+    {
+      "file": "method_v22\\results\\cells\\8192_2_0_static\\latencies.npz",
+      "sha256": "46214eedd202698a31e405d4fb2ad3f73efc78464937b6051c3ef50c9243ee6b"
+    },
+    {
+      "file": "method_v22\\results\\cells\\8192_2_0_static\\summary.json",
+      "sha256": "ff71631eab39501acacc1c003c9a95d7dc8552966a39eee9b069d054295fb4bc"
+    },
+    {
+      "file": "method_v22\\results\\cells\\8192_2_1_risk\\decisions.json",
+      "sha256": "dd09c3a8e410932035139a829a4f709bd03bd2f6786b1a16766c7104a2751628"
+    },
+    {
+      "file": "method_v22\\results\\cells\\8192_2_1_risk\\latencies.npz",
+      "sha256": "03a77f18083be844325fffd3e8ce5a899b2aa6668284dafc52c954a560e1dabd"
+    },
+    {
+      "file": "method_v22\\results\\cells\\8192_2_1_risk\\migrations.csv",
+      "sha256": "b5ac9b6655950072463a3849f418b210ce0da82d0c05f0e3d5140cc68987968e"
+    },
+    {
+      "file": "method_v22\\results\\cells\\8192_2_1_risk\\summary.json",
+      "sha256": "0ec9793fcaad989eebfc53e3ecdfd22f73a7d65db792b70bff1cc9550c1b201e"
+    },
+    {
+      "file": "method_v22\\results\\cells\\8192_2_1_static\\latencies.npz",
+      "sha256": "add768bc38267a61101e17628b67d2b881dc687060b9d238896eba794c7279d4"
+    },
+    {
+      "file": "method_v22\\results\\cells\\8192_2_1_static\\summary.json",
+      "sha256": "072c043b0f033b51e70721739d2692e3ed42f29ac57a751ac9bc6525490c9952"
+    },
+    {
+      "file": "method_v22\\results\\cells\\8192_2_2_risk\\decisions.json",
+      "sha256": "7717716005064b25544c3e9d236f7cec23bc0035f09fab908b8ca4ca8b713fac"
+    },
+    {
+      "file": "method_v22\\results\\cells\\8192_2_2_risk\\latencies.npz",
+      "sha256": "89d945657e2e16e390d03f817b392b831a8a3a2fa665babe4a61bbc53f47dfcf"
+    },
+    {
+      "file": "method_v22\\results\\cells\\8192_2_2_risk\\migrations.csv",
+      "sha256": "057cafc8afe65cb8961ae2aa7513fb91ae37822f3110896edbe3abd86d9f90b8"
+    },
+    {
+      "file": "method_v22\\results\\cells\\8192_2_2_risk\\summary.json",
+      "sha256": "0eb6537d8a0dadcb1c1abc05f2a0b319cfad22add1588760b7f2cceded70c80a"
+    },
+    {
+      "file": "method_v22\\results\\cells\\8192_2_2_static\\latencies.npz",
+      "sha256": "5ef4d5e2478641aa853e4e03c3fb511ff2f6a79d0541b9b6fd6dbfcdb2d32ffa"
+    },
+    {
+      "file": "method_v22\\results\\cells\\8192_2_2_static\\summary.json",
+      "sha256": "d0263cb54cb80ac606e4ad473edf1d2207f8dcd2ba0325aeeb7ba9ad365e0ee9"
+    },
+    {
+      "file": "method_v22\\results\\cells\\8192_2_3_risk\\decisions.json",
+      "sha256": "8c2c63d39f594e6f4a82ac73346c4cccd06d7543db4c2566167325f93335d3fd"
+    },
+    {
+      "file": "method_v22\\results\\cells\\8192_2_3_risk\\latencies.npz",
+      "sha256": "992665df6c5111c18592f06debbad83f1cd32c3f7192288109998a1c7bfd966f"
+    },
+    {
+      "file": "method_v22\\results\\cells\\8192_2_3_risk\\migrations.csv",
+      "sha256": "543b6fb48597c8fcd0e4e5c40c9f733370ace8305ec75fc945949048ab95ebb8"
+    },
+    {
+      "file": "method_v22\\results\\cells\\8192_2_3_risk\\summary.json",
+      "sha256": "e16f27f70807e9ef4b3ba2d0ef74c4b81d08937f6fd4ac8023153d8c4dccbb12"
+    },
+    {
+      "file": "method_v22\\results\\cells\\8192_2_3_static\\latencies.npz",
+      "sha256": "f246e7bcdeac94b7aa123b81db70a1b0a3b05f88e0f997e67820ee2892e5728f"
+    },
+    {
+      "file": "method_v22\\results\\cells\\8192_2_3_static\\summary.json",
+      "sha256": "3f8b2f4e4bf36196dea096b77a92923c7f3238388960124727d3e3b5b64cbcae"
+    },
+    {
+      "file": "method_v22\\results\\durable_calibration.csv",
+      "sha256": "cbd8a7de70988700dcd5ebc78ee9558e582ad12accc5dc7d375f39ac1679f731"
+    },
+    {
+      "file": "method_v22\\results\\protocol.json",
+      "sha256": "3afb8de46e2f36054e0e5cc0b91a121e65610bca391d842a08a95c87d17e7dcc"
+    },
+    {
+      "file": "method_v22\\results\\query_calibration.json",
+      "sha256": "d02e4d3a58f94d0995dbf2f9d6e0f776a1460d20712b29cc8bbc095c719357bc"
+    },
+    {
+      "file": "method_v22\\results\\stable_tail_windows.csv",
+      "sha256": "dbee590ae3a565e4f7e8f8766be7a1146d4dfe99f703155334019725789fdc3f"
+    },
+    {
+      "file": "method_v22\\results\\summary.csv",
+      "sha256": "fc4cb365c8c9f4ed399a13bd2c0aaf2bcc0d48659f57b44e08510bafc39acc7b"
+    },
+    {
+      "file": "method_v22\\results\\verification.json",
+      "sha256": "07e76ed0e5af31e79934a97ddb5377ad51e41ec6927986b2babeeb0833beca17"
+    },
+    {
+      "file": "results\\chunk_manifest.csv",
+      "sha256": "bf17bf09f3c56ac962b8d05a08ea8e658b1bc843471a526ddfbd972a1335f43a"
+    },
+    {
+      "file": "results\\values_16384.npz",
+      "sha256": "98f417c777a0e7453fb1a8dc3a7f5d11c49fde1e8af952b901e00f6bbdae79f7"
+    },
+    {
+      "file": "results\\values_8192.npz",
+      "sha256": "dd668b909858b91c660082a80deb0ab92fbcf931b966532e70bf9965b643ce78"
+    }
+  ],
+  "analysis_sha256": "43b7896230f797fd1067455dcaaeecd40d715d65c1208a5a07284abc454afc3b"
+}

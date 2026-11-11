@@ -1,0 +1,11 @@
+{
+  "passed": true,
+  "events": 2880000,
+  "decision_boundaries": 11181,
+  "original_decision_median_ns": 88800.0,
+  "cached_decision_median_ns": 38600.0,
+  "median_paired_time_ratio": 0.4344262295081967,
+  "original_source_sha256": "3264395f85158ee4ccfdb0220e0d3a4f109a9f65e98be9bb9e37cc833221475f",
+  "cached_source_sha256": "ff86fe89695f36fb4ac876c3c1feb2da4db06792ff86c197732810f4cda4f8de",
+  "note": "alternating component timings; exact request, decision, credit, and recorded-action equivalence; lookup initialization recorded separately"
+}

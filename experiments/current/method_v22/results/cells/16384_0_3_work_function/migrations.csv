@@ -1,0 +1,2 @@
+event,source,target,reason,chunk_id,migration_id,from_codec,target_codec,from_version,to_version,migration_time_ns,rewrite_bytes,no_op,stage_times_ns,durable_transactions
+32187,whole_lz4,block_lz4_1024,work_function,bdg2_r1_cs16384_06acdc6f09196c8a,4c332bc51ea24c4bba3675a37d1f0a35,whole_lz4,block_lz4_1024,0,1,44484000,47302,False,"{'intent_ns': 10693700, 'decode_ns': 342900, 'encode_sync_ns': 6912600, 'validate_ns': 12485600, 'publish_files_ns': 2573900, 'active_commit_ns': 5665400, 'post_validate_ns': 2151700, 'cleanup_ns': 2240400}",3

@@ -1,0 +1,10 @@
+{
+  "observations": 240,
+  "directed_pairs": 80,
+  "original_median_ms": 49.83455,
+  "efficient_median_ms": 39.60885,
+  "median_paired_ratio": 0.785757809531721,
+  "ratio_p10": 0.7239087155803542,
+  "ratio_p90": 0.8284338094130602,
+  "all_correct": true
+}

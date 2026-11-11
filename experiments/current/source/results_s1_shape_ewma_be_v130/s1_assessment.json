@@ -1,0 +1,259 @@
+{
+  "version": "1.3.1",
+  "target_journal": "Journal of Big Data",
+  "status": "S1 complete",
+  "s1_protocol_sha256": "5439048582702cf434cb02253834f6014051421d4f1585158b01b4a566a82c79",
+  "s1_experiment_freeze_sha256": "3d20b6bbb53f55a0cbdf00d4b76dabeff06f67d7f66b584396966c90166f95c7",
+  "parent_hashes": {
+    "v070_protocol_sha256": "196ac4312695a0b5255129ee1587e9d7112c3bf9f795ebe6763434334fad97e8",
+    "v074_experiment_freeze_sha256": "48092ee607251e1290441b7259daa63e063a481cb6d4f6ddbdd0aa787ba883fa",
+    "a2_experiment_freeze_sha256": "4a562be0427893c04fb72e4db69816638d046ba47142beec43f6dc8b44af5e0b"
+  },
+  "frozen_config": {
+    "config_id": "EWMA_012",
+    "alpha": 0.01,
+    "deadband": 0.05,
+    "prediction_horizon": 300,
+    "decision_interval": 100,
+    "min_observations": 200,
+    "break_even_factor": 1.0,
+    "selection_dataset": "PEMS04",
+    "selection_protocol_sha256": "5439048582702cf434cb02253834f6014051421d4f1585158b01b4a566a82c79",
+    "selection_summary": {
+      "config_id": "EWMA_012",
+      "alpha": 0.01,
+      "deadband": 0.05,
+      "prediction_horizon": 300,
+      "action_geometric_mean_ratio": 0.8307346321750674,
+      "action_median_ratio": 0.8333965642363396,
+      "action_migration_count": 108,
+      "action_rewrite_bytes": 4623318,
+      "brief_median_ratio": 1.0047584707612862,
+      "stable_median_ratio": 1.0,
+      "brief_max_ratio": 1.009179381646658,
+      "stable_max_ratio": 1.0009935549522098,
+      "brief_safety_pass": true,
+      "stable_safety_pass": true,
+      "safe": true,
+      "best_action_score": 0.8277949255855587,
+      "tie_tolerance": 0.005,
+      "equivalent_config_count": 34
+    },
+    "frozen_for_holdouts_and_r1": true,
+    "may_not_be_retuned_after_holdout": true,
+    "s1_experiment_freeze_sha256": "3d20b6bbb53f55a0cbdf00d4b76dabeff06f67d7f66b584396966c90166f95c7"
+  },
+  "development_selection": {
+    "safe_config_count": 44,
+    "selected_action_score": 0.8307346321750674,
+    "selected_brief_median_ratio": 1.0047584707612862,
+    "selected_stable_median_ratio": 1.0
+  },
+  "holdout_comparison_summary": [
+    {
+      "dataset": "BDG2",
+      "trace": "brief_burst",
+      "chunk_size": 8192,
+      "n_trace_seeds": 3,
+      "geometric_mean_ratio_repressdb_over_shape_ewma": 0.9945514679430836,
+      "median_ratio_repressdb_over_shape_ewma": 0.9940048068417179,
+      "fraction_repressdb_faster": 1.0
+    },
+    {
+      "dataset": "BDG2",
+      "trace": "brief_burst",
+      "chunk_size": 16384,
+      "n_trace_seeds": 3,
+      "geometric_mean_ratio_repressdb_over_shape_ewma": 0.9854302724925431,
+      "median_ratio_repressdb_over_shape_ewma": 0.9857510109019224,
+      "fraction_repressdb_faster": 1.0
+    },
+    {
+      "dataset": "BDG2",
+      "trace": "frequency_only",
+      "chunk_size": 8192,
+      "n_trace_seeds": 3,
+      "geometric_mean_ratio_repressdb_over_shape_ewma": 1.2255464641943308,
+      "median_ratio_repressdb_over_shape_ewma": 1.2211460306290542,
+      "fraction_repressdb_faster": 0.0
+    },
+    {
+      "dataset": "BDG2",
+      "trace": "frequency_only",
+      "chunk_size": 16384,
+      "n_trace_seeds": 3,
+      "geometric_mean_ratio_repressdb_over_shape_ewma": 1.291303672096252,
+      "median_ratio_repressdb_over_shape_ewma": 1.3220113123507153,
+      "fraction_repressdb_faster": 0.0
+    },
+    {
+      "dataset": "BDG2",
+      "trace": "joint_orthogonal",
+      "chunk_size": 8192,
+      "n_trace_seeds": 3,
+      "geometric_mean_ratio_repressdb_over_shape_ewma": 1.0638217620679442,
+      "median_ratio_repressdb_over_shape_ewma": 1.0655721761965846,
+      "fraction_repressdb_faster": 0.0
+    },
+    {
+      "dataset": "BDG2",
+      "trace": "joint_orthogonal",
+      "chunk_size": 16384,
+      "n_trace_seeds": 3,
+      "geometric_mean_ratio_repressdb_over_shape_ewma": 1.1194013739608597,
+      "median_ratio_repressdb_over_shape_ewma": 1.1143372508760612,
+      "fraction_repressdb_faster": 0.0
+    },
+    {
+      "dataset": "BDG2",
+      "trace": "shape_only",
+      "chunk_size": 8192,
+      "n_trace_seeds": 3,
+      "geometric_mean_ratio_repressdb_over_shape_ewma": 1.0556036519831635,
+      "median_ratio_repressdb_over_shape_ewma": 1.0586293407328922,
+      "fraction_repressdb_faster": 0.0
+    },
+    {
+      "dataset": "BDG2",
+      "trace": "shape_only",
+      "chunk_size": 16384,
+      "n_trace_seeds": 3,
+      "geometric_mean_ratio_repressdb_over_shape_ewma": 1.0748839189118877,
+      "median_ratio_repressdb_over_shape_ewma": 1.0745431502751204,
+      "fraction_repressdb_faster": 0.0
+    },
+    {
+      "dataset": "BDG2",
+      "trace": "stable_scan",
+      "chunk_size": 8192,
+      "n_trace_seeds": 3,
+      "geometric_mean_ratio_repressdb_over_shape_ewma": 1.0,
+      "median_ratio_repressdb_over_shape_ewma": 1.0,
+      "fraction_repressdb_faster": 0.0
+    },
+    {
+      "dataset": "BDG2",
+      "trace": "stable_scan",
+      "chunk_size": 16384,
+      "n_trace_seeds": 3,
+      "geometric_mean_ratio_repressdb_over_shape_ewma": 1.0,
+      "median_ratio_repressdb_over_shape_ewma": 1.0,
+      "fraction_repressdb_faster": 0.0
+    },
+    {
+      "dataset": "PEMS08",
+      "trace": "brief_burst",
+      "chunk_size": 8192,
+      "n_trace_seeds": 3,
+      "geometric_mean_ratio_repressdb_over_shape_ewma": 1.0009818888477868,
+      "median_ratio_repressdb_over_shape_ewma": 1.0006194508116772,
+      "fraction_repressdb_faster": 0.0
+    },
+    {
+      "dataset": "PEMS08",
+      "trace": "brief_burst",
+      "chunk_size": 16384,
+      "n_trace_seeds": 3,
+      "geometric_mean_ratio_repressdb_over_shape_ewma": 0.9871324271280673,
+      "median_ratio_repressdb_over_shape_ewma": 0.9871010494432577,
+      "fraction_repressdb_faster": 1.0
+    },
+    {
+      "dataset": "PEMS08",
+      "trace": "frequency_only",
+      "chunk_size": 8192,
+      "n_trace_seeds": 3,
+      "geometric_mean_ratio_repressdb_over_shape_ewma": 1.2187722406296477,
+      "median_ratio_repressdb_over_shape_ewma": 1.2062771032621251,
+      "fraction_repressdb_faster": 0.0
+    },
+    {
+      "dataset": "PEMS08",
+      "trace": "frequency_only",
+      "chunk_size": 16384,
+      "n_trace_seeds": 3,
+      "geometric_mean_ratio_repressdb_over_shape_ewma": 1.34999862258856,
+      "median_ratio_repressdb_over_shape_ewma": 1.354836394570268,
+      "fraction_repressdb_faster": 0.0
+    },
+    {
+      "dataset": "PEMS08",
+      "trace": "joint_orthogonal",
+      "chunk_size": 8192,
+      "n_trace_seeds": 3,
+      "geometric_mean_ratio_repressdb_over_shape_ewma": 1.0676264228673988,
+      "median_ratio_repressdb_over_shape_ewma": 1.0682352090215466,
+      "fraction_repressdb_faster": 0.0
+    },
+    {
+      "dataset": "PEMS08",
+      "trace": "joint_orthogonal",
+      "chunk_size": 16384,
+      "n_trace_seeds": 3,
+      "geometric_mean_ratio_repressdb_over_shape_ewma": 1.1230946662347827,
+      "median_ratio_repressdb_over_shape_ewma": 1.1090683408958508,
+      "fraction_repressdb_faster": 0.0
+    },
+    {
+      "dataset": "PEMS08",
+      "trace": "shape_only",
+      "chunk_size": 8192,
+      "n_trace_seeds": 3,
+      "geometric_mean_ratio_repressdb_over_shape_ewma": 1.046406991866532,
+      "median_ratio_repressdb_over_shape_ewma": 1.0453700214890143,
+      "fraction_repressdb_faster": 0.0
+    },
+    {
+      "dataset": "PEMS08",
+      "trace": "shape_only",
+      "chunk_size": 16384,
+      "n_trace_seeds": 3,
+      "geometric_mean_ratio_repressdb_over_shape_ewma": 1.0706793588881178,
+      "median_ratio_repressdb_over_shape_ewma": 1.0726690741117846,
+      "fraction_repressdb_faster": 0.0
+    },
+    {
+      "dataset": "PEMS08",
+      "trace": "stable_scan",
+      "chunk_size": 8192,
+      "n_trace_seeds": 3,
+      "geometric_mean_ratio_repressdb_over_shape_ewma": 1.0,
+      "median_ratio_repressdb_over_shape_ewma": 1.0,
+      "fraction_repressdb_faster": 0.0
+    },
+    {
+      "dataset": "PEMS08",
+      "trace": "stable_scan",
+      "chunk_size": 16384,
+      "n_trace_seeds": 3,
+      "geometric_mean_ratio_repressdb_over_shape_ewma": 1.0,
+      "median_ratio_repressdb_over_shape_ewma": 1.0,
+      "fraction_repressdb_faster": 0.0
+    }
+  ],
+  "actual_model_validation": {
+    "n_cells": 12,
+    "median_actual_over_model_ratio": 0.2205648899030993,
+    "median_absolute_log_ratio": 1.511622477975206
+  },
+  "acceptance_checks": {
+    "S1_1_exactly_80_configs_evaluated": true,
+    "S1_2_selected_config_passes_brief_safety": true,
+    "S1_3_selected_config_passes_stable_safety": true,
+    "S1_4_config_frozen_before_holdout_outputs": true,
+    "S1_5_both_holdouts_complete": true,
+    "S1_6_all_expected_model_holdout_rows_present": true,
+    "S1_7_actual_audit_12_runs_complete": true,
+    "S1_8_actual_audit_queries_all_truth_checked": true,
+    "S1_9_model_actual_validation_complete": true,
+    "S1_10_holdout_repressdb_comparison_reported": true,
+    "all_ten": true
+  },
+  "scientific_interpretation_rule": {
+    "if_repressdb_lower_total_cost": "dual-window safety chain adds independent value",
+    "if_total_cost_similar_but_repressdb_fewer_risky_migrations": "RePressDB value is mainly risk control",
+    "if_shape_ewma_faster_in_some_traces": "speed-stability trade-off",
+    "if_shape_ewma_dominates_cost_and_safety": "RePressDB necessity is substantively weakened; do not hide this outcome"
+  },
+  "next_gate": "Run R1 with this frozen config; do not retune."
+}

@@ -1,0 +1,15 @@
+{
+  "n_buildings": 32,
+  "meter_type_counts": {
+    "electricity": 10,
+    "chilledwater": 10,
+    "steam": 9,
+    "gas": 2,
+    "hotwater": 1
+  },
+  "site_count": 4,
+  "a2_overlap_count": 0,
+  "overlap_fallback_used": false,
+  "selected_buildings_sha256": "640adc23b0d35b6f1a9c34be18fc1fc210410f16cd5c308812e736fa5d194d20",
+  "chunk_manifest_sha256": "fd71053c235ec0eafb49469928a034ce74ce6f8d9c551808f83da62fa7b81027"
+}

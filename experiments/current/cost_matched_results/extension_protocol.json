@@ -1,0 +1,12 @@
+{
+  "stage": "post-hoc targeted cost-matched control",
+  "created_utc": "2026-10-31T16:06:53.133043+00:00",
+  "policy": "Horizon-RePress with full durable costs",
+  "changed_input": "the archived representation-rewrite cost table is replaced by medians of the same full durable calibration supplied to RePressDB",
+  "unchanged": "all horizon controller settings, request sequences, initial choices, active-view executor, write budget, timing implementation and processor affinity",
+  "rationale": "separate a cost-table change from an admission-rule change; this comparison was added after the primary 90-cell results were inspected",
+  "planned_cells": 18,
+  "queries_per_cell": 160000,
+  "source_driver_sha256": "dd1e00b992b990073ebdb8becdedb2ebd82fbc9f51baa0e042b768059cb96763",
+  "extension_sha256": "487cee69e8f4d7f5da892803bdd646832b55d7467bd6bc9feb002d91ff594394"
+}

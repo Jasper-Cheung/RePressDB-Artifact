@@ -1,0 +1,6 @@
+dataset,chunk_id,series_index,chunk_start,chunk_size,unit_type,unit_id,building_id,codec,raw_size_bytes,payload_size_bytes,metadata_size_bytes,stored_size_bytes,compression_ratio,encode_ns,full_decode_ns
+BDG2_JSS_FRESH_CALIBRATION,bdg2_r1_cs16384_b33f637fd1f701fc,30,0,16384,building,Hog_office_Marlena,Hog_office_Marlena,whole_lz4,65536,37259,0,37259,0.5685272216796875,4049300,43800
+BDG2_JSS_FRESH_CALIBRATION,bdg2_r1_cs16384_b33f637fd1f701fc,30,0,16384,building,Hog_office_Marlena,Hog_office_Marlena,whole_zstd,65536,25529,0,25529,0.3895416259765625,4166200,81700
+BDG2_JSS_FRESH_CALIBRATION,bdg2_r1_cs16384_b33f637fd1f701fc,30,0,16384,building,Hog_office_Marlena,Hog_office_Marlena,block_lz4_64,65536,53222,8200,61422,0.937225341796875,10142100,764500
+BDG2_JSS_FRESH_CALIBRATION,bdg2_r1_cs16384_b33f637fd1f701fc,30,0,16384,building,Hog_office_Marlena,Hog_office_Marlena,block_lz4_256,65536,45115,2056,47171,0.7197723388671875,6835500,227200
+BDG2_JSS_FRESH_CALIBRATION,bdg2_r1_cs16384_b33f637fd1f701fc,30,0,16384,building,Hog_office_Marlena,Hog_office_Marlena,block_lz4_1024,65536,40703,520,41223,0.6290130615234375,7154800,93400

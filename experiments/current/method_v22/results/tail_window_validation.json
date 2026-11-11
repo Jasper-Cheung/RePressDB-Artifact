@@ -1,0 +1,19 @@
+{
+  "scope": "same-request separately timed query-path windows; stable layout for 768 local requests; overlapping descriptive observations",
+  "roles": {
+    "adapted": {
+      "windows": 2477,
+      "model_feasible_windows": 2467,
+      "observed_within_tolerance": 1750,
+      "model_feasible_and_within_tolerance": 1744,
+      "median_p99_ratio": 0.7861666742607202
+    },
+    "reference": {
+      "windows": 11851,
+      "model_feasible_windows": 11851,
+      "observed_within_tolerance": 6084,
+      "model_feasible_and_within_tolerance": 6084,
+      "median_p99_ratio": 1.0912730184147328
+    }
+  }
+}

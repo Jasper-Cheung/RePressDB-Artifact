@@ -1,0 +1,32 @@
+{
+  "size": 16384,
+  "group": 1,
+  "family": "R1_C_noisy_bursts",
+  "policy": "legacy_repress",
+  "seed": 2026119686,
+  "n_queries": 160000,
+  "service_ns": 10961140400,
+  "p99_ns": 199600.0,
+  "p999_ns": 318101.70000003127,
+  "max_ns": 69380900,
+  "controller_ns": 257543500,
+  "migration_ns": 1278113500,
+  "migration_count": 22,
+  "rewrite_bytes": 1118053,
+  "budget_denied": 1,
+  "budget_limit_bytes": 79041,
+  "prediction_ns": 9476009300.0,
+  "elapsed_ns": 11984701100,
+  "truth_ns": 729514600,
+  "correct": true,
+  "integrity": {
+    "chunk_count": 8,
+    "invalid_chunks": [],
+    "non_idle_chunks": [],
+    "chunks_without_exactly_one_payload": [],
+    "temporary_file_count": 0,
+    "active_stored_bytes": 351734,
+    "pass": true
+  },
+  "code_sha256": "dd1e00b992b990073ebdb8becdedb2ebd82fbc9f51baa0e042b768059cb96763"
+}

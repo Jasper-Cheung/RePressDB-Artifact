@@ -1,0 +1,88 @@
+{
+  "version": "0.7.3",
+  "parent_protocol_sha256": "196ac4312695a0b5255129ee1587e9d7112c3bf9f795ebe6763434334fad97e8",
+  "change_classification": "nearest-baseline redesign after preregistered no-go diagnostic",
+  "baseline_name": "AF-HC-D",
+  "deadband_factor": 1.5,
+  "deadband_derivation": "With 32 equally accessed chunks and the shortest 100-query classification interval, deterministic round truncation creates at most a 4/3 count ratio. A fixed 1.5 factor rejects that artifact while retaining the protocol's 4:1 frequency contrast.",
+  "classification": {
+    "hot": "score >= 1.5 * median_score",
+    "cold": "score <= median_score / 1.5",
+    "neutral": "preserve the current representation",
+    "hot_fraction_role": "maximum hot-set capacity among chunks passing the hot threshold; equal-score capacity ties use frozen manifest order",
+    "frequency_ema_alpha": 0.5
+  },
+  "fair_initialization": "AF-HC-D, initial-best, and RePressDB all begin from each chunk's scan-optimal representation.",
+  "information_boundary": {
+    "allowed": [
+      "per-chunk access counts",
+      "frequency EMA",
+      "fixed reclassification period",
+      "fixed 1.5 deadband",
+      "maximum hot-set fraction",
+      "fixed hot and cold codecs"
+    ],
+    "forbidden": [
+      "query class or query shape",
+      "point/scan/aggregate proportions",
+      "dual-timescale estimates",
+      "predicted saving",
+      "break-even",
+      "confirmation rounds",
+      "cooldown",
+      "future phase labels"
+    ]
+  },
+  "unchanged": {
+    "pems04_series_selection": true,
+    "pems08_reserved_selection": true,
+    "bdg2_reserved_selection": true,
+    "chunk_sizes": [
+      8192,
+      16384
+    ],
+    "trace_names": [
+      "shape_only",
+      "frequency_only",
+      "joint_orthogonal",
+      "brief_burst",
+      "stable_scan"
+    ],
+    "trace_seeds": [
+      20260718,
+      20260719,
+      20260720
+    ],
+    "grid_size": 72,
+    "adaptation_periods": [
+      100,
+      300,
+      500,
+      1000
+    ],
+    "hot_fractions": [
+      0.25,
+      0.5,
+      0.75
+    ],
+    "cold_codecs": [
+      "whole_lz4",
+      "whole_zstd"
+    ],
+    "hot_codecs": [
+      "block_lz4_64",
+      "block_lz4_256",
+      "block_lz4_1024"
+    ],
+    "stable_ratio_limit": 1.05,
+    "burst_ratio_limit": 1.05,
+    "burst_migration_limit": 2.0,
+    "repressdb_controller": "unchanged and frozen"
+  },
+  "previous_diagnostic": {
+    "version": "0.7.2",
+    "status": "no safe naive-percentile AF-HC configuration",
+    "scientific_use": "diagnostic only; not the nearest baseline"
+  },
+  "holdout_status": "PEMS08 and BDG2 have not been evaluated under AF-HC-D."
+}

@@ -1,0 +1,13 @@
+{
+  "pass": true,
+  "cells": 90,
+  "verified_queries": 14400000,
+  "budget_violations": [],
+  "all_catalogs_valid": true,
+  "source_hash": "dd1e00b992b990073ebdb8becdedb2ebd82fbc9f51baa0e042b768059cb96763",
+  "calibration_migration_observations": 2880,
+  "duration_median_ms": 54.16695,
+  "duration_p95_ms": 71.74398999999998,
+  "query_cost_records": 1920,
+  "calibration_query_executions": 69120
+}

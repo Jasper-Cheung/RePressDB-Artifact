@@ -1,0 +1,6 @@
+dataset,chunk_id,series_index,chunk_start,chunk_size,unit_type,unit_id,building_id,codec,raw_size_bytes,payload_size_bytes,metadata_size_bytes,stored_size_bytes,compression_ratio,encode_ns,full_decode_ns
+BDG2_R1,bdg2_r1_cs8192_1c81f0b6a93f79d2,16,0,8192,building,Shrew_office_Sherill,Shrew_office_Sherill,whole_lz4,32768,23197,0,23197,0.707916259765625,5957200,27400
+BDG2_R1,bdg2_r1_cs8192_1c81f0b6a93f79d2,16,0,8192,building,Shrew_office_Sherill,Shrew_office_Sherill,whole_zstd,32768,14474,0,14474,0.44171142578125,2982600,52700
+BDG2_R1,bdg2_r1_cs8192_1c81f0b6a93f79d2,16,0,8192,building,Shrew_office_Sherill,Shrew_office_Sherill,block_lz4_64,32768,33283,4104,37387,1.140960693359375,7491100,404700
+BDG2_R1,bdg2_r1_cs8192_1c81f0b6a93f79d2,16,0,8192,building,Shrew_office_Sherill,Shrew_office_Sherill,block_lz4_256,32768,28527,1032,29559,0.902069091796875,4930100,105700
+BDG2_R1,bdg2_r1_cs8192_1c81f0b6a93f79d2,16,0,8192,building,Shrew_office_Sherill,Shrew_office_Sherill,block_lz4_1024,32768,25096,264,25360,0.77392578125,8685700,44900

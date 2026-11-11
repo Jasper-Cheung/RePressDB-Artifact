@@ -1,0 +1,50 @@
+{
+  "version": "1.0.0",
+  "target_journal": "Journal of Big Data",
+  "study": "Full-BDG2 single-active storage and scale characterization",
+  "parent_b1_experiment_freeze_sha256": "89b5586712ab73ad9fdfb7ec018da5c2ad884276778682c65794e7f3f0f8d3ac",
+  "bdg2_root": "E:\\IPM\\大学\\科研\\E\\buds-lab-building-data-genome-project-2-3d0cbaf",
+  "eligibility": {
+    "only_cleaned_meter_files": true,
+    "minimum_contiguous_length": 8192,
+    "minimum_distinct_values": 16,
+    "minimum_nonzero_count": 32,
+    "variance_epsilon": 1e-12,
+    "all_candidates_scanned": true,
+    "interpolation": false,
+    "normalization": false,
+    "resampling": false
+  },
+  "views": {
+    "data_scale_8192": {
+      "chunk_size": 8192,
+      "query_count": 500000,
+      "migration_count": 500
+    },
+    "catalog_scale_2048": {
+      "chunk_size": 2048,
+      "query_count": 500000,
+      "migration_count": 500
+    }
+  },
+  "store": {
+    "single_active_representation": true,
+    "production_catalog": "stores/<view>/catalog.sqlite3",
+    "telemetry_database": "telemetry.sqlite3",
+    "catalog_telemetry_separated": true,
+    "initial_codec": "whole_lz4",
+    "codecs": [
+      "whole_lz4",
+      "whole_zstd",
+      "block_lz4_64",
+      "block_lz4_256",
+      "block_lz4_1024"
+    ],
+    "maximum_open_file_handle_cache": 256
+  },
+  "formal_workload": {
+    "total_queries": 1000000,
+    "total_migrations": 1000,
+    "startup_repeats_per_view": 5
+  }
+}

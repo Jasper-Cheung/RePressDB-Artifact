@@ -1,0 +1,13 @@
+{
+  "stage": "post-hoc cost-matched control",
+  "cells": 18,
+  "verified_queries": 2880000,
+  "horizon_full_cost_migrations": 0,
+  "horizon_full_cost_rewrite_bytes": 0,
+  "repressdb_migrations": 91,
+  "repressdb_rewrite_bytes": 3229271,
+  "service_ratio_repressdb_over_cost_matched": 0.850392241053538,
+  "p99_ratio_repressdb_over_cost_matched": 1.2402041093918048,
+  "all_recorded_checks_pass": true,
+  "note": "separate post-hoc executions; ratios are descriptive and not part of the primary pre-scheduled five-policy intervals"
+}

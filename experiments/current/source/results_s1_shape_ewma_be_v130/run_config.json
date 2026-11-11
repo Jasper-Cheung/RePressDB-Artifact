@@ -1,0 +1,770 @@
+{
+  "version": "1.3.1",
+  "target_journal": "Journal of Big Data",
+  "s1_protocol_sha256": "5439048582702cf434cb02253834f6014051421d4f1585158b01b4a566a82c79",
+  "s1_experiment_freeze_sha256": "3d20b6bbb53f55a0cbdf00d4b76dabeff06f67d7f66b584396966c90166f95c7",
+  "grid": [
+    {
+      "config_id": "EWMA_000",
+      "alpha": 0.01,
+      "deadband": 0.0,
+      "prediction_horizon": 300,
+      "decision_interval": 100,
+      "min_observations": 200,
+      "break_even_factor": 1.0
+    },
+    {
+      "config_id": "EWMA_001",
+      "alpha": 0.01,
+      "deadband": 0.0,
+      "prediction_horizon": 600,
+      "decision_interval": 100,
+      "min_observations": 200,
+      "break_even_factor": 1.0
+    },
+    {
+      "config_id": "EWMA_002",
+      "alpha": 0.01,
+      "deadband": 0.0,
+      "prediction_horizon": 1200,
+      "decision_interval": 100,
+      "min_observations": 200,
+      "break_even_factor": 1.0
+    },
+    {
+      "config_id": "EWMA_003",
+      "alpha": 0.01,
+      "deadband": 0.0,
+      "prediction_horizon": 2400,
+      "decision_interval": 100,
+      "min_observations": 200,
+      "break_even_factor": 1.0
+    },
+    {
+      "config_id": "EWMA_004",
+      "alpha": 0.01,
+      "deadband": 0.01,
+      "prediction_horizon": 300,
+      "decision_interval": 100,
+      "min_observations": 200,
+      "break_even_factor": 1.0
+    },
+    {
+      "config_id": "EWMA_005",
+      "alpha": 0.01,
+      "deadband": 0.01,
+      "prediction_horizon": 600,
+      "decision_interval": 100,
+      "min_observations": 200,
+      "break_even_factor": 1.0
+    },
+    {
+      "config_id": "EWMA_006",
+      "alpha": 0.01,
+      "deadband": 0.01,
+      "prediction_horizon": 1200,
+      "decision_interval": 100,
+      "min_observations": 200,
+      "break_even_factor": 1.0
+    },
+    {
+      "config_id": "EWMA_007",
+      "alpha": 0.01,
+      "deadband": 0.01,
+      "prediction_horizon": 2400,
+      "decision_interval": 100,
+      "min_observations": 200,
+      "break_even_factor": 1.0
+    },
+    {
+      "config_id": "EWMA_008",
+      "alpha": 0.01,
+      "deadband": 0.02,
+      "prediction_horizon": 300,
+      "decision_interval": 100,
+      "min_observations": 200,
+      "break_even_factor": 1.0
+    },
+    {
+      "config_id": "EWMA_009",
+      "alpha": 0.01,
+      "deadband": 0.02,
+      "prediction_horizon": 600,
+      "decision_interval": 100,
+      "min_observations": 200,
+      "break_even_factor": 1.0
+    },
+    {
+      "config_id": "EWMA_010",
+      "alpha": 0.01,
+      "deadband": 0.02,
+      "prediction_horizon": 1200,
+      "decision_interval": 100,
+      "min_observations": 200,
+      "break_even_factor": 1.0
+    },
+    {
+      "config_id": "EWMA_011",
+      "alpha": 0.01,
+      "deadband": 0.02,
+      "prediction_horizon": 2400,
+      "decision_interval": 100,
+      "min_observations": 200,
+      "break_even_factor": 1.0
+    },
+    {
+      "config_id": "EWMA_012",
+      "alpha": 0.01,
+      "deadband": 0.05,
+      "prediction_horizon": 300,
+      "decision_interval": 100,
+      "min_observations": 200,
+      "break_even_factor": 1.0
+    },
+    {
+      "config_id": "EWMA_013",
+      "alpha": 0.01,
+      "deadband": 0.05,
+      "prediction_horizon": 600,
+      "decision_interval": 100,
+      "min_observations": 200,
+      "break_even_factor": 1.0
+    },
+    {
+      "config_id": "EWMA_014",
+      "alpha": 0.01,
+      "deadband": 0.05,
+      "prediction_horizon": 1200,
+      "decision_interval": 100,
+      "min_observations": 200,
+      "break_even_factor": 1.0
+    },
+    {
+      "config_id": "EWMA_015",
+      "alpha": 0.01,
+      "deadband": 0.05,
+      "prediction_horizon": 2400,
+      "decision_interval": 100,
+      "min_observations": 200,
+      "break_even_factor": 1.0
+    },
+    {
+      "config_id": "EWMA_016",
+      "alpha": 0.02,
+      "deadband": 0.0,
+      "prediction_horizon": 300,
+      "decision_interval": 100,
+      "min_observations": 200,
+      "break_even_factor": 1.0
+    },
+    {
+      "config_id": "EWMA_017",
+      "alpha": 0.02,
+      "deadband": 0.0,
+      "prediction_horizon": 600,
+      "decision_interval": 100,
+      "min_observations": 200,
+      "break_even_factor": 1.0
+    },
+    {
+      "config_id": "EWMA_018",
+      "alpha": 0.02,
+      "deadband": 0.0,
+      "prediction_horizon": 1200,
+      "decision_interval": 100,
+      "min_observations": 200,
+      "break_even_factor": 1.0
+    },
+    {
+      "config_id": "EWMA_019",
+      "alpha": 0.02,
+      "deadband": 0.0,
+      "prediction_horizon": 2400,
+      "decision_interval": 100,
+      "min_observations": 200,
+      "break_even_factor": 1.0
+    },
+    {
+      "config_id": "EWMA_020",
+      "alpha": 0.02,
+      "deadband": 0.01,
+      "prediction_horizon": 300,
+      "decision_interval": 100,
+      "min_observations": 200,
+      "break_even_factor": 1.0
+    },
+    {
+      "config_id": "EWMA_021",
+      "alpha": 0.02,
+      "deadband": 0.01,
+      "prediction_horizon": 600,
+      "decision_interval": 100,
+      "min_observations": 200,
+      "break_even_factor": 1.0
+    },
+    {
+      "config_id": "EWMA_022",
+      "alpha": 0.02,
+      "deadband": 0.01,
+      "prediction_horizon": 1200,
+      "decision_interval": 100,
+      "min_observations": 200,
+      "break_even_factor": 1.0
+    },
+    {
+      "config_id": "EWMA_023",
+      "alpha": 0.02,
+      "deadband": 0.01,
+      "prediction_horizon": 2400,
+      "decision_interval": 100,
+      "min_observations": 200,
+      "break_even_factor": 1.0
+    },
+    {
+      "config_id": "EWMA_024",
+      "alpha": 0.02,
+      "deadband": 0.02,
+      "prediction_horizon": 300,
+      "decision_interval": 100,
+      "min_observations": 200,
+      "break_even_factor": 1.0
+    },
+    {
+      "config_id": "EWMA_025",
+      "alpha": 0.02,
+      "deadband": 0.02,
+      "prediction_horizon": 600,
+      "decision_interval": 100,
+      "min_observations": 200,
+      "break_even_factor": 1.0
+    },
+    {
+      "config_id": "EWMA_026",
+      "alpha": 0.02,
+      "deadband": 0.02,
+      "prediction_horizon": 1200,
+      "decision_interval": 100,
+      "min_observations": 200,
+      "break_even_factor": 1.0
+    },
+    {
+      "config_id": "EWMA_027",
+      "alpha": 0.02,
+      "deadband": 0.02,
+      "prediction_horizon": 2400,
+      "decision_interval": 100,
+      "min_observations": 200,
+      "break_even_factor": 1.0
+    },
+    {
+      "config_id": "EWMA_028",
+      "alpha": 0.02,
+      "deadband": 0.05,
+      "prediction_horizon": 300,
+      "decision_interval": 100,
+      "min_observations": 200,
+      "break_even_factor": 1.0
+    },
+    {
+      "config_id": "EWMA_029",
+      "alpha": 0.02,
+      "deadband": 0.05,
+      "prediction_horizon": 600,
+      "decision_interval": 100,
+      "min_observations": 200,
+      "break_even_factor": 1.0
+    },
+    {
+      "config_id": "EWMA_030",
+      "alpha": 0.02,
+      "deadband": 0.05,
+      "prediction_horizon": 1200,
+      "decision_interval": 100,
+      "min_observations": 200,
+      "break_even_factor": 1.0
+    },
+    {
+      "config_id": "EWMA_031",
+      "alpha": 0.02,
+      "deadband": 0.05,
+      "prediction_horizon": 2400,
+      "decision_interval": 100,
+      "min_observations": 200,
+      "break_even_factor": 1.0
+    },
+    {
+      "config_id": "EWMA_032",
+      "alpha": 0.05,
+      "deadband": 0.0,
+      "prediction_horizon": 300,
+      "decision_interval": 100,
+      "min_observations": 200,
+      "break_even_factor": 1.0
+    },
+    {
+      "config_id": "EWMA_033",
+      "alpha": 0.05,
+      "deadband": 0.0,
+      "prediction_horizon": 600,
+      "decision_interval": 100,
+      "min_observations": 200,
+      "break_even_factor": 1.0
+    },
+    {
+      "config_id": "EWMA_034",
+      "alpha": 0.05,
+      "deadband": 0.0,
+      "prediction_horizon": 1200,
+      "decision_interval": 100,
+      "min_observations": 200,
+      "break_even_factor": 1.0
+    },
+    {
+      "config_id": "EWMA_035",
+      "alpha": 0.05,
+      "deadband": 0.0,
+      "prediction_horizon": 2400,
+      "decision_interval": 100,
+      "min_observations": 200,
+      "break_even_factor": 1.0
+    },
+    {
+      "config_id": "EWMA_036",
+      "alpha": 0.05,
+      "deadband": 0.01,
+      "prediction_horizon": 300,
+      "decision_interval": 100,
+      "min_observations": 200,
+      "break_even_factor": 1.0
+    },
+    {
+      "config_id": "EWMA_037",
+      "alpha": 0.05,
+      "deadband": 0.01,
+      "prediction_horizon": 600,
+      "decision_interval": 100,
+      "min_observations": 200,
+      "break_even_factor": 1.0
+    },
+    {
+      "config_id": "EWMA_038",
+      "alpha": 0.05,
+      "deadband": 0.01,
+      "prediction_horizon": 1200,
+      "decision_interval": 100,
+      "min_observations": 200,
+      "break_even_factor": 1.0
+    },
+    {
+      "config_id": "EWMA_039",
+      "alpha": 0.05,
+      "deadband": 0.01,
+      "prediction_horizon": 2400,
+      "decision_interval": 100,
+      "min_observations": 200,
+      "break_even_factor": 1.0
+    },
+    {
+      "config_id": "EWMA_040",
+      "alpha": 0.05,
+      "deadband": 0.02,
+      "prediction_horizon": 300,
+      "decision_interval": 100,
+      "min_observations": 200,
+      "break_even_factor": 1.0
+    },
+    {
+      "config_id": "EWMA_041",
+      "alpha": 0.05,
+      "deadband": 0.02,
+      "prediction_horizon": 600,
+      "decision_interval": 100,
+      "min_observations": 200,
+      "break_even_factor": 1.0
+    },
+    {
+      "config_id": "EWMA_042",
+      "alpha": 0.05,
+      "deadband": 0.02,
+      "prediction_horizon": 1200,
+      "decision_interval": 100,
+      "min_observations": 200,
+      "break_even_factor": 1.0
+    },
+    {
+      "config_id": "EWMA_043",
+      "alpha": 0.05,
+      "deadband": 0.02,
+      "prediction_horizon": 2400,
+      "decision_interval": 100,
+      "min_observations": 200,
+      "break_even_factor": 1.0
+    },
+    {
+      "config_id": "EWMA_044",
+      "alpha": 0.05,
+      "deadband": 0.05,
+      "prediction_horizon": 300,
+      "decision_interval": 100,
+      "min_observations": 200,
+      "break_even_factor": 1.0
+    },
+    {
+      "config_id": "EWMA_045",
+      "alpha": 0.05,
+      "deadband": 0.05,
+      "prediction_horizon": 600,
+      "decision_interval": 100,
+      "min_observations": 200,
+      "break_even_factor": 1.0
+    },
+    {
+      "config_id": "EWMA_046",
+      "alpha": 0.05,
+      "deadband": 0.05,
+      "prediction_horizon": 1200,
+      "decision_interval": 100,
+      "min_observations": 200,
+      "break_even_factor": 1.0
+    },
+    {
+      "config_id": "EWMA_047",
+      "alpha": 0.05,
+      "deadband": 0.05,
+      "prediction_horizon": 2400,
+      "decision_interval": 100,
+      "min_observations": 200,
+      "break_even_factor": 1.0
+    },
+    {
+      "config_id": "EWMA_048",
+      "alpha": 0.1,
+      "deadband": 0.0,
+      "prediction_horizon": 300,
+      "decision_interval": 100,
+      "min_observations": 200,
+      "break_even_factor": 1.0
+    },
+    {
+      "config_id": "EWMA_049",
+      "alpha": 0.1,
+      "deadband": 0.0,
+      "prediction_horizon": 600,
+      "decision_interval": 100,
+      "min_observations": 200,
+      "break_even_factor": 1.0
+    },
+    {
+      "config_id": "EWMA_050",
+      "alpha": 0.1,
+      "deadband": 0.0,
+      "prediction_horizon": 1200,
+      "decision_interval": 100,
+      "min_observations": 200,
+      "break_even_factor": 1.0
+    },
+    {
+      "config_id": "EWMA_051",
+      "alpha": 0.1,
+      "deadband": 0.0,
+      "prediction_horizon": 2400,
+      "decision_interval": 100,
+      "min_observations": 200,
+      "break_even_factor": 1.0
+    },
+    {
+      "config_id": "EWMA_052",
+      "alpha": 0.1,
+      "deadband": 0.01,
+      "prediction_horizon": 300,
+      "decision_interval": 100,
+      "min_observations": 200,
+      "break_even_factor": 1.0
+    },
+    {
+      "config_id": "EWMA_053",
+      "alpha": 0.1,
+      "deadband": 0.01,
+      "prediction_horizon": 600,
+      "decision_interval": 100,
+      "min_observations": 200,
+      "break_even_factor": 1.0
+    },
+    {
+      "config_id": "EWMA_054",
+      "alpha": 0.1,
+      "deadband": 0.01,
+      "prediction_horizon": 1200,
+      "decision_interval": 100,
+      "min_observations": 200,
+      "break_even_factor": 1.0
+    },
+    {
+      "config_id": "EWMA_055",
+      "alpha": 0.1,
+      "deadband": 0.01,
+      "prediction_horizon": 2400,
+      "decision_interval": 100,
+      "min_observations": 200,
+      "break_even_factor": 1.0
+    },
+    {
+      "config_id": "EWMA_056",
+      "alpha": 0.1,
+      "deadband": 0.02,
+      "prediction_horizon": 300,
+      "decision_interval": 100,
+      "min_observations": 200,
+      "break_even_factor": 1.0
+    },
+    {
+      "config_id": "EWMA_057",
+      "alpha": 0.1,
+      "deadband": 0.02,
+      "prediction_horizon": 600,
+      "decision_interval": 100,
+      "min_observations": 200,
+      "break_even_factor": 1.0
+    },
+    {
+      "config_id": "EWMA_058",
+      "alpha": 0.1,
+      "deadband": 0.02,
+      "prediction_horizon": 1200,
+      "decision_interval": 100,
+      "min_observations": 200,
+      "break_even_factor": 1.0
+    },
+    {
+      "config_id": "EWMA_059",
+      "alpha": 0.1,
+      "deadband": 0.02,
+      "prediction_horizon": 2400,
+      "decision_interval": 100,
+      "min_observations": 200,
+      "break_even_factor": 1.0
+    },
+    {
+      "config_id": "EWMA_060",
+      "alpha": 0.1,
+      "deadband": 0.05,
+      "prediction_horizon": 300,
+      "decision_interval": 100,
+      "min_observations": 200,
+      "break_even_factor": 1.0
+    },
+    {
+      "config_id": "EWMA_061",
+      "alpha": 0.1,
+      "deadband": 0.05,
+      "prediction_horizon": 600,
+      "decision_interval": 100,
+      "min_observations": 200,
+      "break_even_factor": 1.0
+    },
+    {
+      "config_id": "EWMA_062",
+      "alpha": 0.1,
+      "deadband": 0.05,
+      "prediction_horizon": 1200,
+      "decision_interval": 100,
+      "min_observations": 200,
+      "break_even_factor": 1.0
+    },
+    {
+      "config_id": "EWMA_063",
+      "alpha": 0.1,
+      "deadband": 0.05,
+      "prediction_horizon": 2400,
+      "decision_interval": 100,
+      "min_observations": 200,
+      "break_even_factor": 1.0
+    },
+    {
+      "config_id": "EWMA_064",
+      "alpha": 0.2,
+      "deadband": 0.0,
+      "prediction_horizon": 300,
+      "decision_interval": 100,
+      "min_observations": 200,
+      "break_even_factor": 1.0
+    },
+    {
+      "config_id": "EWMA_065",
+      "alpha": 0.2,
+      "deadband": 0.0,
+      "prediction_horizon": 600,
+      "decision_interval": 100,
+      "min_observations": 200,
+      "break_even_factor": 1.0
+    },
+    {
+      "config_id": "EWMA_066",
+      "alpha": 0.2,
+      "deadband": 0.0,
+      "prediction_horizon": 1200,
+      "decision_interval": 100,
+      "min_observations": 200,
+      "break_even_factor": 1.0
+    },
+    {
+      "config_id": "EWMA_067",
+      "alpha": 0.2,
+      "deadband": 0.0,
+      "prediction_horizon": 2400,
+      "decision_interval": 100,
+      "min_observations": 200,
+      "break_even_factor": 1.0
+    },
+    {
+      "config_id": "EWMA_068",
+      "alpha": 0.2,
+      "deadband": 0.01,
+      "prediction_horizon": 300,
+      "decision_interval": 100,
+      "min_observations": 200,
+      "break_even_factor": 1.0
+    },
+    {
+      "config_id": "EWMA_069",
+      "alpha": 0.2,
+      "deadband": 0.01,
+      "prediction_horizon": 600,
+      "decision_interval": 100,
+      "min_observations": 200,
+      "break_even_factor": 1.0
+    },
+    {
+      "config_id": "EWMA_070",
+      "alpha": 0.2,
+      "deadband": 0.01,
+      "prediction_horizon": 1200,
+      "decision_interval": 100,
+      "min_observations": 200,
+      "break_even_factor": 1.0
+    },
+    {
+      "config_id": "EWMA_071",
+      "alpha": 0.2,
+      "deadband": 0.01,
+      "prediction_horizon": 2400,
+      "decision_interval": 100,
+      "min_observations": 200,
+      "break_even_factor": 1.0
+    },
+    {
+      "config_id": "EWMA_072",
+      "alpha": 0.2,
+      "deadband": 0.02,
+      "prediction_horizon": 300,
+      "decision_interval": 100,
+      "min_observations": 200,
+      "break_even_factor": 1.0
+    },
+    {
+      "config_id": "EWMA_073",
+      "alpha": 0.2,
+      "deadband": 0.02,
+      "prediction_horizon": 600,
+      "decision_interval": 100,
+      "min_observations": 200,
+      "break_even_factor": 1.0
+    },
+    {
+      "config_id": "EWMA_074",
+      "alpha": 0.2,
+      "deadband": 0.02,
+      "prediction_horizon": 1200,
+      "decision_interval": 100,
+      "min_observations": 200,
+      "break_even_factor": 1.0
+    },
+    {
+      "config_id": "EWMA_075",
+      "alpha": 0.2,
+      "deadband": 0.02,
+      "prediction_horizon": 2400,
+      "decision_interval": 100,
+      "min_observations": 200,
+      "break_even_factor": 1.0
+    },
+    {
+      "config_id": "EWMA_076",
+      "alpha": 0.2,
+      "deadband": 0.05,
+      "prediction_horizon": 300,
+      "decision_interval": 100,
+      "min_observations": 200,
+      "break_even_factor": 1.0
+    },
+    {
+      "config_id": "EWMA_077",
+      "alpha": 0.2,
+      "deadband": 0.05,
+      "prediction_horizon": 600,
+      "decision_interval": 100,
+      "min_observations": 200,
+      "break_even_factor": 1.0
+    },
+    {
+      "config_id": "EWMA_078",
+      "alpha": 0.2,
+      "deadband": 0.05,
+      "prediction_horizon": 1200,
+      "decision_interval": 100,
+      "min_observations": 200,
+      "break_even_factor": 1.0
+    },
+    {
+      "config_id": "EWMA_079",
+      "alpha": 0.2,
+      "deadband": 0.05,
+      "prediction_horizon": 2400,
+      "decision_interval": 100,
+      "min_observations": 200,
+      "break_even_factor": 1.0
+    }
+  ],
+  "selected_config": {
+    "config_id": "EWMA_012",
+    "alpha": 0.01,
+    "deadband": 0.05,
+    "prediction_horizon": 300,
+    "decision_interval": 100,
+    "min_observations": 200,
+    "break_even_factor": 1.0,
+    "selection_dataset": "PEMS04",
+    "selection_protocol_sha256": "5439048582702cf434cb02253834f6014051421d4f1585158b01b4a566a82c79",
+    "selection_summary": {
+      "config_id": "EWMA_012",
+      "alpha": 0.01,
+      "deadband": 0.05,
+      "prediction_horizon": 300,
+      "action_geometric_mean_ratio": 0.8307346321750674,
+      "action_median_ratio": 0.8333965642363396,
+      "action_migration_count": 108,
+      "action_rewrite_bytes": 4623318,
+      "brief_median_ratio": 1.0047584707612862,
+      "stable_median_ratio": 1.0,
+      "brief_max_ratio": 1.009179381646658,
+      "stable_max_ratio": 1.0009935549522098,
+      "brief_safety_pass": true,
+      "stable_safety_pass": true,
+      "safe": true,
+      "best_action_score": 0.8277949255855587,
+      "tie_tolerance": 0.005,
+      "equivalent_config_count": 34
+    },
+    "frozen_for_holdouts_and_r1": true,
+    "may_not_be_retuned_after_holdout": true,
+    "s1_experiment_freeze_sha256": "3d20b6bbb53f55a0cbdf00d4b76dabeff06f67d7f66b584396966c90166f95c7"
+  },
+  "environment": {
+    "python": "3.10.20 | packaged by conda-forge | (main, Mar  5 2026, 16:36:49) [MSC v.1944 64 bit (AMD64)]",
+    "platform": "Windows-10-10.0.26200-SP0",
+    "processor": "Intel64 Family 6 Model 183 Stepping 1, GenuineIntel",
+    "numpy": "2.2.6",
+    "pandas": "2.3.3",
+    "timer": "time.perf_counter_ns"
+  }
+}

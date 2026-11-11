@@ -1,0 +1,6 @@
+dataset,chunk_id,series_index,chunk_start,chunk_size,unit_type,unit_id,building_id,codec,raw_size_bytes,payload_size_bytes,metadata_size_bytes,stored_size_bytes,compression_ratio,encode_ns,full_decode_ns
+BDG2_JSS_FRESH_CALIBRATION,bdg2_r1_cs16384_afa0b354eb8f54e1,29,0,16384,building,Lamb_assembly_Elinor,Lamb_assembly_Elinor,whole_lz4,65536,20608,0,20608,0.314453125,3218800,43100
+BDG2_JSS_FRESH_CALIBRATION,bdg2_r1_cs16384_afa0b354eb8f54e1,29,0,16384,building,Lamb_assembly_Elinor,Lamb_assembly_Elinor,whole_zstd,65536,12891,0,12891,0.1967010498046875,3330800,54300
+BDG2_JSS_FRESH_CALIBRATION,bdg2_r1_cs16384_afa0b354eb8f54e1,29,0,16384,building,Lamb_assembly_Elinor,Lamb_assembly_Elinor,block_lz4_64,65536,31776,8200,39976,0.6099853515625,8440900,691500
+BDG2_JSS_FRESH_CALIBRATION,bdg2_r1_cs16384_afa0b354eb8f54e1,29,0,16384,building,Lamb_assembly_Elinor,Lamb_assembly_Elinor,block_lz4_256,65536,24177,2056,26233,0.4002838134765625,6801100,204000
+BDG2_JSS_FRESH_CALIBRATION,bdg2_r1_cs16384_afa0b354eb8f54e1,29,0,16384,building,Lamb_assembly_Elinor,Lamb_assembly_Elinor,block_lz4_1024,65536,21762,520,22282,0.339996337890625,7479000,112100

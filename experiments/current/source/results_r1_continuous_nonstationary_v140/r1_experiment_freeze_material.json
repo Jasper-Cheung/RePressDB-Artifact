@@ -1,0 +1,11 @@
+{
+  "r1_protocol_sha256": "ecc5aa0c7e777c1a93394f4df74d4fb535554593dcd6509250de545812ff6086",
+  "trace_manifest_sha256": "2fc27fc817315d02c05f57c98122b8bab5f4e8461f6df14cd0332facaec07101",
+  "shape_ewma_frozen_config_sha256": "d00a8d79135dd4946cac5734e1adfe1378385b83d62ba0adf9acb0a2e1a9b720",
+  "calibration_records_sha256": "6704d36d8865a0fc035174cf40824095aa8ca9adf4bdbe6ec3dddf3b8354e4db",
+  "migration_costs_sha256": "1fa7b0ed54f63f2ca5981a65937afea316e78837e864b94a21533c2a64b630f3",
+  "script_sha256": "3be9b87059a81aa4ccc36a6e5ef72927bec9462ea8d7131be9cc803577ee1582",
+  "parent_s1_freeze_sha256": "3d20b6bbb53f55a0cbdf00d4b76dabeff06f67d7f66b584396966c90166f95c7",
+  "parent_afhc_freeze_sha256": "48092ee607251e1290441b7259daa63e063a481cb6d4f6ddbdd0aa787ba883fa",
+  "parent_b2_freeze_sha256": "1e7708807b1f44b3b3608a3dd2d0e590d3d74e78ac53dcb7652586ed6248f733"
+}

@@ -1,0 +1,17 @@
+{
+  "no_action_traces": [
+    "shape_only",
+    "brief_burst",
+    "stable_scan"
+  ],
+  "n_exact_paired_cells": 1728,
+  "overall_median_afhc_over_initial": 1.0028818575884335,
+  "required_interval": [
+    0.95,
+    1.05
+  ],
+  "overall_median_within_required_interval": true,
+  "afhc_total_migrations_in_no_action_traces": 0,
+  "zero_no_action_migrations": true,
+  "pass": true
+}

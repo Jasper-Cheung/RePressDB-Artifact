@@ -1,0 +1,186 @@
+{
+  "version": "0.8.0",
+  "target_journal": "Journal of Big Data",
+  "a2_protocol_sha256": "799459ec0ae5a199ced0bcadb3a45ae69fe853ec983b0931306e27861ee11f98",
+  "a2_experiment_freeze_sha256": "4a562be0427893c04fb72e4db69816638d046ba47142beec43f6dc8b44af5e0b",
+  "frozen_configuration": {
+    "config_id": "AFHC_056",
+    "adaptation_period": 1000,
+    "hot_fraction": 0.25,
+    "cold_codec": "whole_lz4",
+    "hot_codec": "block_lz4_1024",
+    "frequency_ema_alpha": 0.5,
+    "hot_rule": "hot if score >= 1.5*median, cold if score <= median/1.5; neutral preserves current layout; hot_fraction caps maximum hot-set size",
+    "selection_dataset": "PEMS04",
+    "selection_version": "0.7.4",
+    "frozen_for_holdouts": true,
+    "deadband_factor": 1.5,
+    "deadband_protocol_sha256": "8cf9f05722120cf66dc34b6ffc6c9a7bdb8715632db22829935b3b4e34a80ca7",
+    "v074_protocol_sha256": "8bed8e0a66202997b7cf5626102ce53e4c5bd3c02726cc37c3ce8c4f375ad058",
+    "selection_objective": "geometric mean over frequency_only and joint_orthogonal action cells",
+    "selection_summary": {
+      "config_id": "AFHC_056",
+      "adaptation_period": 1000,
+      "hot_fraction": 0.25,
+      "cold_codec": "whole_lz4",
+      "hot_codec": "block_lz4_1024",
+      "action_geometric_mean_ratio": 0.9023705501389339,
+      "action_median_ratio": 1.0040733599008627,
+      "action_mean_ratio": 0.924369966393395,
+      "action_median_migrations_per_chunk": 0.75,
+      "action_median_rewrite_bytes": 555266.0,
+      "stable_median_ratio": 1.0,
+      "burst_median_ratio": 1.0,
+      "burst_median_migrations_per_chunk": 0.0,
+      "all_trace_median_migrations_per_chunk": 0.0,
+      "all_trace_median_rewrite_bytes": 0.0,
+      "safety_pass": true,
+      "failure_reasons": "",
+      "n_safety_failures": 0,
+      "stable_excess_over_limit": 0.0,
+      "burst_excess_over_limit": 0.0,
+      "burst_migration_excess_over_limit": 0.0,
+      "selection_status": "frozen_action_sensitive_configuration",
+      "best_action_score_before_tie_band": 0.9023705501389339,
+      "tie_band_relative_tolerance": 0.005,
+      "n_configs_in_tie_band": 9
+    },
+    "initialization": "per-chunk scan-optimal representation, identical to initial-best and RePressDB",
+    "experiment_freeze_sha256": "48092ee607251e1290441b7259daa63e063a481cb6d4f6ddbdd0aa787ba883fa"
+  },
+  "datasets": {
+    "PEMS08": {
+      "n_independent_units": 32,
+      "n_chunks": 64,
+      "chunks_by_size": {
+        "8192": 32,
+        "16384": 32
+      },
+      "source_metadata": {
+        "source": "E:\\IPM\\大学\\科研\\鲁棒性预测\\data\\Traffic-main\\PEMS08\\PEMS08.npz",
+        "array_key": "data",
+        "available_keys": [
+          "data"
+        ],
+        "original_shape": [
+          17856,
+          170,
+          3
+        ],
+        "feature_index": 0,
+        "selected_original_series_indices": [
+          0,
+          5,
+          14,
+          18,
+          21,
+          25,
+          29,
+          38,
+          42,
+          47,
+          53,
+          58,
+          66,
+          68,
+          70,
+          71,
+          73,
+          77,
+          80,
+          93,
+          100,
+          103,
+          111,
+          113,
+          116,
+          123,
+          131,
+          132,
+          133,
+          138,
+          145,
+          156
+        ],
+        "excluded_series_indices": [],
+        "loaded_shape": [
+          17856,
+          32
+        ],
+        "imputed_nonfinite_fraction": 0.0,
+        "dtype": "float32"
+      },
+      "calibration_rows": 2560,
+      "codec_rows": 320,
+      "migration_rows": 1600,
+      "actual_policy_runs": 270
+    },
+    "BDG2": {
+      "n_independent_units": 32,
+      "n_chunks": 64,
+      "chunks_by_size": {
+        "8192": 32,
+        "16384": 32
+      },
+      "source_metadata": {
+        "source": "E:\\IPM\\大学\\科研\\E\\buds-lab-building-data-genome-project-2-3d0cbaf",
+        "n_buildings": 32,
+        "n_chunks": 64,
+        "meter_type_counts": {
+          "electricity": 20,
+          "chilledwater": 6,
+          "steam": 3,
+          "hotwater": 2,
+          "gas": 1
+        },
+        "site_counts": {
+          "Eagle": 8,
+          "Robin": 7,
+          "Hog": 6,
+          "Shrew": 5,
+          "Lamb": 4,
+          "Moose": 1,
+          "Mouse": 1
+        }
+      },
+      "calibration_rows": 2560,
+      "codec_rows": 320,
+      "migration_rows": 1600,
+      "actual_policy_runs": 270
+    }
+  },
+  "execution": {
+    "trace_seeds": [
+      20260718,
+      20260719,
+      20260720
+    ],
+    "trace_names": [
+      "shape_only",
+      "frequency_only",
+      "joint_orthogonal",
+      "brief_burst",
+      "stable_scan"
+    ],
+    "chunk_sizes": [
+      8192,
+      16384
+    ],
+    "policies": [
+      "initial_best",
+      "afhc_frozen",
+      "repressdb"
+    ],
+    "actual_repeats": 3,
+    "checkpoint_resume": true,
+    "timer": "time.perf_counter_ns"
+  },
+  "environment": {
+    "python": "3.10.20 | packaged by conda-forge | (main, Mar  5 2026, 16:36:49) [MSC v.1944 64 bit (AMD64)]",
+    "platform": "Windows-10-10.0.26200-SP0",
+    "processor": "Intel64 Family 6 Model 183 Stepping 1, GenuineIntel",
+    "numpy": "2.2.6",
+    "pandas": "2.3.3",
+    "scipy": "1.15.2"
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "python": "3.10.20 | packaged by conda-forge | (main, Mar  5 2026, 16:36:49) [MSC v.1944 64 bit (AMD64)]",
+  "numpy": "2.2.6",
+  "pandas": "2.3.3",
+  "lz4": "4.4.5",
+  "zstandard": "0.25.0",
+  "matplotlib": "3.10.9",
+  "psutil": "7.2.2"
+}

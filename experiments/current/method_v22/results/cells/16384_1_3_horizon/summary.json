@@ -1,0 +1,49 @@
+{
+  "size": 16384,
+  "group": 1,
+  "family": "R2_D_persistent_shift",
+  "policy": "horizon",
+  "seed": 2026126806,
+  "n_queries": 160000,
+  "service_ns": 9283936000,
+  "query_ns": 8788194100,
+  "controller_ns": 370307500,
+  "migration_ns": 125434400,
+  "p99_ns": 198201.00000000093,
+  "p999_ns": 1526400.4000000074,
+  "max_ns": 64022000,
+  "migration_count": 2,
+  "rewrite_bytes": 80979,
+  "budget_denied": 0,
+  "budget_limit_bytes": 79041,
+  "prediction_ns": 7271344720.3125,
+  "elapsed_ns": 10091611100,
+  "truth_ns": 411695000,
+  "correct": true,
+  "integrity": {
+    "chunk_count": 8,
+    "invalid_chunks": [],
+    "non_idle_chunks": [],
+    "chunks_without_exactly_one_payload": [],
+    "temporary_file_count": 0,
+    "active_stored_bytes": 356591,
+    "pass": true
+  },
+  "sources": {
+    "benchmark_v2.py": "1a1a866482c90bf98392f5d70ee4d62b754374c08cfd22c5c0cc45aeabe21047",
+    "efficient_executor.py": "aa47bb9e1bf3d615e0b09837c6bec449dd423df9b2bf014bc8373ce403830dab",
+    "risk_controller.py": "ca87facbe17b8becc15605b3db8322a60c885bee97a8313234786f5d8a818346",
+    "fgcs_benchmark.py": "dd1e00b992b990073ebdb8becdedb2ebd82fbc9f51baa0e042b768059cb96763"
+  },
+  "initial_codecs": [
+    "whole_lz4",
+    "block_lz4_4096",
+    "block_lz4_4096",
+    "whole_lz4",
+    "whole_lz4",
+    "whole_lz4",
+    "whole_lz4",
+    "whole_lz4"
+  ],
+  "controller_setup_ns": 40900
+}

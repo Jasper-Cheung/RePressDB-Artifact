@@ -1,0 +1,6 @@
+dataset,chunk_id,series_index,chunk_start,chunk_size,unit_type,unit_id,building_id,codec,raw_size_bytes,payload_size_bytes,metadata_size_bytes,stored_size_bytes,compression_ratio,encode_ns,full_decode_ns
+BDG2_R1,bdg2_r1_cs8192_11e8e6ff7eb929a4,10,0,8192,building,Hog_office_Alisha,Hog_office_Alisha,whole_lz4,32768,10179,0,10179,0.310638427734375,2760600,17900
+BDG2_R1,bdg2_r1_cs8192_11e8e6ff7eb929a4,10,0,8192,building,Hog_office_Alisha,Hog_office_Alisha,whole_zstd,32768,7566,0,7566,0.23089599609375,2367000,32700
+BDG2_R1,bdg2_r1_cs8192_11e8e6ff7eb929a4,10,0,8192,building,Hog_office_Alisha,Hog_office_Alisha,block_lz4_64,32768,16396,4104,20500,0.6256103515625,7424800,310000
+BDG2_R1,bdg2_r1_cs8192_11e8e6ff7eb929a4,10,0,8192,building,Hog_office_Alisha,Hog_office_Alisha,block_lz4_256,32768,12766,1032,13798,0.42108154296875,6683800,98500
+BDG2_R1,bdg2_r1_cs8192_11e8e6ff7eb929a4,10,0,8192,building,Hog_office_Alisha,Hog_office_Alisha,block_lz4_1024,32768,10889,264,11153,0.340362548828125,6919900,32400

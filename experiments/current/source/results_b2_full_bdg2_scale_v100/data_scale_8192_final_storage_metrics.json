@@ -1,0 +1,36 @@
+{
+  "chunk_count": 720,
+  "raw_bytes": 23592960,
+  "payload_bytes": 16497917,
+  "metadata_bytes": 462648,
+  "active_stored_bytes": 16960565,
+  "stored_over_raw": 0.7188824547661675,
+  "compression_factor_raw_over_stored": 1.3910479986957982,
+  "codec_distribution": [
+    {
+      "active_codec": "block_lz4_1024",
+      "chunk_count": 87,
+      "stored_bytes": 2000686
+    },
+    {
+      "active_codec": "block_lz4_256",
+      "chunk_count": 92,
+      "stored_bytes": 2357262
+    },
+    {
+      "active_codec": "block_lz4_64",
+      "chunk_count": 84,
+      "stored_bytes": 2719247
+    },
+    {
+      "active_codec": "whole_lz4",
+      "chunk_count": 370,
+      "stored_bytes": 8434566
+    },
+    {
+      "active_codec": "whole_zstd",
+      "chunk_count": 87,
+      "stored_bytes": 1448804
+    }
+  ]
+}

@@ -1,0 +1,6 @@
+dataset,chunk_id,series_index,chunk_start,chunk_size,unit_type,unit_id,building_id,codec,raw_size_bytes,payload_size_bytes,metadata_size_bytes,stored_size_bytes,compression_ratio,encode_ns,full_decode_ns
+BDG2_JSS_FRESH_CALIBRATION,bdg2_r1_cs16384_0f7631d923c02614,9,0,16384,building,Lamb_office_Callie,Lamb_office_Callie,whole_lz4,65536,35964,0,35964,0.54876708984375,2700900,36100
+BDG2_JSS_FRESH_CALIBRATION,bdg2_r1_cs16384_0f7631d923c02614,9,0,16384,building,Lamb_office_Callie,Lamb_office_Callie,whole_zstd,65536,25482,0,25482,0.388824462890625,3509200,77400
+BDG2_JSS_FRESH_CALIBRATION,bdg2_r1_cs16384_0f7631d923c02614,9,0,16384,building,Lamb_office_Callie,Lamb_office_Callie,block_lz4_64,65536,54704,8200,62904,0.9598388671875,8249500,695600
+BDG2_JSS_FRESH_CALIBRATION,bdg2_r1_cs16384_0f7631d923c02614,9,0,16384,building,Lamb_office_Callie,Lamb_office_Callie,block_lz4_256,65536,46275,2056,48331,0.7374725341796875,6650500,204400
+BDG2_JSS_FRESH_CALIBRATION,bdg2_r1_cs16384_0f7631d923c02614,9,0,16384,building,Lamb_office_Callie,Lamb_office_Callie,block_lz4_1024,65536,40354,520,40874,0.623687744140625,8301400,79000

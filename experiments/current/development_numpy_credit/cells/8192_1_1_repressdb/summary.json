@@ -1,0 +1,32 @@
+{
+  "size": 8192,
+  "group": 1,
+  "family": "R1_B_mean_reverting",
+  "policy": "repressdb",
+  "seed": 2026111394,
+  "n_queries": 160000,
+  "service_ns": 9127951800,
+  "p99_ns": 134400.0,
+  "p999_ns": 253001.3000000239,
+  "max_ns": 404515600,
+  "controller_ns": 509169800,
+  "migration_ns": 550173200,
+  "migration_count": 3,
+  "rewrite_bytes": 75886,
+  "budget_denied": 0,
+  "budget_limit_bytes": 39340,
+  "prediction_ns": 8358845950.0,
+  "elapsed_ns": 10059489100,
+  "truth_ns": 641515300,
+  "correct": true,
+  "integrity": {
+    "chunk_count": 8,
+    "invalid_chunks": [],
+    "non_idle_chunks": [],
+    "chunks_without_exactly_one_payload": [],
+    "temporary_file_count": 0,
+    "active_stored_bytes": 222893,
+    "pass": true
+  },
+  "code_sha256": "58890dd14f265b4c75a4e18b040d981d76da5879180279daa2f5cee1d71259ca"
+}

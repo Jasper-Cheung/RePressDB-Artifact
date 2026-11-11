@@ -1,0 +1,6 @@
+dataset,chunk_id,series_index,chunk_start,chunk_size,unit_type,unit_id,building_id,codec,raw_size_bytes,payload_size_bytes,metadata_size_bytes,stored_size_bytes,compression_ratio,encode_ns,full_decode_ns
+BDG2_R1,bdg2_r1_cs16384_1c8f7c749e0c7bb1,17,0,16384,building,Eagle_assembly_Lacy,Eagle_assembly_Lacy,whole_lz4,65536,49429,0,49429,0.7542266845703125,4056200,41200
+BDG2_R1,bdg2_r1_cs16384_1c8f7c749e0c7bb1,17,0,16384,building,Eagle_assembly_Lacy,Eagle_assembly_Lacy,whole_zstd,65536,42526,0,42526,0.648895263671875,3792200,86700
+BDG2_R1,bdg2_r1_cs16384_1c8f7c749e0c7bb1,17,0,16384,building,Eagle_assembly_Lacy,Eagle_assembly_Lacy,block_lz4_64,65536,55850,8200,64050,0.977325439453125,13647000,1754200
+BDG2_R1,bdg2_r1_cs16384_1c8f7c749e0c7bb1,17,0,16384,building,Eagle_assembly_Lacy,Eagle_assembly_Lacy,block_lz4_256,65536,51025,2056,53081,0.8099517822265625,10031300,194000
+BDG2_R1,bdg2_r1_cs16384_1c8f7c749e0c7bb1,17,0,16384,building,Eagle_assembly_Lacy,Eagle_assembly_Lacy,block_lz4_1024,65536,49859,520,50379,0.7687225341796875,10273000,181700

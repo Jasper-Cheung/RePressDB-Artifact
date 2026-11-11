@@ -1,0 +1,6 @@
+dataset,chunk_id,series_index,chunk_start,chunk_size,unit_type,unit_id,building_id,codec,raw_size_bytes,payload_size_bytes,metadata_size_bytes,stored_size_bytes,compression_ratio,encode_ns,full_decode_ns
+BDG2_JSS_FRESH_CALIBRATION,bdg2_r1_cs16384_9c4cd3e74fd18803,27,0,16384,building,Eagle_office_Phyllis,Eagle_office_Phyllis,whole_lz4,65536,49756,0,49756,0.75921630859375,3063900,36500
+BDG2_JSS_FRESH_CALIBRATION,bdg2_r1_cs16384_9c4cd3e74fd18803,27,0,16384,building,Eagle_office_Phyllis,Eagle_office_Phyllis,whole_zstd,65536,42244,0,42244,0.64459228515625,3317800,89900
+BDG2_JSS_FRESH_CALIBRATION,bdg2_r1_cs16384_9c4cd3e74fd18803,27,0,16384,building,Eagle_office_Phyllis,Eagle_office_Phyllis,block_lz4_64,65536,68120,8200,76320,1.16455078125,8300500,703000
+BDG2_JSS_FRESH_CALIBRATION,bdg2_r1_cs16384_9c4cd3e74fd18803,27,0,16384,building,Eagle_office_Phyllis,Eagle_office_Phyllis,block_lz4_256,65536,61596,2056,63652,0.97125244140625,6793600,215000
+BDG2_JSS_FRESH_CALIBRATION,bdg2_r1_cs16384_9c4cd3e74fd18803,27,0,16384,building,Eagle_office_Phyllis,Eagle_office_Phyllis,block_lz4_1024,65536,56198,520,56718,0.865447998046875,9420200,108000

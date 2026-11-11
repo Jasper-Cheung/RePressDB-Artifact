@@ -1,0 +1,7 @@
+{
+  "pass": true,
+  "trials": 40,
+  "events": 400000,
+  "comparison": "exact credit values and event proposal equality; identical committed switches",
+  "seed": 20261031
+}

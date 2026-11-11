@@ -1,0 +1,6 @@
+dataset,chunk_id,series_index,chunk_start,chunk_size,unit_type,unit_id,building_id,codec,raw_size_bytes,payload_size_bytes,metadata_size_bytes,stored_size_bytes,compression_ratio,encode_ns,full_decode_ns
+BDG2_JSS_FRESH_CALIBRATION,bdg2_r1_cs16384_55f4f6b9f37819ea,22,0,16384,building,Hog_office_Corey,Hog_office_Corey,whole_lz4,65536,40847,0,40847,0.6232757568359375,3231700,47000
+BDG2_JSS_FRESH_CALIBRATION,bdg2_r1_cs16384_55f4f6b9f37819ea,22,0,16384,building,Hog_office_Corey,Hog_office_Corey,whole_zstd,65536,28473,0,28473,0.4344635009765625,3361300,80100
+BDG2_JSS_FRESH_CALIBRATION,bdg2_r1_cs16384_55f4f6b9f37819ea,22,0,16384,building,Hog_office_Corey,Hog_office_Corey,block_lz4_64,65536,60159,8200,68359,1.0430755615234375,7846700,718000
+BDG2_JSS_FRESH_CALIBRATION,bdg2_r1_cs16384_55f4f6b9f37819ea,22,0,16384,building,Hog_office_Corey,Hog_office_Corey,block_lz4_256,65536,50662,2056,52718,0.804412841796875,6955100,216100
+BDG2_JSS_FRESH_CALIBRATION,bdg2_r1_cs16384_55f4f6b9f37819ea,22,0,16384,building,Hog_office_Corey,Hog_office_Corey,block_lz4_1024,65536,44862,520,45382,0.692474365234375,8970200,93200

@@ -1,0 +1,96 @@
+{
+  "version": "0.7.4",
+  "target_journal": "Journal of Big Data",
+  "source_v070_result_directory": "D:\\python_projects\\python_project IPM\\RePressDB_E0_v0_1\\results_a0_a1_hotcold_pems04_v070",
+  "source_v073_result_directory": "D:\\python_projects\\python_project IPM\\RePressDB_E0_v0_1\\results_a0_a1_hotcold_deadband_pems04_v073",
+  "parent_a0_protocol_sha256": "196ac4312695a0b5255129ee1587e9d7112c3bf9f795ebe6763434334fad97e8",
+  "parent_deadband_protocol_sha256": "8cf9f05722120cf66dc34b6ffc6c9a7bdb8715632db22829935b3b4e34a80ca7",
+  "v074_protocol_sha256": "8bed8e0a66202997b7cf5626102ce53e4c5bd3c02726cc37c3ce8c4f375ad058",
+  "experiment_freeze_sha256": "48092ee607251e1290441b7259daa63e063a481cb6d4f6ddbdd0aa787ba883fa",
+  "selection": {
+    "action_traces": [
+      "frequency_only",
+      "joint_orthogonal"
+    ],
+    "score": "geometric mean of total-cost ratios",
+    "safety_filters_unchanged": true,
+    "tie_tolerance": 0.005
+  },
+  "actual_audit": {
+    "repeats": 3,
+    "full_warmup_each_run": true,
+    "random_policy_order_each_repeat": true,
+    "checkpoint_resume": true,
+    "expected_policy_runs": 270,
+    "policy_pause_seconds": 0.05
+  },
+  "selected_configuration": {
+    "config_id": "AFHC_056",
+    "adaptation_period": 1000,
+    "hot_fraction": 0.25,
+    "cold_codec": "whole_lz4",
+    "hot_codec": "block_lz4_1024",
+    "frequency_ema_alpha": 0.5,
+    "hot_rule": "hot if score >= 1.5*median, cold if score <= median/1.5; neutral preserves current layout; hot_fraction caps maximum hot-set size",
+    "selection_dataset": "PEMS04",
+    "selection_version": "0.7.4",
+    "frozen_for_holdouts": true,
+    "deadband_factor": 1.5,
+    "deadband_protocol_sha256": "8cf9f05722120cf66dc34b6ffc6c9a7bdb8715632db22829935b3b4e34a80ca7",
+    "v074_protocol_sha256": "8bed8e0a66202997b7cf5626102ce53e4c5bd3c02726cc37c3ce8c4f375ad058",
+    "selection_objective": "geometric mean over frequency_only and joint_orthogonal action cells",
+    "selection_summary": {
+      "config_id": "AFHC_056",
+      "adaptation_period": 1000,
+      "hot_fraction": 0.25,
+      "cold_codec": "whole_lz4",
+      "hot_codec": "block_lz4_1024",
+      "action_geometric_mean_ratio": 0.9023705501389339,
+      "action_median_ratio": 1.0040733599008627,
+      "action_mean_ratio": 0.924369966393395,
+      "action_median_migrations_per_chunk": 0.75,
+      "action_median_rewrite_bytes": 555266.0,
+      "stable_median_ratio": 1.0,
+      "burst_median_ratio": 1.0,
+      "burst_median_migrations_per_chunk": 0.0,
+      "all_trace_median_migrations_per_chunk": 0.0,
+      "all_trace_median_rewrite_bytes": 0.0,
+      "safety_pass": true,
+      "failure_reasons": "",
+      "n_safety_failures": 0,
+      "stable_excess_over_limit": 0.0,
+      "burst_excess_over_limit": 0.0,
+      "burst_migration_excess_over_limit": 0.0,
+      "selection_status": "frozen_action_sensitive_configuration",
+      "best_action_score_before_tie_band": 0.9023705501389339,
+      "tie_band_relative_tolerance": 0.005,
+      "n_configs_in_tie_band": 9
+    },
+    "initialization": "per-chunk scan-optimal representation, identical to initial-best and RePressDB",
+    "experiment_freeze_sha256": "48092ee607251e1290441b7259daa63e063a481cb6d4f6ddbdd0aa787ba883fa"
+  },
+  "RePressDB_controller": {
+    "long_window": 300,
+    "short_window": 100,
+    "minimum_observations": 200,
+    "decision_interval": 100,
+    "confirmation_rounds": 3,
+    "cooldown_queries": 300,
+    "prediction_horizon": 1200,
+    "minimum_relative_improvement": 0.08,
+    "rewrite_safety_factor": 1.25
+  },
+  "environment": {
+    "python": "3.10.20 | packaged by conda-forge | (main, Mar  5 2026, 16:36:49) [MSC v.1944 64 bit (AMD64)]",
+    "platform": "Windows-10-10.0.26200-SP0",
+    "processor": "Intel64 Family 6 Model 183 Stepping 1, GenuineIntel",
+    "numpy": "2.2.6",
+    "pandas": "2.3.3",
+    "scipy": "1.15.2",
+    "timer": "time.perf_counter_ns"
+  },
+  "holdout_access": {
+    "PEMS08_values_read": false,
+    "BDG2_values_read": false
+  }
+}

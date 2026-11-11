@@ -1,0 +1,6 @@
+dataset,chunk_id,series_index,chunk_start,chunk_size,unit_type,unit_id,building_id,codec,raw_size_bytes,payload_size_bytes,metadata_size_bytes,stored_size_bytes,compression_ratio,encode_ns,full_decode_ns
+BDG2_R1,bdg2_r1_cs8192_4eb073500ba91fa4,21,0,8192,building,Eagle_office_Chantelle,Eagle_office_Chantelle,whole_lz4,32768,32316,0,32316,0.9862060546875,2972100,16400
+BDG2_R1,bdg2_r1_cs8192_4eb073500ba91fa4,21,0,8192,building,Eagle_office_Chantelle,Eagle_office_Chantelle,whole_zstd,32768,27986,0,27986,0.85406494140625,3361200,38200
+BDG2_R1,bdg2_r1_cs8192_4eb073500ba91fa4,21,0,8192,building,Eagle_office_Chantelle,Eagle_office_Chantelle,block_lz4_64,32768,35064,4104,39168,1.1953125,7293400,327200
+BDG2_R1,bdg2_r1_cs8192_4eb073500ba91fa4,21,0,8192,building,Eagle_office_Chantelle,Eagle_office_Chantelle,block_lz4_256,32768,32875,1032,33907,1.034759521484375,5919600,94500
+BDG2_R1,bdg2_r1_cs8192_4eb073500ba91fa4,21,0,8192,building,Eagle_office_Chantelle,Eagle_office_Chantelle,block_lz4_1024,32768,32456,264,32720,0.99853515625,5982700,35500

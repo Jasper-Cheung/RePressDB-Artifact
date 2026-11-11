@@ -1,0 +1,32 @@
+{
+  "size": 8192,
+  "group": 1,
+  "family": "R1_B_mean_reverting",
+  "policy": "legacy_repress",
+  "seed": 2026111394,
+  "n_queries": 160000,
+  "service_ns": 8137767200,
+  "p99_ns": 131700.0,
+  "p999_ns": 217000.60000001104,
+  "max_ns": 147939500,
+  "controller_ns": 247177500,
+  "migration_ns": 422856200,
+  "migration_count": 5,
+  "rewrite_bytes": 140907,
+  "budget_denied": 1,
+  "budget_limit_bytes": 39340,
+  "prediction_ns": 8188140700.0,
+  "elapsed_ns": 9043045200,
+  "truth_ns": 630275700,
+  "correct": true,
+  "integrity": {
+    "chunk_count": 8,
+    "invalid_chunks": [],
+    "non_idle_chunks": [],
+    "chunks_without_exactly_one_payload": [],
+    "temporary_file_count": 0,
+    "active_stored_bytes": 224117,
+    "pass": true
+  },
+  "code_sha256": "58890dd14f265b4c75a4e18b040d981d76da5879180279daa2f5cee1d71259ca"
+}

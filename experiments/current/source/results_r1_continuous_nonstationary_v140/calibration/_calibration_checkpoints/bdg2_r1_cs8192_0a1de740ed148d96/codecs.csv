@@ -1,0 +1,6 @@
+dataset,chunk_id,series_index,chunk_start,chunk_size,unit_type,unit_id,building_id,codec,raw_size_bytes,payload_size_bytes,metadata_size_bytes,stored_size_bytes,compression_ratio,encode_ns,full_decode_ns
+BDG2_R1,bdg2_r1_cs8192_0a1de740ed148d96,6,0,8192,building,Hog_public_Octavia,Hog_public_Octavia,whole_lz4,32768,26943,0,26943,0.822235107421875,2968600,22300
+BDG2_R1,bdg2_r1_cs8192_0a1de740ed148d96,6,0,8192,building,Hog_public_Octavia,Hog_public_Octavia,whole_zstd,32768,22920,0,22920,0.699462890625,3326400,51800
+BDG2_R1,bdg2_r1_cs8192_0a1de740ed148d96,6,0,8192,building,Hog_public_Octavia,Hog_public_Octavia,block_lz4_64,32768,35508,4104,39612,1.2088623046875,7135100,321000
+BDG2_R1,bdg2_r1_cs8192_0a1de740ed148d96,6,0,8192,building,Hog_public_Octavia,Hog_public_Octavia,block_lz4_256,32768,32404,1032,33436,1.0203857421875,6941400,94800
+BDG2_R1,bdg2_r1_cs8192_0a1de740ed148d96,6,0,8192,building,Hog_public_Octavia,Hog_public_Octavia,block_lz4_1024,32768,29832,264,30096,0.91845703125,7964000,40200

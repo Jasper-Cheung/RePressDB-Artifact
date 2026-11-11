@@ -1,0 +1,6 @@
+dataset,chunk_id,series_index,chunk_start,chunk_size,unit_type,unit_id,building_id,codec,raw_size_bytes,payload_size_bytes,metadata_size_bytes,stored_size_bytes,compression_ratio,encode_ns,full_decode_ns
+BDG2_JSS_FRESH_CALIBRATION,bdg2_r1_cs8192_900d96e40e6552c8,26,0,8192,building,Eagle_education_Shana,Eagle_education_Shana,whole_lz4,32768,24473,0,24473,0.746856689453125,3735200,48000
+BDG2_JSS_FRESH_CALIBRATION,bdg2_r1_cs8192_900d96e40e6552c8,26,0,8192,building,Eagle_education_Shana,Eagle_education_Shana,whole_zstd,32768,21035,0,21035,0.641937255859375,3569300,50800
+BDG2_JSS_FRESH_CALIBRATION,bdg2_r1_cs8192_900d96e40e6552c8,26,0,8192,building,Eagle_education_Shana,Eagle_education_Shana,block_lz4_64,32768,32877,4104,36981,1.128570556640625,11116300,442300
+BDG2_JSS_FRESH_CALIBRATION,bdg2_r1_cs8192_900d96e40e6552c8,26,0,8192,building,Eagle_education_Shana,Eagle_education_Shana,block_lz4_256,32768,29590,1032,30622,0.93450927734375,7686000,103600
+BDG2_JSS_FRESH_CALIBRATION,bdg2_r1_cs8192_900d96e40e6552c8,26,0,8192,building,Eagle_education_Shana,Eagle_education_Shana,block_lz4_1024,32768,27021,264,27285,0.832672119140625,7482700,42100

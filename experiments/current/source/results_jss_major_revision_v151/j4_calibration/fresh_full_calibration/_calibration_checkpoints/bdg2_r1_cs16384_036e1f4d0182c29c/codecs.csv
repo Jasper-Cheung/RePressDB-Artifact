@@ -1,0 +1,6 @@
+dataset,chunk_id,series_index,chunk_start,chunk_size,unit_type,unit_id,building_id,codec,raw_size_bytes,payload_size_bytes,metadata_size_bytes,stored_size_bytes,compression_ratio,encode_ns,full_decode_ns
+BDG2_JSS_FRESH_CALIBRATION,bdg2_r1_cs16384_036e1f4d0182c29c,2,0,16384,building,Hog_other_Noma,Hog_other_Noma,whole_lz4,65536,59807,0,59807,0.9125823974609375,3626300,29700
+BDG2_JSS_FRESH_CALIBRATION,bdg2_r1_cs16384_036e1f4d0182c29c,2,0,16384,building,Hog_other_Noma,Hog_other_Noma,whole_zstd,65536,51325,0,51325,0.7831573486328125,3189200,86700
+BDG2_JSS_FRESH_CALIBRATION,bdg2_r1_cs16384_036e1f4d0182c29c,2,0,16384,building,Hog_other_Noma,Hog_other_Noma,block_lz4_64,65536,71364,8200,79564,1.21405029296875,7179000,681900
+BDG2_JSS_FRESH_CALIBRATION,bdg2_r1_cs16384_036e1f4d0182c29c,2,0,16384,building,Hog_other_Noma,Hog_other_Noma,block_lz4_256,65536,66571,2056,68627,1.0471649169921875,6879700,215000
+BDG2_JSS_FRESH_CALIBRATION,bdg2_r1_cs16384_036e1f4d0182c29c,2,0,16384,building,Hog_other_Noma,Hog_other_Noma,block_lz4_1024,65536,64201,520,64721,0.9875640869140625,8902500,82700

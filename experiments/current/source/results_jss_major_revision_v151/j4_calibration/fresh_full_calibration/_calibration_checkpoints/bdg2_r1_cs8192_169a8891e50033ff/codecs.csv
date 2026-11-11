@@ -1,0 +1,6 @@
+dataset,chunk_id,series_index,chunk_start,chunk_size,unit_type,unit_id,building_id,codec,raw_size_bytes,payload_size_bytes,metadata_size_bytes,stored_size_bytes,compression_ratio,encode_ns,full_decode_ns
+BDG2_JSS_FRESH_CALIBRATION,bdg2_r1_cs8192_169a8891e50033ff,13,0,8192,building,Eagle_lodging_Stephanie,Eagle_lodging_Stephanie,whole_lz4,32768,31751,0,31751,0.968963623046875,2573800,14600
+BDG2_JSS_FRESH_CALIBRATION,bdg2_r1_cs8192_169a8891e50033ff,13,0,8192,building,Eagle_lodging_Stephanie,Eagle_lodging_Stephanie,whole_zstd,32768,28264,0,28264,0.862548828125,3340500,40700
+BDG2_JSS_FRESH_CALIBRATION,bdg2_r1_cs8192_169a8891e50033ff,13,0,8192,building,Eagle_lodging_Stephanie,Eagle_lodging_Stephanie,block_lz4_64,32768,34569,4104,38673,1.180206298828125,7265500,340400
+BDG2_JSS_FRESH_CALIBRATION,bdg2_r1_cs8192_169a8891e50033ff,13,0,8192,building,Eagle_lodging_Stephanie,Eagle_lodging_Stephanie,block_lz4_256,32768,32388,1032,33420,1.0198974609375,4687700,102100
+BDG2_JSS_FRESH_CALIBRATION,bdg2_r1_cs8192_169a8891e50033ff,13,0,8192,building,Eagle_lodging_Stephanie,Eagle_lodging_Stephanie,block_lz4_1024,32768,31897,264,32161,0.981475830078125,8070100,39400

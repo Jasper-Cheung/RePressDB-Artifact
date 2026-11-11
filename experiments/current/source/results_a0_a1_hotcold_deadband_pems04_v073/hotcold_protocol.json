@@ -1,0 +1,246 @@
+{
+  "version": "0.7.0",
+  "target_journal": "Journal of Big Data",
+  "study_name": "AF-HC nearest-baseline protocol",
+  "development_dataset": "PEMS04",
+  "holdout_datasets": [
+    "PEMS08",
+    "BDG2"
+  ],
+  "seed": 20260718,
+  "trace_seeds": [
+    20260718,
+    20260719,
+    20260720
+  ],
+  "n_independent_entities_per_dataset": 32,
+  "chunk_sizes": [
+    8192,
+    16384
+  ],
+  "trace_names": [
+    "shape_only",
+    "frequency_only",
+    "joint_orthogonal",
+    "brief_burst",
+    "stable_scan"
+  ],
+  "trace_design": {
+    "shape_only": {
+      "access_frequency": "equal for all chunks",
+      "point_drift_group": "800 local scan + 2400 local point",
+      "scan_stable_group": "3200 local scan"
+    },
+    "frequency_only": {
+      "query_shape": "all chunks scan-to-point",
+      "hot_group": "3200 local accesses",
+      "cold_group": "800 local accesses spread every fourth global round"
+    },
+    "joint_orthogonal": {
+      "groups": [
+        "hot_point",
+        "hot_scan",
+        "cold_point",
+        "cold_scan"
+      ],
+      "entities_per_group": 8
+    },
+    "brief_burst": {
+      "burst_group": "1000 scan + 250 point + 1950 scan",
+      "control_group": "3200 scan"
+    },
+    "stable_scan": {
+      "all_chunks": "3200 local scan accesses"
+    }
+  },
+  "afhc_information_boundary": {
+    "allowed": [
+      "per-chunk access counts",
+      "frequency EMA",
+      "fixed reclassification period",
+      "fixed hot/cold percentile",
+      "fixed hot/cold codecs"
+    ],
+    "forbidden": [
+      "query class or query shape",
+      "point/scan/aggregate proportions",
+      "dual-timescale layout estimates",
+      "predicted saving",
+      "break-even",
+      "confirmation rounds",
+      "cooldown",
+      "future phase labels"
+    ]
+  },
+  "afhc_grid": {
+    "adaptation_periods": [
+      100,
+      300,
+      500,
+      1000
+    ],
+    "hot_fractions": [
+      0.25,
+      0.5,
+      0.75
+    ],
+    "cold_codecs": [
+      "whole_lz4",
+      "whole_zstd"
+    ],
+    "hot_codecs": [
+      "block_lz4_64",
+      "block_lz4_256",
+      "block_lz4_1024"
+    ],
+    "frequency_ema_alpha": 0.5,
+    "n_configurations": 72,
+    "hot_classification": "strictly above the (1-hot_fraction) percentile; threshold ties remain cold"
+  },
+  "grid_selection": {
+    "safety_filters": {
+      "stable_ratio_vs_initial_best_max": 1.05,
+      "brief_burst_ratio_vs_initial_best_max": 1.05,
+      "brief_burst_median_migrations_per_chunk_max": 2.0
+    },
+    "objective": "minimum median AF-HC/initial-best total-cost ratio across five traces, two chunk sizes, and three trace seeds",
+    "equivalence_tolerance": 0.005,
+    "tie_break_order": [
+      "fewer migrations",
+      "fewer rewrite bytes",
+      "longer adaptation period",
+      "lexicographically smaller config id"
+    ]
+  },
+  "cost_measurement": {
+    "query_grid_selection": "per-chunk codec/query-class calibrated median latency",
+    "migration_grid_selection": "physically measured directed decode+encode+fsync cost",
+    "selected_config_audit": "real file-backed warm_slicedmeta replay with all query results checked against NumPy truth"
+  },
+  "repressdb_frozen_controller": {
+    "long_window": 300,
+    "short_window": 100,
+    "minimum_observations": 200,
+    "decision_interval": 100,
+    "confirmation_rounds": 3,
+    "cooldown_queries": 300,
+    "prediction_horizon": 1200,
+    "minimum_relative_improvement": 0.08,
+    "rewrite_safety_factor": 1.25
+  },
+  "pems04_source": {
+    "source": "E:\\IPM\\大学\\科研\\鲁棒性预测\\data\\Traffic-main\\PEMS04\\PEMS04.npz",
+    "array_key": "data",
+    "available_keys": [
+      "data"
+    ],
+    "original_shape": [
+      16992,
+      307,
+      3
+    ],
+    "feature_index": 0,
+    "selected_original_series_indices": [
+      0,
+      10,
+      27,
+      28,
+      35,
+      39,
+      46,
+      56,
+      71,
+      78,
+      89,
+      103,
+      108,
+      127,
+      131,
+      133,
+      139,
+      143,
+      146,
+      148,
+      174,
+      193,
+      195,
+      207,
+      225,
+      230,
+      233,
+      240,
+      246,
+      254,
+      258,
+      277
+    ],
+    "excluded_series_indices": [],
+    "loaded_shape": [
+      16992,
+      32
+    ],
+    "imputed_nonfinite_fraction": 0.0,
+    "dtype": "float32"
+  },
+  "pems08_source": {
+    "source": "E:\\IPM\\大学\\科研\\鲁棒性预测\\data\\Traffic-main\\PEMS08\\PEMS08.npz",
+    "array_key": "data",
+    "available_keys": [
+      "data"
+    ],
+    "original_shape": [
+      17856,
+      170,
+      3
+    ],
+    "feature_index": 0,
+    "selected_original_series_indices": [
+      0,
+      5,
+      14,
+      18,
+      21,
+      25,
+      29,
+      38,
+      42,
+      47,
+      53,
+      58,
+      66,
+      68,
+      70,
+      71,
+      73,
+      77,
+      80,
+      93,
+      100,
+      103,
+      111,
+      113,
+      116,
+      123,
+      131,
+      132,
+      133,
+      138,
+      145,
+      156
+    ],
+    "excluded_series_indices": [],
+    "loaded_shape": [
+      17856,
+      32
+    ],
+    "imputed_nonfinite_fraction": 0.0,
+    "dtype": "float32"
+  },
+  "bdg2_reserved_manifest_status": {
+    "found": true,
+    "n_reserved_buildings": 32,
+    "bdg2_root": "E:\\IPM\\大学\\科研\\E\\buds-lab-building-data-genome-project-2-3d0cbaf"
+  },
+  "anti_leakage": "AF-HC parameters are selected only on PEMS04. The resulting hotcold_frozen_config.json must be used unchanged on PEMS08 and BDG2.",
+  "quick_test": false
+}

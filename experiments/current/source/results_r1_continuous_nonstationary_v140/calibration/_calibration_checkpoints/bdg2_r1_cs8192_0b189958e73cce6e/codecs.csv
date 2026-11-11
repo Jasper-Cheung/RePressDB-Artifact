@@ -1,0 +1,6 @@
+dataset,chunk_id,series_index,chunk_start,chunk_size,unit_type,unit_id,building_id,codec,raw_size_bytes,payload_size_bytes,metadata_size_bytes,stored_size_bytes,compression_ratio,encode_ns,full_decode_ns
+BDG2_R1,bdg2_r1_cs8192_0b189958e73cce6e,7,0,8192,building,Lamb_health_Ken,Lamb_health_Ken,whole_lz4,32768,22606,0,22606,0.68988037109375,3101300,27800
+BDG2_R1,bdg2_r1_cs8192_0b189958e73cce6e,7,0,8192,building,Lamb_health_Ken,Lamb_health_Ken,whole_zstd,32768,13873,0,13873,0.423370361328125,3208800,50800
+BDG2_R1,bdg2_r1_cs8192_0b189958e73cce6e,7,0,8192,building,Lamb_health_Ken,Lamb_health_Ken,block_lz4_64,32768,33428,4104,37532,1.1453857421875,7217100,326300
+BDG2_R1,bdg2_r1_cs8192_0b189958e73cce6e,7,0,8192,building,Lamb_health_Ken,Lamb_health_Ken,block_lz4_256,32768,28171,1032,29203,0.891204833984375,5780600,102400
+BDG2_R1,bdg2_r1_cs8192_0b189958e73cce6e,7,0,8192,building,Lamb_health_Ken,Lamb_health_Ken,block_lz4_1024,32768,24340,264,24604,0.7508544921875,7983800,43200

@@ -1,0 +1,32 @@
+{
+  "size": 16384,
+  "group": 2,
+  "family": "R1_A_gradual_periodic",
+  "policy": "static",
+  "seed": 2026119487,
+  "n_queries": 160000,
+  "service_ns": 12189078100,
+  "p99_ns": 117301.00000000093,
+  "p999_ns": 288201.70000003127,
+  "max_ns": 2429900,
+  "controller_ns": 0,
+  "migration_ns": 0,
+  "migration_count": 0,
+  "rewrite_bytes": 0,
+  "budget_denied": 0,
+  "budget_limit_bytes": 76363,
+  "prediction_ns": 11434187600.0,
+  "elapsed_ns": 13077075900,
+  "truth_ns": 636009800,
+  "correct": true,
+  "integrity": {
+    "chunk_count": 8,
+    "invalid_chunks": [],
+    "non_idle_chunks": [],
+    "chunks_without_exactly_one_payload": [],
+    "temporary_file_count": 0,
+    "active_stored_bytes": 363743,
+    "pass": true
+  },
+  "code_sha256": "dd1e00b992b990073ebdb8becdedb2ebd82fbc9f51baa0e042b768059cb96763"
+}

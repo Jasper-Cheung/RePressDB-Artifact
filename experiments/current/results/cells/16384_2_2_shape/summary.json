@@ -1,0 +1,32 @@
+{
+  "size": 16384,
+  "group": 2,
+  "family": "R1_C_noisy_bursts",
+  "policy": "shape",
+  "seed": 2026119687,
+  "n_queries": 160000,
+  "service_ns": 12549359000,
+  "p99_ns": 120001.00000000093,
+  "p999_ns": 276002.90000005334,
+  "max_ns": 2019300,
+  "controller_ns": 316787800,
+  "migration_ns": 0,
+  "migration_count": 0,
+  "rewrite_bytes": 0,
+  "budget_denied": 0,
+  "budget_limit_bytes": 76363,
+  "prediction_ns": 11453846000.0,
+  "elapsed_ns": 13445010600,
+  "truth_ns": 650843700,
+  "correct": true,
+  "integrity": {
+    "chunk_count": 8,
+    "invalid_chunks": [],
+    "non_idle_chunks": [],
+    "chunks_without_exactly_one_payload": [],
+    "temporary_file_count": 0,
+    "active_stored_bytes": 363743,
+    "pass": true
+  },
+  "code_sha256": "dd1e00b992b990073ebdb8becdedb2ebd82fbc9f51baa0e042b768059cb96763"
+}

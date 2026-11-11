@@ -1,0 +1,8 @@
+{
+  "stage": "interrupted method-development evaluation",
+  "completed_cells": 33,
+  "completed_events": 5280000,
+  "stopped_utc": "2026-10-31T16:59:46Z",
+  "reason": "The tail-admission prototype repeatedly returned to its anchor after a regime change. It retained evidence across infeasible epochs and priced only the forward action. The whole evaluation was stopped for method redesign; every completed and partial cell remains. No subset is promoted to a final comparison.",
+  "successor": "method_v21 with epoch-bound evidence, forward-plus-return admission prices, unchanged measured executor and calibration, and fresh query seeds"
+}

@@ -1,0 +1,6 @@
+dataset,chunk_id,series_index,chunk_start,chunk_size,unit_type,unit_id,building_id,codec,raw_size_bytes,payload_size_bytes,metadata_size_bytes,stored_size_bytes,compression_ratio,encode_ns,full_decode_ns
+BDG2_R1,bdg2_r1_cs16384_07d0ec7fad1f28fe,5,0,16384,building,Eagle_office_Mandi,Eagle_office_Mandi,whole_lz4,65536,62808,0,62808,0.9583740234375,2644500,18600
+BDG2_R1,bdg2_r1_cs16384_07d0ec7fad1f28fe,5,0,16384,building,Eagle_office_Mandi,Eagle_office_Mandi,whole_zstd,65536,54643,0,54643,0.8337860107421875,3675100,67300
+BDG2_R1,bdg2_r1_cs16384_07d0ec7fad1f28fe,5,0,16384,building,Eagle_office_Mandi,Eagle_office_Mandi,block_lz4_64,65536,68573,8200,76773,1.1714630126953125,10737200,651100
+BDG2_R1,bdg2_r1_cs16384_07d0ec7fad1f28fe,5,0,16384,building,Eagle_office_Mandi,Eagle_office_Mandi,block_lz4_256,65536,64101,2056,66157,1.0094757080078125,6659400,192000
+BDG2_R1,bdg2_r1_cs16384_07d0ec7fad1f28fe,5,0,16384,building,Eagle_office_Mandi,Eagle_office_Mandi,block_lz4_1024,65536,63081,520,63601,0.9704742431640625,8339000,66100

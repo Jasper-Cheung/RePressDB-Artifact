@@ -1,0 +1,7 @@
+{
+  "protocol_sha256": "3529d555980f4f33844c3385ecf7b918c2b8a6c02a1b79322b8aaa8b09baa8b6",
+  "code_sha256": "dd1e00b992b990073ebdb8becdedb2ebd82fbc9f51baa0e042b768059cb96763",
+  "manifest_sha256": "bf17bf09f3c56ac962b8d05a08ea8e658b1bc843471a526ddfbd972a1335f43a",
+  "query_calibration.csv": "7e518a1ea4cc37ead735b477fcacb3849968abcaf3cb53d399b63501cc1d6244",
+  "durable_calibration.csv": "0adf4af81f220c506d4f48b73d7a01681ea75848045e088db8fdfe11ab2e9084"
+}
