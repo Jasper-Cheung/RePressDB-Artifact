@@ -4,3 +4,5 @@ experiments/current/** -text
 *.npz binary
 *.png binary
 *.pdf binary
+
+paper/current/** -text

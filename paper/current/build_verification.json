@@ -1,0 +1,12 @@
+{
+  "passed": true,
+  "pages": 12,
+  "supplied_files_unchanged": 23,
+  "tex_files_unchanged": 14,
+  "input_zip_sha256": "68b860c0974bfdd4ebb592c0e3d0e0f5c201b3021130f0eb1f8d9cfceba089ed",
+  "pdf_sha256": "7fc07bfdbfa48ad08a1b08027acac2ea360778f44a12caab8fcb2e2480711944",
+  "source_edited": false,
+  "unresolved_references": false,
+  "overfull_boxes": false,
+  "all_pages_visually_inspected": true
+}

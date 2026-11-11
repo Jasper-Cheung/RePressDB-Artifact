@@ -1,0 +1,30 @@
+\section{Introduction}
+Time-series services execute point retrievals, scans, and aggregates over immutable measurements. These operations favor different compressed layouts: small blocks limit decompression for selective requests, while whole-chunk compression reduces block-processing work for broad scans. The preferred representation can therefore change with the request mixture even when the values remain fixed.
+
+Replacing that representation affects both query execution and maintenance. A layout with a lower average query cost may expose a costly minority of operations. Installation also requires file synchronization, validation, catalog activation, and cleanup. If a later mixture makes the accepted layout unattractive, returning to a reference layout adds another directed replacement. These costs connect the duration of the workload evidence to the physical action it supports.
+
+Existing research addresses distinct parts of this decision. Online physical design, including OReO, balances query processing and reorganization through switching-cost models and layout generation \citep{rong2024oreo}. Adaptive compression, including AdaCom, changes segment compression according to access statistics and memory/CPU trade-offs \citep{windheuser2024adacom}. Transaction and versioning mechanisms establish atomic visibility and recovery for persistent state \citep{mohan1992aries,gray1992transaction,sqlitewal}. For compressed immutable chunks, these concerns meet at an operation-dependent query path and an executed file replacement. The query distribution used for admission must be interpreted alongside the cost and recovery boundary of that action.
+
+This leads to the research question: \emph{When should a storage component replace a compressed layout under an evolving query mixture, accounting for operation-dependent latency distributions, durable replacement cost, and a possible return to a reference layout?} A sustained favorable mixture can provide time to recover the action cost; evidence retained across separate feasible periods can instead support a late or repeatedly reversed change. Recent work on index-tuning regressions similarly motivates examining the query behavior behind an estimated average benefit \citep{wu2025qpr}.
+
+We present RePressDB, a file-backed component that coordinates layout admission and recoverable physical replacement. The controller separates query operations and range lengths, filters layouts through empirical tail distributions, and accumulates advantage over consecutive feasible decision epochs. Admission prices both installation and return to the reference layout. The executor measures and performs the complete replacement, groups catalog changes around reservation, activation, and retirement, and commits retirement before deleting old files. Conditional-distribution count tables make the empirical filter practical on the request path.
+
+The contributions are:
+\begin{enumerate}
+\item A risk- and switching-cost-aware admission mechanism linking operation/length distributions, consecutive feasible decision epochs, and directed installation-plus-return prices. The link determines which observed opportunities can justify a physical change as query mixtures evolve.
+\item A low-overhead, recoverable execution design combining exact conditional-count decisions with a three-transaction replacement path. Its visibility and retirement boundaries support a recovery case split and measurement of complete action cost.
+\item A common-executor study that separates control-policy trade-offs from executor improvements. Shared inputs, layouts, budgets, and timing boundaries support joint interpretation of service, event tails, controller work, and rewriting; decision and post-action analyses explain the conditions encountered by the mechanism.
+\end{enumerate}
+
+\section{Problem and cost boundary}
+\label{sec:problem}
+The managed unit is an immutable one-dimensional chunk of little-endian float32 values. Layouts are whole-chunk LZ4, whole-chunk Zstandard level~3, and LZ4 blocks of 64, 256, 1,024, or 4,096 values. The additional 4,096-value layout exposes an intermediate selective-decompression cost. Every policy receives the same six-layout action space.
+
+The query interface supports points, scans, sums, averages, minima, maxima, and threshold counts. Range lengths span 0.1\%, 1\%, 10\%, 50\%, and 100\% in the workload generator; threshold requests use its three supported lengths. A scan consumes the selected values and returns their float64 sum. The evaluated component supports immutable-chunk replacement and sequential request execution.
+
+For a request sequence, modeled cost is
+\begin{equation}
+C=\sum_{t=1}^{T}\mu_{c_t}(r_{c_t,t},x_t)+\sum_{e\in\mathcal M}m_{c_e}(r_e^-,r_e^+),
+\label{eq:cost}
+\end{equation}
+where $\mu$ is calibrated query-path mean cost and $m$ is complete directed replacement cost. Measured service additionally contains controller work and view reconstruction. Calibration is a commissioning expenditure reported separately. Event quantiles assess the distribution of query, controller, and synchronous maintenance cost together.

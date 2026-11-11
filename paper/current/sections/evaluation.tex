@@ -1,0 +1,52 @@
+\section{Evaluation}
+\label{sec:evaluation}
+The evaluation asks: (RQ1) how much work is saved by consolidating durable preparation stages; (RQ2) how risk-aware admission changes service time, tails, and rewriting under common execution; and (RQ3) how the revised path recovers across its publication and retirement boundaries.
+
+\subsection{Evidence roles and data}
+The new policy comparison uses 24 Building Data Genome~2 building-meter series \citep{miller2020bdg2}, partitioned into three groups of eight. The earlier eight-building timing subset is excluded. These 24 buildings appeared in earlier replay and in the development campaign used to identify the method's weaknesses. The new campaign uses fresh request seeds, frozen method parameters, and new calibration; its role is a subsequent evaluation on this measured corpus.
+
+Each building supplies paired 8,192- and 16,384-value chunks. The 48 distinct chunks contain 2.25~MiB of raw values. Reconstructed bytes match archived raw SHA-256 values. The experiment characterizes a warm working set and file-backed codec execution. The data and query roles remain explicit: measurements are real building data, while requests come from semi-synthetic continuous mixtures.
+
+The final method and parameters were frozen before the reported execution. The physical corpus had already been used during development; recorded request seeds define subsequent evaluations on that corpus. Six policies share the final inputs and executor. Development records, source changes, and the complete implementation-equivalence audit are retained in the reproducibility archive.
+
+\subsection{Requests, layout space, and common inputs}
+Gradual-periodic, mean-reverting, and noisy-burst families change the relative weights of point, scan, and aggregate requests continuously. A fourth, persistent-shift family characterizes a longer opportunity to recover replacement cost. Its first 20,000 requests use the fixed initial scan-heavy weights. The remaining 140,000 use weights 0.94, 0.025, 0.005, 0.0005, 0.01, 0.005, 0.01, and 0.0045 for point, short/medium/long scan, short/medium/long aggregate, and threshold requests, respectively. This family was specified before the final execution, and its six instances are reported separately from the 18 continuous-mixture instances. Each group/size/family instance contains 160,000 requests. A seeded skewed distribution selects chunks, and seeded draws select query classes and concrete arguments. The seed list is recorded before calibration and policy execution.
+
+The design contains 24 instances and six policies, producing 144 executions and 23.04 million events. All policies receive the same concrete requests, six layouts, initial layout, empirical query-cost means, complete migration table, read path, and payload-write budget. The initial layout minimizes calibrated scan-heavy cost, using the same fixed deployment-time weights. Feature weights expand these class weights according to the query pool's operation/length proportions.
+
+\subsection{Compared policies}
+\textit{Static} retains the common initial layout.
+
+\textit{Shape-EWMA-BE} tracks the common operation/length features using EWMA $\alpha=0.01$, a 5\% deadband, a 300-query projection horizon, 100-query decision intervals, and 200 initial observations. The settings come from the earlier PEMS04 development protocol.
+
+\textit{Horizon-RePress} retains 300/100-query windows, 8\% gain, three confirmations, a 300-query cooldown, a 1,200-query projection, and a 1.25 cost margin. In this campaign it uses the same refined query means and full three-transaction migration prices as every adaptive policy.
+
+\textit{Work-function-inspired} (labelled Work-function in tables and figures) maintains one value per layout over the common six-layout space at 100-query boundaries:
+\begin{equation}
+W'(r)=v(r)+\min_s\{W(s)+m(s,r)\}.
+\end{equation}
+Here $v(r)$ sums the block's calibrated feature costs. A common minimum is subtracted for stability. The policy proposes the minimizer of $W'(r)+m(a,r)$, starting with directed costs from the initial layout \citep{azar2007workfunction}. Directed measured prices, six fixed layouts, block decisions, and the common budget define this switching-cost baseline. OReO additionally provides a layout generator and a theoretical framework for its own action model.
+
+\textit{Credit-RePress} retains the previous per-request reflected counter, 300/100-query windows, three confirmations, 8\% gain, 300-query cooldown, and 1.25 cost threshold. Its profile is expanded to the common operation/length features. This comparison tests the revised controller against accumulated admission under the same expanded inputs and executor.
+
+\textit{Risk-RePress} implements Section~\ref{sec:admission}: 256-query blocks, three-block long windows, a 10\% empirical tail tolerance, epoch-bound advantage, forward-plus-return action prices, and budgeted risk repair. These settings were frozen before this comparison. The comparison measures complete operating policies; paired executor measurements isolate the change to durable execution separately.
+
+\subsection{Calibration, timing, and correctness}
+Calibration measures 64 queries after four warmups for each chunk/layout/feature stratum. Layout order rotates between chunks, and complete stratum pools are shuffled with recorded seeds. All 8,352 records retain raw samples, means, medians, and p95 values. Three complete replacements measure each nontrivial directed layout pair, giving 4,320 observations. Setup replacements are included in calibration wall time and excluded from policy action counts.
+
+Every timed execution uses a fresh store and prewarms one query per chunk. Only one performance worker runs at a time, pinned to logical processor~0. Policy order rotates cyclically across the 24 instances, so every policy occupies each position four times. Query, controller, and migration arrays are stored separately. Event service is
+\begin{equation}
+L_t=T_{\mathrm{query},t}+T_{\mathrm{control},t}+T_{\mathrm{migration},t}.
+\end{equation}
+Controller timing includes feature extraction, distribution calculations, decision logging, and successful-switch state updates. Queries after migration include active-view reconstruction. The triggering event pays for synchronous maintenance. Network transport and arrival-process queuing require additional service models.
+
+Every result is checked independently against raw float32 values outside service timers. Integer results use exact equality; floating results use relative tolerance $10^{-7}$ and absolute tolerance $10^{-5}$. Final decoded arrays must match exactly, and catalog integrity must pass in each cell.
+
+The host is an Intel Core i7-14700HX Windows/NTFS system with approximately 16~GB memory and NVMe storage. Execution uses Python~3.10.20, NumPy~2.2.6, Pandas~2.3.3, LZ4~4.4.5, and Zstandard~0.25.0. Sources, calibration, parameters, environment, event arrays, and decisions are preserved with hashes. Locally executed code supplies all measurements.
+
+\subsection{Analysis}
+Controller initialization, including conditional-count table construction, is measured separately from steady-state service. Passive host observations are preserved alongside the execution log.
+
+The new analyses reuse recorded decisions, query features, event components, and the frozen cost surface. Gate outcomes are reconstructed in execution order and checked against logged proposals, committed migrations, and budget deferrals. For each migration, calibrated query-cost differences over the subsequent observed episode are compared with measured action cost. Stable-window analysis keeps model feasibility, observed query p99, and observed event p99 as separate quantities. The analysis archive binds every input file by SHA-256.
+
+The paired unit is a group/size/family instance. We report equal-weight geometric-mean ratios, win counts, and percentile-bootstrap 95\% intervals from 20,000 paired instance resamples. These summaries describe generated request variation conditional on the corpus, fixed calibration, and host. Every scheduled final cell is retained. Continuous and persistent-shift strata are reported separately, with their own paired summaries. Intervals spanning one express the range of effects supported by this experiment. Migrations and target bytes are also reported as campaign totals.

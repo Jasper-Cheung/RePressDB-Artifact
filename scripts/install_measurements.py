@@ -3,7 +3,7 @@ from pathlib import Path
 from zipfile import ZipFile
 import hashlib,sys
 
-ARCHIVE_SHA256='2fb8c9a13be63e6359dab59a8df26a792745d5bb19b17e07f222cfe6117b9925'
+ARCHIVE_SHA256='82203dd4ec8b084598e884e8e20af3160e0ce514dab6220224cb84aa229e5fff'
 def digest(path):
     h=hashlib.sha256()
     with path.open('rb') as f:

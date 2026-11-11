@@ -1,0 +1,56 @@
+\documentclass[final,5p,times,twocolumn,numbers]{elsarticle}
+\usepackage{amsmath,amssymb,booktabs,tabularx,graphicx,microtype,xurl}
+\usepackage{tikz}
+\usetikzlibrary{positioning,arrows.meta}
+\usepackage[hidelinks]{hyperref}
+\usepackage{placeins,flushend}
+\hypersetup{pdfauthor={Zhichao Zhang, Daoqi Sun, Xiaolu Peng},pdftitle={RePressDB: Risk-Aware Layout Adaptation with Efficient Durable Replacement}}
+\journal{Future Generation Computer Systems}
+\biboptions{numbers,sort&compress}
+\graphicspath{{figures/}{./}}
+\setlength{\emergencystretch}{2em}
+\setlength{\textfloatsep}{11pt plus 2pt minus 2pt}
+\setlength{\floatsep}{9pt plus 2pt minus 2pt}
+\raggedbottom
+\begin{document}
+\begin{frontmatter}
+\title{RePressDB: Risk-Aware Layout Adaptation with Efficient Durable Replacement}
+\author[aff1]{Zhichao Zhang\corref{cor1}}
+\ead{zhichao.zhang2024@outlook.com}
+\author[aff1]{Daoqi Sun}
+\ead{sundao0217@gmail.com}
+\author[aff2]{Xiaolu Peng}
+\ead{lilypxl1656179423@outlook.com}
+\cortext[cor1]{Corresponding author: Zhichao Zhang (zhichao.zhang2024@outlook.com).}
+\address[aff1]{School of Science, Minzu University of China, No. 27 Zhongguancun South Avenue, Beijing, 100081, China}
+\address[aff2]{School of Navigation, Dalian Maritime University, No. 1 Linghai Road, Ganjingzi District, Dalian 116026, China}
+
+
+\begin{abstract}
+\input{abstract}
+\end{abstract}
+\begin{keyword}
+time-series storage \sep online physical design \sep adaptive compression \sep switching cost \sep runtime reconfiguration \sep crash recovery
+\end{keyword}
+\end{frontmatter}
+\input{sections/introduction}
+\input{sections/method_v2}
+\input{sections/evaluation}
+\input{sections/results}
+\input{sections/discussion}
+\FloatBarrier
+\input{sections/related}
+\input{sections/conclusion}
+\section*{CRediT authorship contribution statement}
+\textbf{Zhichao Zhang}: Conceptualization; Methodology; Software; Formal analysis; Investigation; Validation; Data curation; Visualization; Project administration; Supervision; Writing -- original draft; Writing -- review and editing. \textbf{Daoqi Sun}: Formal analysis; Investigation; Validation; Visualization; Writing -- review and editing. \textbf{Xiaolu Peng}: Software; Investigation; Validation; Data curation; Resources; Writing -- review and editing.
+\section*{Data and code availability}
+The public datasets are available from the cited sources. The companion reproducibility archive contains the revised experiment driver, unchanged original measurement sources with SHA-256 provenance, protocol and environment records, calibration observations, per-instance summaries, migration records, event-latency arrays, and manuscript-generation code. The earlier artifact is available at \url{https://github.com/Jasper-Cheung/RePressDB-Artifact}. The revised archive identifies which results are newly measured and which are archival.
+\section*{Declaration of competing interest}
+The authors declare that they have no known competing financial interests or personal relationships that could have appeared to influence the work reported in this paper.
+\section*{Funding}
+This research received no specific grant from funding agencies in the public, commercial, or not-for-profit sectors.
+\section*{Acknowledgements}
+The authors acknowledge the maintainers of the public PEMS and Building Data Genome Project~2 datasets.
+\bibliographystyle{elsarticle-num}
+\bibliography{references}
+\end{document}

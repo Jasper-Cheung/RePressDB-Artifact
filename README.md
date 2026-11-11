@@ -40,6 +40,8 @@ The installer checks the archive checksum. Verification covers source hashes, ca
 
 ## Manuscript and figures
 
+The files in `paper/current/` match the supplied source ZIP byte for byte. The PDF is compiled from those unchanged inputs. Compilation checks are in `paper/current/build_verification.json`.
+
 ```bash
 cd paper/current
 latexmk -pdf -interaction=nonstopmode -halt-on-error main.tex
@@ -47,4 +49,4 @@ latexmk -pdf -interaction=nonstopmode -halt-on-error main.tex
 
 Figures 2--4 can be regenerated with `experiments/current/figure_revision_v26/render_figures.py`. Plotting uses the dependencies in `experiments/current/requirements-figures.txt` and installed Times New Roman fonts. Figure 1 is supplied as a separate image.
 
-Original experiment snapshots and the preceding manuscript remain in their existing directories. Dataset information is in `docs/DATASETS.md`. Source code uses the MIT License; result tables and documentation use CC BY 4.0.
+Original experiment snapshots remain in their existing directories. Dataset information is in `docs/DATASETS.md`. Source code uses the MIT License; result tables and documentation use CC BY 4.0.

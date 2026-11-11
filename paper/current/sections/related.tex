@@ -1,0 +1,15 @@
+\section{Related work}
+\label{sec:related}
+\subsection{Physical design and compression}
+Automatic physical design selects database structures using workload information \citep{chaudhuri1997autoadmin,bruno2005physical}. Database cracking integrates reorganization with query execution \citep{idreos2007cracking}; self-driving systems extend automated decisions to broader configuration spaces \citep{vanaken2017ottertune,pavlo2017selfdriving}.
+
+OReO studies online layout replacement through metrical task systems and dynamic layout generation \citep{rong2024oreo}. Its theoretical framework establishes the role of reorganization costs. RePressDB uses a finite codec/block space, directed measured transactions, and an empirical request-tail constraint. A common work-function-inspired baseline evaluates switching-cost logic in that measured action space.
+
+AdaCom samples segment accesses and changes compression according to hot/cold behavior in DuckDB \citep{windheuser2024adacom}. Its memory/CPU trade-off complements the operation-dependent latency and durable replacement costs studied here. Compression-aware processing likewise links operators to encodings \citep{stonebraker2005cstore,abadi2006compression,damme2020morphstore}. Gorilla, BTrDB, and Sprintz demonstrate specialized time-series storage and compression designs \citep{pelkonen2015gorilla,andersen2016btrdb,blalock2018sprintz}. The present layout space exposes selective-decompression and summary-processing costs through general-purpose codecs.
+
+Recent index-tuning work identifies structural query-plan changes associated with performance regressions \citep{wu2025qpr}. RePressDB's empirical latency filter addresses regression during physical adaptation at a different level: operation/length distributions over compressed chunks. It complements the average-cost criterion with a measured tail-risk reference.
+
+\subsection{Runtime control and durable execution}
+Self-adaptive architectures separate observation, analysis, planning, and actuation \citep{kephart2003vision,garlan2004rainbow,salehie2009landscape,delemos2013roadmap}. Stability and proactive adaptation studies emphasize decision cost, action frequency, and settling behavior \citep{salama2017stability,ayala2021prodspl,chen2024reliable}. Recent FGCS task tuning evaluates how analysis costs amortize over execution \citep{alvarez2027online}, while resource-sensitive scheduling connects constraints to system measurements \citep{wu2027sensascale}. These connections motivate including control and actuation inside service accounting.
+
+Write-ahead logging, retained versions, and atomic visibility provide the recovery foundations \citep{mohan1992aries,gray1992transaction,sqlitewal}. RePressDB applies them to measured layout replacement, consolidating preparation updates and ordering retirement before deletion. The recovery case split identifies the software-visible stages used in fault injection, following the distinction between fault-tolerance mechanisms and their assessment \citep{avizienis2004dependability}.

@@ -1,0 +1,98 @@
+\section{Risk-aware layout admission}
+\label{sec:admission}
+\subsection{Operation and length cost distributions}
+A point lookup, a broad scan, and a range aggregate exercise different compressed-data paths. Aggregates also differ by operation: a block sum can use its summary, whereas a threshold count may decompress ambiguous blocks. RePressDB describes a request by $x=(o,b)$, its operation and normalized range-length bin. Operations are point, scan, sum, average, minimum, maximum, and threshold count. Length-bin upper boundaries are $0.002$, $0.02$, $0.2$, $0.75$, and $1$. Points occupy a separate stratum; the evaluated interface populates 29 strata.
+
+Calibration executes 64 measured queries per chunk/layout/stratum after four warmups. Positions and threshold values cycle through shuffled complete stratum pools. All latency samples $z_{c,r,x,j}$ and their means $\mu_c(r,x)$ are retained. Every policy receives this cost surface. Admission additionally uses the empirical distributions. For recent weights $w(x)$,
+\begin{align}
+\widehat L_{c,w}(r)&=\sum_xw(x)\mu_c(r,x),\\
+\widehat F_{c,w,r}(u)&=\sum_x\frac{w(x)}{64}\sum_{j=1}^{64}\mathbf1[z_{c,r,x,j}\leq u].
+\end{align}
+
+\subsection{Tail admission and risk repair}
+Let $a_0$ be a chunk's common initial layout. Its empirical 99th percentile under each current mixture defines
+\begin{equation}
+\tau_{c,w}=1.10\inf\{u:\widehat F_{c,w,a_0}(u)\geq0.99\}.
+\end{equation}
+The 10\% tolerance is fixed before the comparison. Feasible candidates satisfy
+\begin{equation}
+\mathcal F_c=\{r:1-\widehat F_{c,w,r}(\tau_{c,w})\leq0.01,\ w\in\{s,l\}\}.
+\label{eq:feasible}
+\end{equation}
+Equation~\eqref{eq:feasible} is an empirical filter on calibrated query-path risk under the observed mixture. Measured event latency additionally charges controller work and synchronous replacement. The initial layout remains available. Short and long windows contain 256 and 768 local queries. Their block histograms supply feature weights. The target must minimize estimated mean cost within $\mathcal F_c$ in both windows, improve the active layout by at least 8\% in each, and persist for three rounds. An expensive minority of requests therefore affects admission before an average-cost improvement is accepted.
+
+When the active layout fails Eq.~\eqref{eq:feasible}, the reference layout becomes a risk-repair target with a two-round target-confirmation threshold. Risk repair uses the same executor and byte budget. Its full cost remains in service timing. The gate evaluates calibrated query-path distributions; measured event tails additionally contain control work and maintenance.
+
+\subsection{Blockwise action evidence}
+A feasible epoch is a sequence of consecutive decision boundaries at which a candidate passes Eq.~\eqref{eq:feasible}. Each 256-query block supplies one empirical mixture observation. Each query updates one feature count, and histogram $h_k(x)$ updates advantage at the boundary. Let $D_k(r)=\sum_xh_k(x)[\mu_c(a,x)-\mu_c(r,x)]$. Then
+\begin{equation}
+A_k(r)=\begin{cases}
+\max\{0,A_{k-1}(r)+D_k(r)\},&r\in\mathcal F_c,\\
+0,&r\notin\mathcal F_c.
+\end{cases}
+\label{eq:credit}
+\end{equation}
+A feasible target passing the persistence tests is admitted when
+\begin{equation}
+A_k(r^*)\geq1.25[m_c(a,r^*)+m_c(r^*,a_0)].
+\label{eq:admission}
+\end{equation}
+A change resets counters and starts a 768-query cooldown. Initial incomplete windows supply zero credit. An infeasible interval discards a target's old evidence, so a later favorable regime must rebuild it. The price includes a directed return to the reference layout, accounting for the repair that a later mixture may require. This couples action evidence to the controller's own return behavior. The rule uses historical advantage as a conservative admission heuristic. Subsequent query mixtures determine how much of that opportunity becomes post-action saving. Return pricing raises the evidence threshold; the byte budget is checked when each actual action is proposed.
+
+\textit{Block evidence property.} For a fixed active layout and common reset points, Eq.~\eqref{eq:credit} is bounded above by the corresponding counter reflected after every request. Successive updates $v\mapsto\max(0,v+d_i)$ yield at least $\max(0,v+\sum_i d_i)$ for a block's increments. Induction over blocks gives the result. Resets at infeasible epochs preserve the inequality. Thus batching and epoch resets supply conservative boundary evidence and reduce per-request arithmetic.
+
+Request accounting costs $O(1)$. Three histograms require $O(K)$ state. Repeatedly scanning $RKS$ latency samples at a decision boundary can itself affect event tails. We therefore prepare conditional-distribution counts once from the calibration samples. Let $U$ be the number of distinct initial-layout sample latencies. For every such value $u$, we store the initial layout's per-feature counts at $u$ and each candidate's exceedance counts at $1.10u$. Each count fits in one byte because $S=64$.
+
+The initial-layout empirical quantile lies on this finite support. Binary search over its weighted conditional counts locates the reference value, and a matrix-vector product supplies each candidate's exceedance probability. This evaluates the same empirical criterion with $O(K\log U+RK)$ decision work and $O(RKU+KU)$ bytes of count tables. Sample sorting and table construction are commissioning work; their measured initialization cost is reported separately. Distribution lookup and decision logging remain inside the controller timer.
+
+An implementation-equivalence check replays all 2.88 million requests from the preceding frozen evaluation. All 11,181 decision boundaries, counters, proposals, and recorded actions agree. Alternating-order component timings compare the scanning and count-table implementations, preserving their setup measurements as a separate expenditure.
+
+\subsection{Shared payload budget}
+Every policy enforces, per 1,000 global queries,
+\begin{equation}
+\sum_{e\in\mathcal M_k}b_{c_e}(r_e^-,r_e^+)\leq B_k.
+\label{eq:budget}
+\end{equation}
+Here $B_k$ equals the largest calibrated candidate payload plus metadata in the instance. Deferred proposals face subsequent evidence and risk checks. This measure covers target files; journals and device write amplification require separate accounting. In the final Risk-RePress runs, the limit deferred one proposal. Section~\ref{sec:mechanism} reports this execution constraint alongside the other decision outcomes.
+
+\section{Three-transaction durable replacement}
+\label{sec:execution}
+A catalog row names one active immutable version, its codec, paths, sizes, checksum, and an optional retained previous version. SQLite uses WAL with \texttt{synchronous=FULL}. A process-local lock serializes replacement and view changes.
+
+The original path committed intent, encoding, validation, publication, activation, and cleanup in six transactions. The revised path uses three durable recovery decisions:
+\begin{enumerate}
+\item \textit{Reserve.} $T_1$ records source and target versions and every temporary and final candidate pathname. Decode, encode, synchronization, validation, and file publication proceed locally while the source remains active.
+\item \textit{Activate.} $T_2$ atomically installs the validated target, retains its predecessor, and records committed-pending-cleanup state. The active view is invalidated and the catalog-visible version is validated.
+\item \textit{Retire.} $T_3$ clears the previous-version pointer and completes the migration log. Physical deletion follows; startup sweeping collects interrupted deletion's unreferenced files.
+\end{enumerate}
+
+Retirement ordering matters for block layouts. Reconstructing a retained version requires its metadata. Deleting that metadata while the catalog still refers to it can break restart cleanup. Committing retirement first makes partially deleted old files unreferenced garbage while preserving the validated active version.
+
+Figure~\ref{fig:lifecycle} connects three parts of the component. Panel~A shows query-path admission: normal candidates pass the two-window target, gain, confirmation, evidence-price, and cooldown conditions, while risk repair returns to the reference layout after two confirmations. Both paths check the shared payload budget; deferred proposals retain the active layout and are reconsidered at later decisions. Panel~B shows the successful transactional replacement, and panel~C identifies restart actions before activation, while a predecessor is retained, and after retirement.
+
+\begin{figure*}[t]
+\centering
+\includegraphics[width=\textwidth]{fig1_image.png}
+\caption{RePressDB admission, replacement, and recovery.}
+\label{fig:lifecycle}
+\end{figure*}
+
+Before $T_2$, recovery retains the source and removes $T_1$'s candidate paths. Between $T_2$ and $T_3$, a valid target completes retirement; an invalid target can be replaced by the retained checksum-valid source. After $T_3$, the target is authoritative and remaining old files are garbage. Repeated cleanup reaches the same active pointer and file set. This case split covers partial payload/metadata publication because activation follows validation of both files.
+
+
+\begin{table}[t]
+\centering\small
+\caption{Recovery states at transaction boundaries.}
+\label{tab:invariants}
+\begin{tabularx}{\columnwidth}{@{}lccX@{}}\toprule
+Interval & Active & Retained & Restart action \\
+\midrule
+$[T_1,T_2)$ & $a$ & -- & Keep $a$; discard candidate paths. \\
+$[T_2,T_3)$ & $r$ & $a$ & Validate $r$; finish retirement or restore valid $a$. \\
+After $T_3$ & $r$ & -- & Keep validated $r$; collect unreferenced files. \\
+\bottomrule\end{tabularx}
+\end{table}
+
+Table~\ref{tab:invariants} summarizes the recovery case split. Payload synchronization and pre- and post-activation validation remain in the path. Fault tests exercise ten software-visible stages, abrupt exits, and corruption while a previous version is retained. Windows/NTFS is the measured persistence environment; hardware and device ordering determine additional deployment properties.
+
+The shared active view retains the catalog row, parsed metadata, representation object, and open handles. Queries execute the file-backed codec path. Migration, recovery, rollback, creation, and close invalidate views; reconstruction after activation is charged to the next query. All policies use this view and executor. Directed calibration includes decode, encode, synchronization, validation, activation, retirement, and deletion. Independent truth checks run outside query timers. Per-event arrays preserve query, control, and maintenance time.

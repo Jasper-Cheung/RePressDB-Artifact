@@ -1,0 +1,121 @@
+{
+  "archive_sha256": "68b860c0974bfdd4ebb592c0e3d0e0f5c201b3021130f0eb1f8d9cfceba089ed",
+  "source_root": "C:\\Users\\10746\\Documents\\ChatGPT\\JSS\u8f6c\u6295\\publication\\replacement_20261111\\source\\RePressDB_FGCS_v2_7",
+  "files": [
+    {
+      "file": "RePressDB_FGCS_v2_7/abstract.tex",
+      "sha256": "ea92022cc7ba101b547536f34f9dd0edd34ccda0ef820ee487b6da991b7fa52d",
+      "bytes": 1468
+    },
+    {
+      "file": "RePressDB_FGCS_v2_7/elsarticle-num.bst",
+      "sha256": "08d06d24a533fbe0c6e29d5bd5e7134781ab41a3c6640d73ad63112d4851b301",
+      "bytes": 29462
+    },
+    {
+      "file": "RePressDB_FGCS_v2_7/elsarticle.cls",
+      "sha256": "ba7a1f25626a79fb39b53888dd826c4ae14d20db5429e236abdaaaf2fdf897ab",
+      "bytes": 45216
+    },
+    {
+      "file": "RePressDB_FGCS_v2_7/figures/executor_cost.pdf",
+      "sha256": "f20dcc28a50911264471d6802dcda946a7255d9d0e702ed922f0a4f7e7f2beac",
+      "bytes": 39386
+    },
+    {
+      "file": "RePressDB_FGCS_v2_7/figures/fig1_image.png",
+      "sha256": "bdb512ebde1a7c5e9fe9ba5dc0906c93a7e56abfeca9a134cc20001ee3356cd7",
+      "bytes": 27710819
+    },
+    {
+      "file": "RePressDB_FGCS_v2_7/figures/policy_comparison.pdf",
+      "sha256": "dfb566ae272107780f951be6da67b3b1247c031c9a17cb8462392e7a6512bb24",
+      "bytes": 37638
+    },
+    {
+      "file": "RePressDB_FGCS_v2_7/figures/service_trajectories.pdf",
+      "sha256": "4047d00c3546d8f8e6e19603089f22851b01a86a8fcc520ac5bbfe20ea659ee1",
+      "bytes": 51272
+    },
+    {
+      "file": "RePressDB_FGCS_v2_7/main.bbl",
+      "sha256": "c129366464a98ae5ee0380bdd184196575588eaf25985d1a3320e34848821c55",
+      "bytes": 9182
+    },
+    {
+      "file": "RePressDB_FGCS_v2_7/main.tex",
+      "sha256": "ce6eb1ed174b70deb1870a290a5d1a1763b695060971a6029cd667e148a32c09",
+      "bytes": 3459
+    },
+    {
+      "file": "RePressDB_FGCS_v2_7/qa/final_pdf_check.json",
+      "sha256": "28152ac44066174cb7166777ffa88a9d24942878747ec53dfd7bfc98c91f4828",
+      "bytes": 385
+    },
+    {
+      "file": "RePressDB_FGCS_v2_7/references.bib",
+      "sha256": "3d0f6e6285e89f0da277fab405e42f95a70750107abfd1596cc62d0744dc8b89",
+      "bytes": 14507
+    },
+    {
+      "file": "RePressDB_FGCS_v2_7/sections/conclusion.tex",
+      "sha256": "93b724fefbaa0e00bf73d1bd38ab5b38b9c6e9c8f3ad767e595d3beccaeb5068",
+      "bytes": 1131
+    },
+    {
+      "file": "RePressDB_FGCS_v2_7/sections/discussion.tex",
+      "sha256": "8f28c1d4d861a8f9f66483b8186590dee812baf33b33e794eb983302d4ce7cfb",
+      "bytes": 4321
+    },
+    {
+      "file": "RePressDB_FGCS_v2_7/sections/evaluation.tex",
+      "sha256": "292f000baad8d887c44ce47787bc47aeb2b51f6de397603199ddf5215ecb0a58",
+      "bytes": 8437
+    },
+    {
+      "file": "RePressDB_FGCS_v2_7/sections/introduction.tex",
+      "sha256": "65d51d55448f7f96d7e9e5ef5bc2a24dbc9b995c1bac66bc3100ac49d6e2caad",
+      "bytes": 5175
+    },
+    {
+      "file": "RePressDB_FGCS_v2_7/sections/method_v2.tex",
+      "sha256": "c1c990b6fc12fd5f6cc191e86fce132816eaf4b930ad87c2869f49a7a6ab774b",
+      "bytes": 10712
+    },
+    {
+      "file": "RePressDB_FGCS_v2_7/sections/related.tex",
+      "sha256": "01522de0599805e98ba1ad1b083dfa8d29c052d57b2aac98e0799b6ae719cb27",
+      "bytes": 3073
+    },
+    {
+      "file": "RePressDB_FGCS_v2_7/sections/results.tex",
+      "sha256": "e7117aef97e79c78d8dd8b24d25864a58ee5f35fc2df6de1395a4ccced84ac6b",
+      "bytes": 10817
+    },
+    {
+      "file": "RePressDB_FGCS_v2_7/sections/table_agreement.tex",
+      "sha256": "659ea8e57c3c05c4a2241a43b4aeab8a852c0b8d204714d7520f3f9facea6388",
+      "bytes": 317
+    },
+    {
+      "file": "RePressDB_FGCS_v2_7/sections/table_decisions.tex",
+      "sha256": "090ac9483181e926720e0e3a0ce52d9d7514c63daa1bc111a36fbf8708109696",
+      "bytes": 387
+    },
+    {
+      "file": "RePressDB_FGCS_v2_7/sections/table_new_results.tex",
+      "sha256": "7d7cf139dfee036a9ec8ff0b590ac2659c02d64f5be0fc88fbf3476b33f9b77c",
+      "bytes": 707
+    },
+    {
+      "file": "RePressDB_FGCS_v2_7/sections/table_payback.tex",
+      "sha256": "d581c7ef020ed74f734474e1662ff095ba0bb1ef7a8894b56ea8f0804917b196",
+      "bytes": 462
+    },
+    {
+      "file": "RePressDB_FGCS_v2_7/sections/table_strata.tex",
+      "sha256": "a1f361ab0dc415e5f053f4794683b86cfd7c8adc755f1a6a1cdecb45f6f6b43d",
+      "bytes": 501
+    }
+  ]
+}

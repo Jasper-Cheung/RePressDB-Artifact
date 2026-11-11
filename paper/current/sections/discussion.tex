@@ -1,0 +1,26 @@
+\section{Discussion}
+\label{sec:discussion}
+\subsection{What the coordinated mechanism controls}
+The empirical tail filter defines candidate feasibility at decision boundaries. Feasible-epoch counters discard evidence when that condition fails, while installation-plus-return pricing accounts for the repair behavior induced by the criterion. The decision logs show both filtering exposure and price checks at which return cost changes eligibility. The policy comparison then measures the complete combination under a shared executor.
+
+Risk-RePress's lower event p99 and rewriting relative to Credit-RePress accompany a service-time interval of 0.995--1.065. Against Static, persistent shifts and continuous mixtures occupy different operating regions. The post-action model analysis explains how much opportunity appears after accepted changes; measured service includes the actual query, controller, and maintenance components. The 10\% admission setting is interpreted on its calibrated query-path distribution, with query-window and event-window observations reported separately.
+
+\subsection{Calibration reuse and lifecycle cost}
+The storage component's commissioning process collects profiles before online adaptation. Credit-RePress and Risk-RePress use the same cost surface and directed replacement table, so that expenditure is common to their policy comparison. A fixed-layout deployment can use a smaller profiling procedure or a configured layout. Its incremental commissioning difference therefore depends on that deployment's selection process.
+
+Let $\Delta T_{\mathrm{cal},b}$ and $\Delta T_{\mathrm{setup},b}$ denote additional commissioning and setup relative to baseline $b$. For $N$ queries over which the calibrated chunks remain reusable, a fixed-rate amortization condition is
+\begin{equation}
+N\overline{\Delta t}_b>
+\Delta T_{\mathrm{cal},b}+\Delta T_{\mathrm{setup},b},
+\label{eq:amortization}
+\end{equation}
+where $\overline{\Delta t}_b$ is average net service saving per request, including control and replacement. A positive saving and a sufficiently long reuse lifetime are both required. The reported 400.9~s covers all six eight-chunk calibration groups; each group's profile is reused across its workload instances.
+
+As a conservative fixed-rate reuse scenario against Static, we assign the entire recorded group calibration to adaptation and zero commissioning to Static, then add the measured controller-setup difference. Holding each persistent-shift instance's measured net service saving fixed yields query-equivalent thresholds of 1.69--11.69 million requests per eight-chunk group, with median 5.45 million. This projection specifies its cost allocation and fixed saving rate; the source table also retains instances with non-positive measured savings. Calibration reuse is conditioned on the chunk bytes, candidate codecs, query kernels, and operating cache/hardware conditions. Cost changes call for refreshed profiles.
+
+The commissioning view complements amortized analysis and profiling in runtime tuning and resource-sensitive scheduling \citep{alvarez2027online,wu2027sensascale}. Here the reuse unit is the calibrated physical chunk and layout configuration. Conditional-count tables add measured initialization and memory costs while reducing repeated online distribution work.
+
+\subsection{Physical data and recovery scope}
+The 48 distinct chunks contain 2.25~MiB of raw values and fit in memory. File-backed codecs, synchronized replacement, and catalog commits remain in execution. The measurements characterize this warm-file component on one Windows/NTFS host. Larger distinct corpora, other cache conditions, concurrent arrivals, and longer-term host variation provide additional deployment axes.
+
+Recovery is organized around the active-pointer commit and retirement of the predecessor. The invariant table identifies the authoritative and retained versions at each boundary; 492 software-visible interruption and corruption trials check those cases. Hardware power interruption, device ordering, replica failover, and concurrent readers introduce additional scheduling and persistence conditions. Detailed development history, parameters, seeds, and hashes remain in the companion artifact, separate from the final scientific comparisons.

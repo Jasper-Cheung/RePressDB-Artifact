@@ -1,0 +1,200 @@
+\begin{thebibliography}{10}
+\expandafter\ifx\csname url\endcsname\relax
+  \def\url#1{\texttt{#1}}\fi
+\expandafter\ifx\csname urlprefix\endcsname\relax\def\urlprefix{URL }\fi
+\expandafter\ifx\csname href\endcsname\relax
+  \def\href#1#2{#2} \def\path#1{#1}\fi
+
+\bibitem{rong2024oreo}
+K.~Rong, P.~Liu, S.~A. Sonje, M.~Charikar, Dynamic data layout optimization
+  with worst-case guarantees, in: 2024 IEEE 40th International Conference on
+  Data Engineering (ICDE), 2024, pp. 4288--4301.
+\newblock \href {https://doi.org/10.1109/ICDE60146.2024.00327}
+  {\path{doi:10.1109/ICDE60146.2024.00327}}.
+
+\bibitem{windheuser2024adacom}
+L.~Windheuser, C.~Anneser, H.~Zhang, T.~Neumann, A.~Kemper, Adaptive
+  compression for databases, in: Proceedings of the 27th International
+  Conference on Extending Database Technology, 2024, pp. 143--149.
+\newblock \href {https://doi.org/10.48786/edbt.2024.13}
+  {\path{doi:10.48786/edbt.2024.13}}.
+
+\bibitem{mohan1992aries}
+C.~Mohan, D.~Haderle, B.~Lindsay, H.~Pirahesh, P.~Schwarz, {ARIES}: A
+  transaction recovery method supporting fine-granularity locking and partial
+  rollbacks using write-ahead logging, ACM Transactions on Database Systems
+  17~(1) (1992) 94--162.
+\newblock \href {https://doi.org/10.1145/128765.128770}
+  {\path{doi:10.1145/128765.128770}}.
+
+\bibitem{gray1992transaction}
+J.~Gray, A.~Reuter, Transaction Processing: Concepts and Techniques, Morgan
+  Kaufmann, San Francisco, 1992.
+
+\bibitem{sqlitewal}
+{SQLite Consortium}, Write-ahead logging,
+  \url{https://www.sqlite.org/wal.html}, accessed 18 July 2026 (2026).
+
+\bibitem{wu2025qpr}
+W.~Wu, A.~Dutt, G.~Xu, V.~Narasayya, S.~Chaudhuri, Understanding and detecting
+  query performance regression in practical index tuning: [experiments \&
+  analysis], Proceedings of the ACM on Management of Data 3~(6) (2025)
+  374:1--374:26.
+\newblock \href {https://doi.org/10.1145/3769839} {\path{doi:10.1145/3769839}}.
+
+\bibitem{miller2020bdg2}
+C.~Miller, A.~Kathirgamanathan, B.~Picchetti, P.~Arjunan, J.~Y. Park, Z.~Nagy,
+  P.~Raftery, B.~Hobson, Z.~Shi, F.~Meggers, The building data genome project
+  2, energy meter data from the {ASHRAE} great energy predictor iii
+  competition, Scientific Data 7 (2020) 368.
+\newblock \href {https://doi.org/10.1038/s41597-020-00712-x}
+  {\path{doi:10.1038/s41597-020-00712-x}}.
+
+\bibitem{azar2007workfunction}
+Y.~Azar, U.~Feige, S.~Nath,
+  \href{https://www.wisdom.weizmann.ac.il/~feige/TechnicalReports/AzarFeigeNath.pdf}{On
+  the work function algorithm for two state task systems}, Tech. rep.,
+  Microsoft Research (2007).
+\newline\urlprefix\url{https://www.wisdom.weizmann.ac.il/~feige/TechnicalReports/AzarFeigeNath.pdf}
+
+\bibitem{alvarez2027online}
+D.~{\'{A}}lvarez, T.~Chatelain, P.~J. Martinez-Ferrer, V.~Beltran, Online
+  adaptive tuning of data-flow iterative applications, Future Generation
+  Computer Systems 188 (2027) 108828.
+\newblock \href {https://doi.org/10.1016/j.future.2026.108828}
+  {\path{doi:10.1016/j.future.2026.108828}}.
+
+\bibitem{wu2027sensascale}
+K.~Wu, X.~Wang, Z.~Peng, R.~Xie, W.~Lin, K.~Li, {SensaScale}: A deadline-aware
+  scheduler for {DNN} training tasks based on resource sensitivity, Future
+  Generation Computer Systems 188 (2027) 108820.
+\newblock \href {https://doi.org/10.1016/j.future.2026.108820}
+  {\path{doi:10.1016/j.future.2026.108820}}.
+
+\bibitem{chaudhuri1997autoadmin}
+S.~Chaudhuri, V.~R. Narasayya, An efficient cost-driven index selection tool
+  for {Microsoft SQL Server}, in: Proceedings of the 23rd International
+  Conference on Very Large Data Bases, 1997, pp. 146--155.
+
+\bibitem{bruno2005physical}
+N.~Bruno, S.~Chaudhuri, Automatic physical database tuning: A relaxation-based
+  approach, in: Proceedings of the 2005 ACM SIGMOD International Conference on
+  Management of Data, 2005, pp. 227--238.
+\newblock \href {https://doi.org/10.1145/1066157.1066184}
+  {\path{doi:10.1145/1066157.1066184}}.
+
+\bibitem{idreos2007cracking}
+S.~Idreos, M.~L. Kersten, S.~Manegold, Database cracking, in: Third Biennial
+  Conference on Innovative Data Systems Research, 2007, pp. 68--78.
+
+\bibitem{vanaken2017ottertune}
+D.~Van~Aken, A.~Pavlo, G.~J. Gordon, B.~Zhang, Automatic database management
+  system tuning through large-scale machine learning, in: Proceedings of the
+  2017 ACM International Conference on Management of Data, 2017, pp.
+  1009--1024.
+\newblock \href {https://doi.org/10.1145/3035918.3064029}
+  {\path{doi:10.1145/3035918.3064029}}.
+
+\bibitem{pavlo2017selfdriving}
+A.~Pavlo, G.~Angulo, J.~Arulraj, H.~Lin, J.~Lin, L.~Ma, P.~Menon, T.~C. Mowry,
+  M.~Perron, I.~Quah, et~al., Self-driving database management systems, in: 8th
+  Biennial Conference on Innovative Data Systems Research, 2017.
+
+\bibitem{stonebraker2005cstore}
+M.~Stonebraker, D.~J. Abadi, A.~Batkin, X.~Chen, M.~Cherniack, M.~Ferreira,
+  E.~Lau, A.~Lin, S.~Madden, E.~O'Neil, P.~O'Neil, A.~Rasin, N.~Tran,
+  S.~Zdonik, {C-Store}: A column-oriented {DBMS}, in: Proceedings of the 31st
+  International Conference on Very Large Data Bases, 2005, pp. 553--564.
+
+\bibitem{abadi2006compression}
+D.~J. Abadi, S.~R. Madden, M.~C. Ferreira, Integrating compression and
+  execution in column-oriented database systems, in: Proceedings of the 2006
+  ACM SIGMOD International Conference on Management of Data, 2006, pp.
+  671--682.
+\newblock \href {https://doi.org/10.1145/1142473.1142548}
+  {\path{doi:10.1145/1142473.1142548}}.
+
+\bibitem{damme2020morphstore}
+P.~Damme, A.~Ungeth{\"u}m, J.~Pietrzyk, A.~Krause, D.~Habich, W.~Lehner,
+  {MorphStore}: Analytical query engine with a holistic compression-enabled
+  processing model, Proceedings of the VLDB Endowment 13~(11) (2020)
+  2396--2410.
+\newblock \href {https://doi.org/10.14778/3407790.3407833}
+  {\path{doi:10.14778/3407790.3407833}}.
+
+\bibitem{pelkonen2015gorilla}
+T.~Pelkonen, S.~Franklin, J.~Teller, P.~Cavallaro, Q.~Huang, J.~Meza,
+  K.~Veeraraghavan, Gorilla: A fast, scalable, in-memory time series database,
+  Proceedings of the VLDB Endowment 8~(12) (2015) 1816--1827.
+\newblock \href {https://doi.org/10.14778/2824032.2824078}
+  {\path{doi:10.14778/2824032.2824078}}.
+
+\bibitem{andersen2016btrdb}
+M.~P. Andersen, D.~E. Culler, {BTrDB}: Optimizing storage system design for
+  timeseries processing, in: 14th USENIX Conference on File and Storage
+  Technologies, 2016, pp. 39--52.
+
+\bibitem{blalock2018sprintz}
+D.~Blalock, S.~Madden, J.~Guttag, Sprintz: Time series compression for the
+  internet of things, Proceedings of the ACM on Interactive, Mobile, Wearable
+  and Ubiquitous Technologies 2~(3) (2018) 93:1--93:23.
+\newblock \href {https://doi.org/10.1145/3264903} {\path{doi:10.1145/3264903}}.
+
+\bibitem{kephart2003vision}
+J.~O. Kephart, D.~M. Chess, The vision of autonomic computing, Computer 36~(1)
+  (2003) 41--50.
+\newblock \href {https://doi.org/10.1109/MC.2003.1160055}
+  {\path{doi:10.1109/MC.2003.1160055}}.
+
+\bibitem{garlan2004rainbow}
+D.~Garlan, S.-W. Cheng, A.-C. Huang, B.~Schmerl, P.~Steenkiste, Rainbow:
+  Architecture-based self-adaptation with reusable infrastructure, Computer
+  37~(10) (2004) 46--54.
+\newblock \href {https://doi.org/10.1109/MC.2004.175}
+  {\path{doi:10.1109/MC.2004.175}}.
+
+\bibitem{salehie2009landscape}
+M.~Salehie, L.~Tahvildari, Self-adaptive software: Landscape and research
+  challenges, ACM Transactions on Autonomous and Adaptive Systems 4~(2) (2009)
+  14:1--14:42.
+\newblock \href {https://doi.org/10.1145/1516533.1516538}
+  {\path{doi:10.1145/1516533.1516538}}.
+
+\bibitem{delemos2013roadmap}
+R.~de~Lemos, H.~Giese, H.~A. M{\"u}ller, M.~Shaw, J.~Andersson, M.~Litoiu,
+  B.~Schmerl, G.~Tamura, N.~M. Villegas, T.~Vogel, et~al., Software engineering
+  for self-adaptive systems: A second research roadmap, in: Software
+  Engineering for Self-Adaptive Systems II, Vol. 7475 of Lecture Notes in
+  Computer Science, Springer, 2013, pp. 1--32.
+\newblock \href {https://doi.org/10.1007/978-3-642-35813-5_1}
+  {\path{doi:10.1007/978-3-642-35813-5_1}}.
+
+\bibitem{salama2017stability}
+M.~Salama, R.~Bahsoon, Analysing and modelling runtime architectural stability
+  for self-adaptive software, Journal of Systems and Software 133 (2017)
+  95--112.
+\newblock \href {https://doi.org/10.1016/j.jss.2017.07.041}
+  {\path{doi:10.1016/j.jss.2017.07.041}}.
+
+\bibitem{ayala2021prodspl}
+I.~Ayala, A.~V. Papadopoulos, M.~Amor, L.~Fuentes, {ProDSPL}: Proactive
+  self-adaptation based on dynamic software product lines, Journal of Systems
+  and Software 175 (2021) 110909.
+\newblock \href {https://doi.org/10.1016/j.jss.2021.110909}
+  {\path{doi:10.1016/j.jss.2021.110909}}.
+
+\bibitem{chen2024reliable}
+Z.~Chen, J.~Li, N.~Li, W.~Jiao, Reliable proactive adaptation via prediction
+  fusion and extended stochastic model predictive control, Journal of Systems
+  and Software 217 (2024) 112166.
+\newblock \href {https://doi.org/10.1016/j.jss.2024.112166}
+  {\path{doi:10.1016/j.jss.2024.112166}}.
+
+\bibitem{avizienis2004dependability}
+A.~Avizienis, J.-C. Laprie, B.~Randell, C.~Landwehr, Basic concepts and
+  taxonomy of dependable and secure computing, IEEE Transactions on Dependable
+  and Secure Computing 1~(1) (2004) 11--33.
+\newblock \href {https://doi.org/10.1109/TDSC.2004.2}
+  {\path{doi:10.1109/TDSC.2004.2}}.
+
+\end{thebibliography}

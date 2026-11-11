@@ -1,0 +1,17 @@
+\begin{table*}[!t]
+\centering\small
+\caption{Overall policy comparison.}
+\label{tab:newresults}
+\begin{tabular}{@{}lrrrrrr@{}}
+\toprule
+Policy & Service ratio & 95\% interval & Event p99 ratio & Migrations & Rewrite (MiB) & Control (\%) \\
+\midrule
+Static & 1.000 & -- & 1.000 & 0 & 0.000 & 0.00 \\
+Shape-EWMA-BE & 1.054 & [1.025, 1.085] & 1.038 & 0 & 0.000 & 3.81 \\
+Horizon-RePress & 0.998 & [0.934, 1.044] & 1.126 & 35 & 1.426 & 3.15 \\
+Work-function & 1.007 & [0.971, 1.042] & 1.054 & 13 & 0.510 & 2.34 \\
+Credit-RePress & 0.920 & [0.853, 0.986] & 1.264 & 155 & 5.595 & 5.16 \\
+Risk-RePress & 0.947 & [0.884, 1.005] & 1.102 & 66 & 2.375 & 2.04 \\
+\bottomrule
+\end{tabular}
+\end{table*}

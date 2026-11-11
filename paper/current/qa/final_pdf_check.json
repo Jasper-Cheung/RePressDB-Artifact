@@ -1,0 +1,12 @@
+{
+  "pass": true,
+  "pages_including_references": 12,
+  "unresolved_citations_or_references": false,
+  "overfull_boxes": false,
+  "replacement_glyphs": 0,
+  "words_outside_page": [],
+  "prohibited_prose_matches": false,
+  "all_pages_rendered": true,
+  "all_pages_visually_inspected": true,
+  "pdf_sha256": "b19083859f6abbfcc722bf583647aea15ecfcef98a20eb997b2c568f81853b26"
+}
